@@ -10,6 +10,9 @@ output:
     number_sections: true
 ---
 
+```{r include=FALSE}
+devtools::install_github("ropenscilabs/icon")
+```
 
 &nbsp;
 <p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement</p>
