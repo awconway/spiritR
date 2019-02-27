@@ -10,9 +10,6 @@ output:
     number_sections: true
 ---
 
-```{r include=FALSE}
-devtools::install_github("ropenscilabs/icon")
-```
 
 &nbsp;
 <p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement</p>
@@ -84,11 +81,11 @@ devtools::install_github("ropenscilabs/icon")
 
 # INTRODUCTION
 
-## Background and rationale <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/background-and-rationale/)^ </font>
+## [Background and rationale](http://www.spirit-statement.org/background-and-rationale/)
 
 
 
-## Objectives <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/objectives/)^ </font>
+## [Objectives](http://www.spirit-statement.org/objectives/)
 
 
 
@@ -100,11 +97,11 @@ devtools::install_github("ropenscilabs/icon")
 
 # METHODS
 
-## Study setting <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/study-setting/)^ </font>
+## [Study setting](http://www.spirit-statement.org/study-setting/)
 
 
 
-## Eligibility criteria <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/eligibility-criteria/)^ </font>
+## [Eligibility criteria](http://www.spirit-statement.org/eligibility-criteria/)
 
 ### Inclusion criteria 
 
@@ -112,7 +109,7 @@ devtools::install_github("ropenscilabs/icon")
 ### Exclusion criteria
 
 
-## Interventions <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/interventions/)^ </font>
+## [Interventions](http://www.spirit-statement.org/interventions/)
 
 ### Intervention description
 
@@ -127,22 +124,22 @@ devtools::install_github("ropenscilabs/icon")
 
 
 
-### Modifications <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/modifications/)^ </font>
+### [Modifications](http://www.spirit-statement.org/modifications/)
 
 
 
 
 
-### Adherence <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/adherence/)^ </font>
+### [Adherence](http://www.spirit-statement.org/adherence/)
 
 
 
 
-### Concomitant care <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/concomitant-care/)^ </font>
+### [Concomitant care](http://www.spirit-statement.org/concomitant-care/)
 
 
 
-## Outcomes <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/outcomes-2/)^ </font>
+## [Outcomes](http://www.spirit-statement.org/outcomes-2/)
 
 
 
@@ -155,7 +152,7 @@ devtools::install_github("ropenscilabs/icon")
 
 
 
-## Participant timeline <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/participant-timeline/)^ </font>
+## [Participant timeline](http://www.spirit-statement.org/participant-timeline/)
 
 
 
@@ -181,43 +178,43 @@ devtools::install_github("ropenscilabs/icon")
 
 
 
-## Sample size <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sample-size/)^ </font>
+## [Sample size](http://www.spirit-statement.org/sample-size/)
 
 
 
-## Recruitment <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/recruitment/)^ </font>
+## [Recruitment](http://www.spirit-statement.org/recruitment/)
 
 
 
 ## Allocation
 
-### Sequence generation <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sequence-generation/)^ </font>
+### [Sequence generation](http://www.spirit-statement.org/sequence-generation/)
 
 
-### Concealment mechanism <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/concealment-mechaninism/)^ </font>
+### [Concealment mechanism](http://www.spirit-statement.org/concealment-mechaninism/)
 
 
-### Implementation <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/implementation/)^ </font>
+### [Implementation](http://www.spirit-statement.org/implementation/)
 
 ## Blinding (masking)
 
-### Blinding mechanism <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/blinding-masking/)^ </font>
+### [Blinding mechanism](http://www.spirit-statement.org/blinding-masking/)
 
 
 
-### Emergency unblinding <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/emergency-unblinding/)^ </font>
+### [Emergency unblinding](http://www.spirit-statement.org/emergency-unblinding/)
 
 
-## Data collection <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-collection-methods/)^ </font>
+## [Data collection](http://www.spirit-statement.org/data-collection-methods/)
 
 ### Trial procedures and evaluations
 
 
 
-### Retention <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/retention/)^ </font>
+### [Retention](http://www.spirit-statement.org/retention/)
 
 
-## Data management <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-management/)^ </font>
+## [Data management](http://www.spirit-statement.org/data-management/)
 
 **Data Forms and Data Entry**
 
@@ -240,29 +237,29 @@ devtools::install_github("ropenscilabs/icon")
 
 ## Statistical methods
 
-### Outcomes <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/outcomes/)^ </font>
+### [Outcomes](http://www.spirit-statement.org/outcomes/)
 
 
-### Additional analyses <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/additional-analyses/)^ </font>
+### [Additional analyses](http://www.spirit-statement.org/additional-analyses/)
 
 
 
-### Analysis population and missing data <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/objectives/)^ </font>
+### [Analysis population and missing data](http://www.spirit-statement.org/objectives/)
 
 
 ## Data monitoring
 
-### Formal committee <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/formal-committee/)^ </font>
+### [Formal committee](http://www.spirit-statement.org/formal-committee/)
 
 
-### Interim analysis <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/interim-analysis/)^ </font>
+### [Interim analysis](http://www.spirit-statement.org/interim-analysis/)
 
 
-## Safety/harms <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/harms/)^ </font>
+## [Safety/harms](http://www.spirit-statement.org/harms/)
 
 
 
-## Auditing <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/auditing/)^ </font>
+## [Auditing](http://www.spirit-statement.org/auditing/)
 
 
 
@@ -271,38 +268,38 @@ devtools::install_github("ropenscilabs/icon")
 
 # ETHICS AND DISSEMINATION
 
-## Research ethics approval <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/research-ethics-approval/)^ </font>
+## [Research ethics approval](http://www.spirit-statement.org/research-ethics-approval/)
 
 
 
 
-## Protocol amendments <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/protocol-amendments/)^ </font>
+## [Protocol amendments](http://www.spirit-statement.org/protocol-amendments/)
 
 
 
 
-## Informed consent process <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/consent-or-assent/)^ </font>
+## [Informed consent process](http://www.spirit-statement.org/consent-or-assent/)
 
 
 
-### Ancillary studies <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ancillary-studies/)^ </font>
+### [Ancillary studies](http://www.spirit-statement.org/ancillary-studies/)
 
 
 
-## Confidentiality <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/confidentiality/)^ </font>
+## [Confidentiality](http://www.spirit-statement.org/confidentiality/)
 
 
 
 
 
-## Declaration of interests <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/declaration-of-interests/)^ </font>
+## [Declaration of interests](http://www.spirit-statement.org/declaration-of-interests/)
 
 
 
-## Access to data <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/access-to-data/)^ </font>
+## [Access to data](http://www.spirit-statement.org/access-to-data/)
 
 
-## Ancillary and post-trial care <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ancillary-and-post-trial-care/)^ </font>
+## [Ancillary and post-trial care](http://www.spirit-statement.org/ancillary-and-post-trial-care/)
 
 
 
@@ -310,14 +307,14 @@ devtools::install_github("ropenscilabs/icon")
 
 ## Dissemination policy 
 
-### Trial results <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31a-trial-results/)^ </font>
+### [Trial results](http://www.spirit-statement.org/31a-trial-results/)
 
 
-### Authorship <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31b-authorship/)^ </font>
+### [Authorship](http://www.spirit-statement.org/31b-authorship/)
 
 
 
-### Reproducible research <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31c-reproducible-research/)^ </font>
+### [Reproducible research](http://www.spirit-statement.org/31c-reproducible-research/)
 
 
 
@@ -341,21 +338,21 @@ devtools::install_github("ropenscilabs/icon")
 
 
 
-## Funders <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/funding/)^ </font>
+## [Funders](http://www.spirit-statement.org/funding/)
 
 
 
 ## Roles and responsibilities
 
-### Protocol contributors <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/contributorship/)^ </font>
+### [Protocol contributors](http://www.spirit-statement.org/contributorship/)
 
 
 
-### Sponsor and funder <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ssponsor-and-funder/)^ </font>
+### [Sponsor and funder](http://www.spirit-statement.org/ssponsor-and-funder/)
 
 
 
-### Trial committees <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/committees/)^ </font>
+### T[rial committees](http://www.spirit-statement.org/committees/)
 
 N/A
 
@@ -365,7 +362,7 @@ N/A
 
 # Appendix
 
-## Informed consent materials <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/informed-consent-materials/)^ </font>
+## [Informed consent materials](http://www.spirit-statement.org/informed-consent-materials/)
 
 
-## Biological specimens <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/biological-specimens/)^ </font>
+## [Biological specimens](http://www.spirit-statement.org/biological-specimens/)

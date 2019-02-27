@@ -1,12 +1,13 @@
 Package: spiritR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Template for clinical trial protocol
+Version: 0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Aaron",
+           family = "Conway",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "aaron.conway@utoronto.ca")
+Description: This package contains an R Markdown template for a clinical trial protocol 
+    adhering to the [SPIRIT](http://www.spirit-statement.org/) checklist.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
