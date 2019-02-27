@@ -9,7 +9,7 @@ Future plans are to:
 * Create a function that will make use of the clinicaltrials.gov API to assist uploading information from the protocol developed in your Rmardown file to a new clinical trial record. 
 
 
-# Installing the Templates
+# Installing the Template
 
 Enter the following in your console for installation (uncomment the first line if devtools is not already installed):
 
