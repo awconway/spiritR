@@ -1,0 +1,368 @@
+---
+title: "Research Protocol"
+subtitle: "Title of study goes here"
+author: "Version 1"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+---
+
+
+&nbsp;
+<p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement</p>
+&nbsp;
+
+
+|                               	|                       	|
+|-------------------------------	|-----------------------	|
+| Study Principal Investigator: 	| **Name** Affiliation  	|
+| Sponsors:                     	| [enter details]       	|
+| Protocol contributors:        	| **Name**  Affiliation 	|
+| Trial identifiers:            	|                       	|
+<br><br>
+**ABBREVIATIONS**
+
+| Abbreviation 	| Explanation                              	|
+|--------------	|------------------------------------------	|
+| PHI          	| Personal Health Information              	|
+| PI           	| Principal Investigator                   	|
+| PICF         	| Participant Information and Consent Form 	|
+| RA           	| Research Assistant                       	|
+| REB          	| Research Ethics Board                    	|
+
+
+
+<br><br>
+
+**REVISION HISTORY**
+
+
+| Version  	| Date       	| Amendment Text 	| Description 	|
+|----------	|------------	|----------------	|-------------	|
+| 1        	| enter date 	|                	|             	|
+
+
+<br><br>
+
+# TRIAL SUMMARY
+
+|                                               	| World Health Organization Registration Data Set           	|
+|-------------------------------------------------|-------------------------------------------------------------|
+| Title                                         	| [enter title]                                             	|
+| Primary registry and trial identifying number 	| [enter details]                                           	|
+| Secondary identifying numbers                 	| [enter details]                                           	|
+| Sources of monetary or material support       	| [enter details]                                            	|
+| Primary sponsor contact information           	| [enter details]                                           	|
+| Secondary sponsors (if any)                   	| [enter details]                                           	|
+| Central contact                               	| [name, affiliation and contact details]                   	|
+| Study officials/Investigators                 	| [name and role - PI for example]                          	|
+| Brief title                                   	| [enter details]                                           	|
+| Acronym                                       	| [enter details]                                            	|
+| Countries of recruitment                      	| [enter details]                                           	|
+| Condition(s) or focus of study                	| [enter details]                                            	|
+| Interventions                                 	|                                                           	|
+| *Intervention*                                	| [enter details]                                           	|
+| *Standard Care*                               	| [enter details]                                            	|
+| Key eligibility criteria                      	| Age eligibility: [N/A or "number years"]<br><br>Sex eligibility: Both<br><br>Accepts healthy volunteers: No <br><br>Inclusion criteria: <br>[Enter details] <br><br>Exclusion criteria:<br>1[Enter details]|
+| Study design                                  	| Study type: Interventional trial; Allocation: [Randomized, Non-randomized],Intervention model: [Single group, Parallel, Crossover, Factorial, Sequential],Primary purpose: [Treatment, Prevention, Diagnostic, Supportive Care, Screening, Health Services Research, Basic Science, Device Feasibility, Other],Phase: [Early Phase 1] 	        |
+| Masking                                       	| [Participan, Care Provider, Investigator, Outcomes Assessor, None (Open Label)]|
+| Date of enrollment                            	| [enter details]                                           	|
+| Target sample size                            	| [enter details]                                           	|
+| Recruitment status                            	| [Not yet recruiting]                                      	|
+| Primary outcomes                              	| Outcome:[enter details]Timeframe: [enter details]Description: [enter details]|
+| Secondary outcomes                            	| Outcome: [enter details]Timeframe: [enter details]Description:[enter details]|
+
+
+---------------------------------
+<br>
+
+# INTRODUCTION
+
+## Background and rationale <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/background-and-rationale/)^ </font>
+
+
+
+## Objectives <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/objectives/)^ </font>
+
+
+
+## Trial design 
+
+
+
+
+
+# METHODS
+
+## Study setting <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/study-setting/)^ </font>
+
+
+
+## Eligibility criteria <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/eligibility-criteria/)^ </font>
+
+### Inclusion criteria 
+
+
+### Exclusion criteria
+
+
+## Interventions <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/interventions/)^ </font>
+
+### Intervention description
+
+
+
+>Intervention
+
+
+
+>Comparison
+
+
+
+
+### Modifications <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/modifications/)^ </font>
+
+
+
+
+
+### Adherence <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/adherence/)^ </font>
+
+
+
+
+### Concomitant care <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/concomitant-care/)^ </font>
+
+
+
+## Outcomes <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/outcomes-2/)^ </font>
+
+
+
+>Primary outcome: 
+
+
+
+>Secondary outcomes
+
+
+
+
+## Participant timeline <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/participant-timeline/)^ </font>
+
+
+
+
+
+| STUDY PERIOD                	|           	|            	|                 	|    	|    	|    	|      	|           	|
+|-----------------------------	|:---------:	|:----------:	|:---------------:	|:--:	|:--:	|:--:	|:----:	|:---------:	|
+|                             	| Enrolment 	| Allocation 	| Post-allocation 	|    	|    	|    	|      	| Close-out 	|
+| TIMEPOINT**                 	|     0     	|      0     	|        t1       	| t2 	| t3 	| t4 	| etc. 	|     tx    	|
+| ENROLMENT:                  	|           	|            	|                 	|    	|    	|    	|      	|           	|
+| Eligibility screen          	|     X     	|            	|                 	|    	|    	|    	|      	|           	|
+| Informed consent            	|     X     	|            	|                 	|    	|    	|    	|      	|           	|
+| [List other procedures]     	|     X     	|            	|                 	|    	|    	|    	|      	|           	|
+| Allocation                  	|           	|      X     	|                 	|    	|    	|    	|      	|           	|
+| INTERVENTIONS:              	|           	|            	|                 	|    	|    	|    	|      	|           	|
+| [Intervention A]            	|           	|            	|                 	|    	|    	|    	|      	|           	|
+| [Intervention B]            	|           	|            	|        X        	|    	|  X 	|    	|      	|           	|
+| [List other study groups]   	|           	|            	|                 	|    	|    	|    	|      	|           	|
+| ASSESSMENTS:                	|           	|            	|                 	|    	|    	|    	|      	|           	|
+| [List baseline variables]   	|     X     	|      X     	|                 	|    	|    	|    	|      	|           	|
+| [List outcome variables]    	|           	|            	|                 	|  X 	|    	|  X 	| etc. 	|     X     	|
+| [List other data variables] 	|           	|            	|        X        	|  X 	|  X 	|  X 	| etc. 	|     X     	|
+
+
+
+## Sample size <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sample-size/)^ </font>
+
+
+
+## Recruitment <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/recruitment/)^ </font>
+
+
+
+## Allocation
+
+### Sequence generation <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sequence-generation/)^ </font>
+
+
+### Concealment mechanism <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/concealment-mechaninism/)^ </font>
+
+
+### Implementation <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/implementation/)^ </font>
+
+## Blinding (masking)
+
+### Blinding mechanism <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/blinding-masking/)^ </font>
+
+
+
+### Emergency unblinding <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/emergency-unblinding/)^ </font>
+
+
+## Data collection <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-collection-methods/)^ </font>
+
+### Trial procedures and evaluations
+
+
+
+### Retention <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/retention/)^ </font>
+
+
+## Data management <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-management/)^ </font>
+
+**Data Forms and Data Entry**
+
+
+
+
+**Data Transmission and Editing**
+
+
+
+
+**Security and Back-Up of Data**
+
+
+
+
+**Study status reports**
+
+
+
+## Statistical methods
+
+### Outcomes <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/outcomes/)^ </font>
+
+
+### Additional analyses <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/additional-analyses/)^ </font>
+
+
+
+### Analysis population and missing data <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/objectives/)^ </font>
+
+
+## Data monitoring
+
+### Formal committee <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/formal-committee/)^ </font>
+
+
+### Interim analysis <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/interim-analysis/)^ </font>
+
+
+## Safety/harms <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/harms/)^ </font>
+
+
+
+## Auditing <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/auditing/)^ </font>
+
+
+
+
+
+
+# ETHICS AND DISSEMINATION
+
+## Research ethics approval <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/research-ethics-approval/)^ </font>
+
+
+
+
+## Protocol amendments <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/protocol-amendments/)^ </font>
+
+
+
+
+## Informed consent process <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/consent-or-assent/)^ </font>
+
+
+
+### Ancillary studies <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ancillary-studies/)^ </font>
+
+
+
+## Confidentiality <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/confidentiality/)^ </font>
+
+
+
+
+
+## Declaration of interests <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/declaration-of-interests/)^ </font>
+
+
+
+## Access to data <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/access-to-data/)^ </font>
+
+
+## Ancillary and post-trial care <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ancillary-and-post-trial-care/)^ </font>
+
+
+
+
+
+## Dissemination policy 
+
+### Trial results <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31a-trial-results/)^ </font>
+
+
+### Authorship <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31b-authorship/)^ </font>
+
+
+
+### Reproducible research <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31c-reproducible-research/)^ </font>
+
+
+
+
+
+# STUDY ADMINISTRATION
+
+## Key contacts
+
+**Study Principal Investigator**
+
+
+
+**Central contact**
+
+
+
+**Sponsor**
+
+
+
+
+
+## Funders <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/funding/)^ </font>
+
+
+
+## Roles and responsibilities
+
+### Protocol contributors <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/contributorship/)^ </font>
+
+
+
+### Sponsor and funder <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ssponsor-and-funder/)^ </font>
+
+
+
+### Trial committees <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/committees/)^ </font>
+
+N/A
+
+
+
+# REFERENCES
+
+# Appendix
+
+## Informed consent materials <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/informed-consent-materials/)^ </font>
+
+
+## Biological specimens <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/biological-specimens/)^ </font>
