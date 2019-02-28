@@ -11,3 +11,7 @@ Description: This package contains an R Markdown template for a clinical trial p
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    icon (>= 0.1.0)
+Remotes:  
+    ropenscilabs/icon
