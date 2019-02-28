@@ -81,8 +81,7 @@ output:
 
 # INTRODUCTION
 
-## [Background and rationale](http://www.spirit-statement.org/background-and-rationale/)
-
+## Background and rationale <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/background-and-rationale/)^ </font>
 
 
 ## [Objectives](http://www.spirit-statement.org/objectives/)
