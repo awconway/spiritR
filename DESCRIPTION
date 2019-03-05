@@ -6,12 +6,20 @@ Authors@R:
            family = "Conway",
            role = c("aut", "cre"),
            email = "aaron.conway@utoronto.ca")
-Description: This package contains an R Markdown template for a clinical trial protocol 
-    adhering to the [SPIRIT](http://www.spirit-statement.org/) checklist.
+Description: This package contains an R Markdown template for a clinical trial 
+    protocol adhering to the [SPIRIT](http://www.spirit-statement.org/) 
+    checklist. It also contains functions to create a xml document containing
+    the required information and upload it to clinicaltrials.gov.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    icon (>= 0.1.0)
-Remotes:  
+    icon (>= 0.1.0),
+    xml2,
+    httr,
+    magrittr,
+    tibble
+Remotes: 
     ropenscilabs/icon
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
