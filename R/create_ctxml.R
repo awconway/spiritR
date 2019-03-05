@@ -42,10 +42,10 @@ create_ctxml %>%
   xml2::xml_find_first(".//lead_sponsor") %>%
   xml2::xml_add_sibling("resp_party") %>% 
   xml2::xml_add_child("resp_party_type", respPartyType) %>% 
-  xml2::xml_add_sibling("investigator_username", "None") %>%
-  xml2::xml_add_sibling("investigator_title") %>% 
+  xml2::xml_add_sibling("investigator_username", investigator_username) %>%
+  xml2::xml_add_sibling("investigator_title", investigator_title) %>% 
   xml2::xml_add_sibling("investigator_affiliation") %>% 
-  xml2::xml_add_sibling("name_titlke") %>% 
+  xml2::xml_add_sibling("name_title") %>% 
   xml2::xml_add_sibling("organization") %>% 
   xml2::xml_add_sibling("phone") %>% 
   xml2::xml_add_sibling("phone_ext") %>% 
@@ -70,7 +70,7 @@ create_ctxml %>%
 create_ctxml %>% 
   xml2::xml_find_first(".//oversight_info") %>%
   xml2::xml_add_sibling("brief_summary") %>% 
-  xml2::xml_add_child("textblock") %>% 
+  xml2::xml_add_child("textblock", briefSummary) %>% 
   xml2::xml_root()
 
 create_ctxml %>% 
@@ -88,10 +88,10 @@ create_ctxml %>%
   xml2::xml_add_sibling("start_date", startDate) %>% 
   xml2::xml_add_sibling("start_date_type", "Anticipated") %>% 
   xml2::xml_add_sibling("end_date") %>% 
-  xml2::xml_add_sibling("last_follow_up_date") %>% 
-  xml2::xml_add_sibling("last_follow_up_date_type") %>%
-  xml2::xml_add_sibling("prim_compl_date") %>% 
-  xml2::xml_add_sibling("primary_compl_date_type") %>% 
+  xml2::xml_add_sibling("last_follow_up_date", studyCompletion) %>% 
+  xml2::xml_add_sibling("last_follow_up_date_type", "Anticipated") %>%
+  xml2::xml_add_sibling("prim_compl_date", primaryCompletion) %>% 
+  xml2::xml_add_sibling("primary_compl_date_type", "Anticipated") %>% 
   xml2::xml_add_sibling("study_design") %>% 
   xml2::xml_add_child("study_type", "Interventional") %>% 
   xml2::xml_add_sibling("interventional_design") %>% 
@@ -191,12 +191,12 @@ create_ctxml %>%
 create_ctxml %>% 
   xml2::xml_find_first(".//eligibility") %>%
   xml2::xml_add_sibling("overall_official") %>% 
-  xml2::xml_add_child("first_name", firstName) %>% 
+  xml2::xml_add_child("first_name", off_firstName) %>% 
   xml2::xml_add_sibling("middle_name") %>% 
-  xml2::xml_add_sibling("last_name", lastName) %>% 
-  xml2::xml_add_sibling("degrees", degrees) %>% 
-  xml2::xml_add_sibling("role") %>% 
-  xml2::xml_add_sibling("affiliation") %>% 
+  xml2::xml_add_sibling("last_name", off_lastName) %>% 
+  xml2::xml_add_sibling("degrees", off_degrees) %>% 
+  xml2::xml_add_sibling("role", off_role) %>% 
+  xml2::xml_add_sibling("affiliation", off_affiliation) %>% 
   xml2::xml_root()
   
 create_ctxml %>% 
