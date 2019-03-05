@@ -16,6 +16,9 @@ add_pr_outcome(xmlobject, name, time, description)
 
 add_sec_outcome(xmlobject, name, time, description)
 }
+\value{
+A xml nodespace
+}
 \description{
 These functions add arms, interventions, primary and secondary outcomes to
 the xml document created using the create_ctxml() function. Calls to these

@@ -14,6 +14,8 @@
 #' outcome name, time frame for measurement and additional descriptive details.
 #' * `add_sec_outcome()`: Adds an xml nodespace containing information about the
 #' outcome name, time frame for measurement and additional descriptive details.
+#' 
+#' @return A xml nodespace
 
 #' @examples
 #' \dontrun{
