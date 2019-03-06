@@ -4,7 +4,9 @@
 #'This function will make a http POST request to upload a XML document to the
 #'clinicaltrials.gov registry. 
 #' 
-#' @param xmlobject A xml document
+#' @param ctxml A xml document created using  create_ctxml() and updated with 
+#' any add_arms(), add_interventions(), add_pr_outcomes() and add_sec_outcomes()
+#' that may be required.
 #' @param orgName The organisation name associated with a clinicaltrials.gov 
 #'   account
 #' @param userName Username for a clinicaltrials.gov account
@@ -17,9 +19,9 @@
 #' 
 #' @export
 #' @rdname upload_ct
-upload_ct <- function(xmlobject, orgName, userName, passWord){
+upload_ct <- function(ctxml, orgName, userName, passWord){
   body  <-  list(orgNAME = orgName, userName = userName, 
-                 passWord = passWord,  uploadXML = create_ctxml, 
+                 passWord = passWord,  uploadXML = ctxml, 
                  autoRelease = FALSE)
   httr::POST("https://register.clinicaltrials.gov/prs/app/action/ExternalUpload", 
              body = body, encode = 'form')

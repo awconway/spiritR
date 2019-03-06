@@ -6,7 +6,7 @@
 #' @return A xml document
 #' 
 #' @example 
-#' create_ctxml()
+#' ctxml <- create_ctxml()
 
 #' @export
 #' @rdname create_ctxml

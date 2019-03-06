@@ -8,13 +8,13 @@
 \alias{add_sec_outcome}
 \title{Add arms, interventions and outcomes to an xml document}
 \usage{
-add_arm(xmlobject, arm_label, arm_type, arm_desc)
+add_arm(ctxml, arm_label, arm_type, arm_desc)
 
-add_intervention(xmlobject, int_type, int_name, int_desc, arm_label)
+add_intervention(ctxml, int_type, int_name, int_desc, arm_label)
 
-add_pr_outcome(xmlobject, name, time, description)
+add_pr_outcome(ctxml, name, time, description)
 
-add_sec_outcome(xmlobject, name, time, description)
+add_sec_outcome(ctxml, name, time, description)
 }
 \value{
 A xml nodespace
@@ -38,26 +38,26 @@ outcome name, time frame for measurement and additional descriptive details.
 }
 \examples{
 \dontrun{
- add_arm(xmlobject = create_ctxml, 
+ add_arm(ctxml = ctxml, 
          arm_label = "Standard", 
          arm_type =  "Active Comparator", 
          arm_desc = "Manual upload to registry")
 }
 \dontrun{
-add_intervention(xmlobject = create_ctxml, 
+add_intervention(ctxml = ctxml, 
                  int_type =  "Device", 
                  int_name = "Registry entry",
                  int_desc = "The usual way to enter to the registry",
                  arm_label = "Standard")
 }
 \dontrun{
-add_pr_outcome(xmlobject = create_ctxml,
+add_pr_outcome(ctxml = ctxml,
                name = "correct upload",
                time = "As measured",
                description = "Insert description about the measure.")
 }
 \dontrun{
-add_sec_outcome(xmlobject = test_ctxml,
+add_sec_outcome(ctxml = test_ctxml,
                 name = "time to upload",
                 time = "As measured",
                 description = "Insert description about the measure.")

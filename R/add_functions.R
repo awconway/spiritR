@@ -19,14 +19,14 @@
 
 #' @examples
 #' \dontrun{
-#'  add_arm(xmlobject = create_ctxml, 
+#'  add_arm(ctxml = ctxml, 
 #'          arm_label = "Standard", 
 #'          arm_type =  "Active Comparator", 
 #'          arm_desc = "Manual upload to registry")
 #' }
 
 #' \dontrun{
-#' add_intervention(xmlobject = create_ctxml, 
+#' add_intervention(ctxml = ctxml, 
 #'                  int_type =  "Device", 
 #'                  int_name = "Registry entry",
 #'                  int_desc = "The usual way to enter to the registry",
@@ -34,14 +34,14 @@
 #'}
 
 #' \dontrun{
-#' add_pr_outcome(xmlobject = create_ctxml,
+#' add_pr_outcome(ctxml = ctxml,
 #'                name = "correct upload",
 #'                time = "As measured",
 #'                description = "Insert description about the measure.")
 #' }
 
 #' \dontrun{
-#' add_sec_outcome(xmlobject = test_ctxml,
+#' add_sec_outcome(ctxml = test_ctxml,
 #'                 name = "time to upload",
 #'                 time = "As measured",
 #'                 description = "Insert description about the measure.")
@@ -50,8 +50,8 @@
 
 #' @export
 #' @rdname add_functions
-add_arm <- function(xmlobject, arm_label, arm_type, arm_desc){
-    xmlobject %>% 
+add_arm <- function(ctxml, arm_label, arm_type, arm_desc){
+    ctxml %>% 
     xml2::xml_find_first(".//arm_group") %>% 
     xml2::xml_add_sibling("arm_group") %>% 
     xml2::xml_add_child("arm_group_label", arm_label) %>% 
@@ -64,9 +64,9 @@ add_arm <- function(xmlobject, arm_label, arm_type, arm_desc){
 
 #' @export
 #' @rdname add_functions
-add_intervention <- function(xmlobject, int_type, int_name, int_desc, 
+add_intervention <- function(ctxml, int_type, int_name, int_desc, 
                              arm_label){
-    xmlobject %>% 
+    ctxml %>% 
     xml2::xml_find_first(".//intervention") %>%
     xml2::xml_add_sibling("intervention") %>% 
     xml2::xml_add_child("intervention_type", int_type) %>% 
@@ -81,8 +81,8 @@ add_intervention <- function(xmlobject, int_type, int_name, int_desc,
 
 #' @export
 #' @rdname add_functions
-add_pr_outcome <- function(xmlobject, name, time, description){
-  xmlobject %>% 
+add_pr_outcome <- function(ctxml, name, time, description){
+  ctxml %>% 
     xml2::xml_find_first(".//primary_outcome") %>% 
     xml2::xml_add_sibling("primary_outcome") %>% 
     xml2::xml_add_child("outcome_measure", name) %>% 
@@ -95,8 +95,8 @@ add_pr_outcome <- function(xmlobject, name, time, description){
 
 #' @export
 #' @rdname add_functions
-add_sec_outcome <- function(xmlobject, name, time, description){
-  xmlobject %>% 
+add_sec_outcome <- function(ctxml, name, time, description){
+  ctxml %>% 
     xml2::xml_find_first(".//secondary_outcome") %>% 
     xml2::xml_add_sibling("secondary_outcome") %>% 
     xml2::xml_add_child("outcome_measure", name) %>% 
