@@ -320,43 +320,43 @@ armDescription1  <- #Description
 
 # TRIAL SUMMARY <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-set/)^ </font>
 
-|  World Health Organization Registration Data Set	 |   |  
-| --- | --- |                  
-| Title  | `r officialTitle`  |
+|  World Health Organization Registration Data Set|                                                                                                                           |  
+| ----------------------------------------------- | --- |                  
+| Title                                           | `r officialTitle`                                                                                                         |
 | Primary registry and trial identifying number 	| `r primaryRegistry`	|
 | Secondary identifying numbers                 	| `r secondaryNumbers`|
 | Sources of monetary or material support       	| `r fundingStatement`|
 | Primary sponsor contact information           	| [enter details]|
 | Secondary sponsors (if any)                   	| [enter details] |
-| Central contact   	|`r paste(firstName, lastName, sep=" ")`|
-| Study official        | `r paste(off_firstName, off_lastName, sep=" ")`|
+| Central contact   	                            |`r paste(firstName, lastName, sep=" ")`|
+| Study official                                  | `r paste(off_firstName, off_lastName, sep=" ")`|
 | Brief title                                   	| `r briefTitle` |
 | Acronym                                       	| `r studyAcronym`|
 | Countries of recruitment                      	| [enter details]   	|
 | Condition(s) or focus of study                	| [MesH] 	|
-|**Interventions**|   |
-|`r interventionName1`| Type: `r interventionType1`<br><br> Description: `r interventionDescription1`|
-| **Key eligibility criteria ** |   |
-|Age eligibility: |`r paste(minAge, maxAge, sep = " - ")`|
-|Accepts healthy volunteers|`r healthyVolunteers`|
-|Inclusion criteria | `r inclusionCriteria` |
-|Exclusion criteria | `r exclusionCriteria` |
-| **Study design**    |   |
-| Study type | Interventional trial | 
-|Allocation| `r randomAllocation` |
-|Intervention model| `r randomAssignment`|
-|Primary purpose| `r interventionalSubtype`|
-|Phase |`r phase`| 
-|**Masking**   	|   |
-|Participant|`r maskedSubject`|
-|Care Provider|`r maskedCaregiver`|
-|Investigator| `r maskedInvestigator`|
-|Outcomes Assessor| `r maskedAssesor`	|
-| **Date of enrollment**       	| `r startDate`  	|
-| **Target sample size**         	| `r sampleSize`  	|
-| **Recruitment status**        	| Not yet recruiting 	|
-| **Primary outcomes** | Outcome: `r primaryOutcome1`<br><br>Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1` 	|
-| **Secondary outcomes **  	| Outcome: [enter details]Timeframe: [enter details]Description:[enter details]  	|
+|**Interventions**                                |   |
+|`r interventionName1`                            | Type: `r interventionType1`<br><br> Description: `r interventionDescription1`|
+| **Key eligibility criteria **                   |   |
+|Age eligibility:                                 |`r paste(minAge, maxAge, sep = " - ")`|
+|Accepts healthy volunteers                       |`r healthyVolunteers`|
+|Inclusion criteria                               | `r inclusionCriteria` |
+|Exclusion criteria                               | `r exclusionCriteria` |
+| **Study design**                                |   |
+| Study type                                      | Interventional trial | 
+|Allocation                                       | `r randomAllocation` |
+|Intervention model                               | `r randomAssignment`|
+|Primary purpose                                  | `r interventionalSubtype`|
+|Phase                                            |`r phase`| 
+|**Masking**   	                                  |   |
+|Participant                                      |`r maskedSubject`|
+|Care Provider                                    |`r maskedCaregiver`|
+|Investigator                                     | `r maskedInvestigator`|
+|Outcomes Assessor                                | `r maskedAssesor`	|
+| **Date of enrollment**                        	| `r startDate`  	|
+| **Target sample size**                        	| `r sampleSize`  	|
+| **Recruitment status**                        	| Not yet recruiting 	|
+| **Primary outcomes**                            | Outcome: `r primaryOutcome1`<br><br>Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1`|
+| **Secondary outcomes **  	                      | Outcome: [enter inline rcode]Timeframe: [enter inline rcode]Description:[enter inline rcode]                          	 |
 
 <br>
 <br>
