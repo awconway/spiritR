@@ -113,21 +113,21 @@ create_ctxml <- function(){
     xml2::xml_add_sibling("enrollment", sampleSize) %>% 
     xml2::xml_add_sibling("enrollment_type", "Anticipated") %>% 
     xml2::xml_add_sibling("arm_group") %>% 
-    xml2::xml_add_child("arm_group_label", arm1) %>% 
-    xml2::xml_add_sibling("arm_type", armType1) %>%
+    xml2::xml_add_child("arm_group_label", arm_label_1) %>% 
+    xml2::xml_add_sibling("arm_type", arm_type_1) %>%
     xml2::xml_add_sibling("arm_group_description") %>% 
-    xml2::xml_add_child("textblock", armDescription1) %>% 
+    xml2::xml_add_child("textblock", arm_desc_1) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("intervention") %>% 
-    xml2::xml_add_child("intervention_type", interventionType1) %>% 
-    xml2::xml_add_sibling("intervention_name", interventionName1) %>% 
+    xml2::xml_add_child("intervention_type", int_type_1) %>% 
+    xml2::xml_add_sibling("intervention_name", int_name_1) %>% 
     xml2::xml_add_sibling("intervention_description") %>% 
-    xml2::xml_add_child("textblock", interventionDescription1) %>% 
+    xml2::xml_add_child("textblock", int_desc_1) %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("arm_group_label", arm1) %>% 
+    xml2::xml_add_sibling("arm_group_label", arm_label_1) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("eligibility") %>% 

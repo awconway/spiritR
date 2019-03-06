@@ -15,184 +15,27 @@ output:
 <p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement and was generated using <a href="http://www.github.com/awconway/spiritR/">spiritR</a></p>
 &nbsp;
 
-```{r include=FALSE}
-#This code chunk is for testing - to be removed once live
-
-primaryRegistry <- "Clinicaltrials.gov" 
-fundingStatement <- "Principal Investigator (PI) Conway has submitted an application for a New Researcher Award from the Connaught Fund (University of Toronto) to support this research. The outcome of this award will be released in June 2019. Regardless of the outcome of this application, this study will be able to be fully supported by funds received by the PI, Aaron Conway, for his appointment as Chair of Cardiovascular Nursing Research at PMCC. This includes all work undertaken by the Research Coordinator and purchasing of equipment and consumables for the HFNO and TcCO~2~ monitoring devices."
-secondaryNumbers <- "N/A"
-
-orgName <- "UHNToronto" #associated with PRS log-in details
-orgStudyID  <- "Foo trial ID new" #must be unique!!
-briefTitle <- "Foo trial to test auto upload new" # Limit 300 characters
-studyAcronym  <- "Footrial" #limit 14 characters or n/a 
-officialTitle <- "Foo trial to test auto upload: A randomized trial new" # Limit 600 
-#characters
-agency  <- "University Health Network, Toronto"  #Official name of the sponsor
-#- i.e. the organisation assocaiated with the PRS account
-investigator_username <- # Name [username] eg Aaron Conway [aconway]
-investigator_title <- # Official title
-respPartyType <- "Sponsor-Investigator" # Sponsor, Principal Investigator (responsible party designated by sponsor) or Sponsor-Investigator (individual who initiates and conducts study)
-briefSummary <- "Lay summary here" #A short description of the clinical study, including a brief statement of the clinical study's hypothesis, written in language intended for the lay public. 
-  #Limit: 5000 characters.
-overallStatus <- "Not yet recruiting" #Not yet recruiting: Participants are not 
-#yet being recruited
-#Recruiting: Participants are currently being recruited, whether or not any 
-#participants have yet been enrolled
-#Enrolling by invitation: Participants are being (or will be) selected from a 
-#predetermined population
-#Active, not recruiting: Study is continuing, meaning participants are receiving 
-#an intervention or being examined, but new participants are not currently 
-#being recruited or enrolled
-#Completed: The study has concluded normally; participants are no longer 
-#receiving an intervention or being examined (that is, last participant’s last 
-#visit has occurred)
-#Suspended: Study halted prematurely but potentially will resume
-#Terminated: Study halted prematurely and will not resume; participants are no 
-#longer being examined or receiving intervention
-#Withdrawn: Study halted prematurely, prior to enrollment of first participant
-
-startDate <- "2019-10"   # anticipated in yyyy-mm
-primaryCompletion <- "2020-10" #The date that the final participant was examined 
-#or received an intervention for the purposes of final collection of data for 
-#the primary outcome
-studyCompletion <-"2020-12" # anticipated in yyyy-mm The date the final participant was examined or received an intervention for purposes of final collection of data
-interventionalSubtype <-  "Treatment"   #Treatment, Prevention, Diagnostic, 
-#Supportive Care, Screening, Health Services Research, Basic Science, 
-#Device Feasibility, Other
-phase <- "N/A" #N/A (for trials that do not involve drug or biologic products),
-#Early Phase 1, Phase1/Phase 2, Phase 2, Phase2/Phase 3, Phase 3, Phase 4
-randomAssignment <- "Parallel"   #Single group, Parallel, Crossover, Factorial, 
-#Sequential
-  
-randomAllocation <- "Randomized"   #Randomized, Non-randomized
-  noMasking <- "False"  #True, False
-  maskedSubject <- "True"  #True, False
-  maskedCaregiver <- "True"  #True, False
-  maskedInvestigator <- "True"  #True, False
-  maskedAssesor <- "True"   #True, False
-  numberArms <- 1 #numeric
-  sampleSize <- 200 #planned sample size
-  
-primaryOutcome1 <- "Number of correct uploads"  #limit 254 characters. Name of 
-#measure
-  primaryOutcomeTime1 <- "counted every hour"  #limit 254 characters. Time 
-  #point(s) at which the measurement is assessed. The specific duration of 
-  #time over which each participant is assessed 
-  primaryOutcomeDescription1 <- "None" #Limit 999 characters. Description of 
-  #the metric if not included in outcome measure title
-  
-####All subsequent primary and secondary outcomes are to be added using the 
-  #add_pr_outcome() or add_sec_outcom() function
-  
-#Arguments for the functions are:
-  #xmlobject  = the object created using the create_ctxml function
-  #name = #limit 254 characters. Name of measure
-  #time = #limit 254 characters. Time point(s) at which the measurement is 
-  #assessed. the specific duration of time over which each participant is 
-  #assessed 
-  #description = #Limit 999 characters. Description of the metric if not 
-  #included in outcome measure title
-  
-
-arm1 <- "Intervention"  #"Arm" means a pre-specified group or subgroup of 
-#participant(s) in a clinical trial assigned to receive specific #
-#intervention(s) (or no intervention) according to a protocol. 
-#Limit 62 characters
-armType1 <- "Experimental" #Experimental, Active comparator, Placebo Comparator,
-#Sham Comparator, No Intervention, Other
-armDescription1  <- "Experimental upload"
-
-####All additional arms for the study are to be added using add_arm() 
-#  Arguments for add_arm() are:
-#  xmlobject  = the object created using the create_ctxml function
-#   arm_label  = "Arm" means a pre-specified group or subgroup of 
-#participant(s) in a clinical trial assigned to receive specific #
-#intervention(s) (or no intervention) according to a protocol. 
-#Limit 62 characters
-#  arm_type = Experimental, Active comparator, Placebo Comparator,
-#Sham Comparator, No Intervention, Other
-#  arm_desc = Additional information to describe the study arm
-
-  interventionName1 <- "R Package" #for a drug - generic name (same as in 
-  #associated arm)
-  interventionType1 <- "Device" #Drug, Device, Biological/Vaccine, 
-  #Procedure/Surgery, Radiation, Behavioural, Genetic, Dietary Supplement, 
-  #Combination Product, Diagnostic Test, Other
-  interventionDescription1 <- "Package to automatically upload to clinicaltrials.gov" #Do not repeat from arm description
-
-###Subsequent interventions are to be added by executing add_intervention()
-#  xmlobject  = the object created using the create_ctxml function
-#  int_name = for a drug - generic name (same as in #associated arm)
-#  int_type = #Drug, Device, Biological/Vaccine, 
-  #Procedure/Surgery, Radiation, Behavioural, Genetic, Dietary Supplement, 
-  #Combination Product, Diagnostic Test, Other
-#  int_desc = #Do not repeat from arm description
-#  arm_label = #Associated study arm name
-  
-#############Need to figure out how to format the text boxes well for both the registry upload and presentation in the protocol##########  
-criteria <- "All trials. No exlcusions."  #textbox contaiing both inclusion and exclusion criteria for entry to clinicaltrials.gov
-
- inclusionCriteria <- "1. Adults undergoing an elective cardiac implantable electronic device procedure in the Peter Munk Cardiac Centre Cardiac Cath Labs with conscious sedation administered by an Anesthesia Assistant (de novo and replacement/revision procedures)." # This is for the trial summary box in the protocol. Include a column of character strings eg. c("1. Undergoing a procedure with sedation")
-  exclusionCriteria <- "1. Under 16 years of age.<br>2. Underlying condition requiring chronic oxygen supplementation.<br>3. Diagnosed respiratory condition with confirmed current hypercapnia.<br>4. Pre-existing untreated pneumothorax.<br>5. Transesophageal echocardiography planned for the procedure.<br>6. Active nasal bleeding.<br>7. Complete nasal obstruction.<br>8. Recent upper airway surgery or base of skull fracture.<br>9. Previous participation in the study." # This is for the trial summary box in the protocol. Include a column of character strings eg. c("1. Emergency admission", "2. ) Insert <br> after each item not \n for new lines otherwise the markdown table will not be correct
-    
-  
-healthyVolunteers <- "No" #Yes, No
-gendersIncluded <-  "Both" #Female, Male, Both
-genderBased <- "N/A" #if applicable indicate if eligibility is based on self-representation of gender identitiy. Yes, No
-minAge <- "N/A" #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
-maxAge <- "N/A" #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
-    
-    #Central contact
-    firstName <- "Aaron"
-    lastName <- "Conway"
-    degrees <- "RN PhD"
-    phoneNo <- "334-373-8393"
-    email <- "asd@jffplc.com"
-    
-    #Overall official
-    off_firstName <- "Aaron"
-    off_lastName <- "Conway"
-    off_degrees <- "RN PhD"
-    off_affiliation <- "UHN"
-    
-    #IPD
-    ipdsharing <- "Yes" #Yes, No, Undecided
-    ipddescription <- "Open to all on publication" #Describe the IPD sharing plan, including what IPD are to be shared with other researchers.
-    ipdprotocol <- "true" #true, false
-    ipdsap <- "true" #true, false
-    ipdicf <- "true" #true, false
-    ipdcsr <- "true" #true, false
-    ipdcode <- "true" #true, false
-    ipdtime <- "On publication" #Description in text box
-    ipdcriteria <-"example text" #Description in text box
-    ipdurl <- "http://" #insert url
-    
-
-```
-
 
 ```{r eval=FALSE, include = FALSE}
-#Assign values for each of the objects below. Assigning values for these elements will achieve two purposes:
+#Assign values for each of the objects in the code chunks below. Assigning values for these elements will achieve two purposes:
 # 1. To populate a table at the begining of this protocol document displaying the World Health Organization Regitration Data Set; and
 # 2. To populate an xml document that can be uploaded directly to the clinicaltrials.gov registry using the create_ctxml() function.
 
 #This template will only work for interventional trials. There are options to register Observational and Epidemiological studies on clinicaltrials.gov but this template will not meet the requirements for the xml upload for these other types of studies.
 
 orgName <-  #associated with PRS log-in details
-orgStudy_id  <-  #must be unique!!
+orgStudy_id  <-  #must be unique study number. Sometimes it is the number associated with the funding received.
 briefTitle <- # Limit 300 characters
 studyAcronym  <- #limit 14 characters or n/a
 officialTitle <- # Limit 600 characters
-primaryRegistry <- "Clinicaltrials.gov" #Add in identifier once it is assigned
-secondaryNumbers <- #Secondary identifying numbers (if any)
+primaryRegistry <-  #Add in clinicaltrials.gov identifier number once it is assigned
+secondaryNumbers <- #Secondary identifying numbers (if any) or N/A
 fundingStatement <- # Sources of monetary support
 agency  <- #Lead sponsor
 respPartyType <- # Sponsor, Principal Investigator (responsible party designated by sponsor) or Sponsor-Investigator (individual who initiates and conducts study)
-investigator_username <- # Name [username] eg Aaron Conway [aconway]
-investigator_title <- #
-briefSummary <- #A short description of the clinical study, including a brief statement of the clinical study's hypothesis, written in language intended for the lay public. 
-#Limit: 5000 characters.
+investigator_username <- # Name [username] eg. Aaron Conway [aconway]
+investigator_title <- # Official title
+briefSummary <- #A short description of the clinical study, including a brief statement of the clinical study's hypothesis, written in language intended for the lay public. #Limit: 5000 characters.
 overallStatus <- #Not yet recruiting: Participants are not yet being recruited
 #Recruiting: Participants are currently being recruited, whether or not any participants have yet been enrolled
 #Enrolling by invitation: Participants are being (or will be) selected from a predetermined population
@@ -203,84 +46,90 @@ overallStatus <- #Not yet recruiting: Participants are not yet being recruited
 #Withdrawn: Study halted prematurely, prior to enrollment of first participant
 
 startDate <- # anticipated in yyyy-mm
-primaryCompletion <-  # anticipated in yyyy-mm The date that the final participant was examined 
-  #or received an intervention for the purposes of final collection of data for 
-  #the primary outcome
+primaryCompletion <-  # anticipated in yyyy-mm The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome
 studyCompletion <- # anticipated in yyyy-mm The date the final participant was examined or received an intervention for purposes of final collection of data
 interventionalSubtype <-   #Treatment, Prevention, Diagnostic, Supportive Care, Screening, Health Services Research, Basic Science, Device Feasibility, Other
 phase <- #N/A (for trials that do not involve drug or biologic products), Early Phase 1, Phase1/Phase 2, Phase 2, Phase2/Phase 3, Phase 3, Phase 4
 randomAssignment <- #Single group, Parallel, Crossover, Factorial, Sequential
-  randomAllocation <-  #Randomized, Non-randomized
-  noMasking <-  #True, False
-  maskedSubject <- #True, False
-  maskedCaregiver <- #True, False
-  maskedInvestigator <- #True, False
-  maskedAssessor <-  #True, False
-  numberArms <- #numeric
-  sampleSize <- #planned sample size
-  
-  #########Need to figure out how to add in extra outcomes to xml document##############
+randomAllocation <-  #Randomized, Non-randomized
+noMasking <-  #True, False
+maskedSubject <- #True, False
+maskedCaregiver <- #True, False
+maskedInvestigator <- #True, False
+maskedAssessor <-  #True, False
+sampleSize <- #planned sample size
+
+criteria <- #textbox contaiing both inclusion and exclusion criteria for entry to clinicaltrials.gov
+inclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
+exclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
+
+healthyVolunteers <- #Yes, No
+gendersIncluded <- #Female, Male, Both
+genderBased <- #if applicable indicate if eligibility is based on self-representation of gender identitiy. Yes, No
+minAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
+maxAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
+    
+#Central contact
+firstName <- 
+lastName <- 
+degrees <- 
+phoneNo <- 
+email <- 
+    
+#Overall official
+off_firstName <-
+off_lastName <- 
+off_degrees <- 
+off_affiliation <- # Full name of the official's organization. If none, specify Unaffiliated. 
+off_role <- # Study Chair, Study Director or Study Principal Investigator
+    
+#IPD
+ipdSharing <- #Yes, No, Undecided
+ipdDescription <- #Describe the IPD sharing plan, including what IPD are to be shared with other researchers.
+ipdprotocol <-  #true, false
+ipdsap <- #true, false
+ipdicf <- #true, false
+ipdcsr <- #true, false
+ipdcode <- #true, false
+ipdtime <- #Description in text box
+ipdcriteria <- #Description in text box
+ipdurl <- #insert url
+```
+
+
+```{r eval=FALSE, include = FALSE}
 primaryOutcome1 <- #limit 254 characters. Name of measure
-  primaryOutcomeTime1 <- #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
-  primaryOutcomeDescription1 <- #Limit 999 characters. Description of the metric if not included in outcome measure title
-  
-####All subsequent primary and secondary outcomes are to be added using the function....
-  #outcomeName <- #limit 254 characters. Name of measure
-  #outcomeTime <- #limit 254 characters. Time point(s) at which the measurement is assessed. the specific duration of time over which each participant is assessed 
-  #outcomeDescription <- #Limit 999 characters. Description of the metric if not included in outcome measure title
-  
-  #########Need to figure out how to add in extra arms and interventions to xml document##############
+primaryOutcomeTime1 <- #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
+primaryOutcomeDescription1 <- #Limit 999 characters. Description of the metric if not included in outcome measure title
 
-arm1 <- #"Arm" means a pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol. Limit 62 characters
-armType1 <- #Experimental, Active comparator, Placebo Comparator, Sham Comparator, No Intervention, Other
-armDescription1  <- #Description
-###Subsequent arms are to be added by executing the function....
-  
-  interventionName1 <- #for a drug - generic name (same as in associated arm)
-  interventionType1 <- #Drug, Device, Biological/Vaccine, Procedure/Surgery, Radiation, Behavioural, Genetic, Dietary Supplement, Combination Product, Diagnostic Test, Other
-  interventionDescription1 <-  #Do not repeat from arm description
+#Add in any subsequent primary and secondary outcomes here.
+#eg:  
+#outcomeName <- #limit 254 characters. Name of measure
+#outcomeTime <- #limit 254 characters. Time point(s) at which the measurement is assessed The specific duration of time over which each participant is assessed 
+#outcomeDescription <- #Limit 999 characters. Description of the metric if not included in outcome measure title
 
-###Subsequent interventions are to be added by executing the function....
-  
-#############Need to figure out how to format the text boxes well for both the registry upload and presentation in the protocol##########  
-  criteria <- #textbox contaiing both inclusion and exclusion criteria for entry to clinicaltrials.gov
-  inclusionCriteria <- # This is for the trial summary box in the protocol. Include a column of character strings eg. c("1. Undergoing a procedure with sedation")
-  exclusionCriteria <- # This is for the trial summary box in the protocol. Include a column of character strings eg. c("1. Emergency admission", "2. ) #Insert <br> after each item not \n for new lines otherwise the markdown table will not be correct    
+#When ready to upload to clinicaltrials.gov, ensure that all subsequent primary and secondary outcomes are added to the xml document using the add_pr_outcome() and add_sec_outcome() functions
+```
 
-    
-  
-  healthyVolunteers <- #Yes, No
-    gendersIncluded <- #Female, Male, Both
-    genderBased <- #if applicable indicate if eligibility is based on self-representation of gender identitiy. Yes, No
-    minAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
-    maxAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
-    
-    #Central contact
-    firstName <- 
-    lastName <- 
-    degrees <- 
-    phoneNo <- 
-    email <- 
-    
-    #Overall official
-    off_firstName <-
-  off_lastName <- 
-  off_degrees <- 
-  off_affiliation <- # Full name of the official's organization. If none, specify Unaffiliated. 
-  off_role <- # Study Chair, Study Director or Study Principal Investigator
-    
-    #IPD
-    ipdSharing <- #Yes, No, Undecided
-    ipdDescription <- #Describe the IPD sharing plan, including what IPD are to be shared with other researchers.
-    ipdprotocol <-  #true, false
-    ipdsap <- #true, false
-    ipdicf <- #true, false
-    ipdcsr <- #true, false
-    ipdcode <- #true, false
-    ipdtime <- #Description in text box
-    ipdcriteria <- #Description in text box
-    ipdurl <- #insert url
-    
+
+```{r eval=FALSE, include = FALSE}
+numberArms <- #numeric
+arm_label_1 <- #"Arm" means a pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol. Limit 62 characters
+arm_type_1 <- #Experimental, Active comparator, Placebo Comparator, Sham Comparator, No Intervention, Other
+arm_desc_1  <- #Description
+#Assign objects for any subsequent arms here, including the label, type and description as per above (i.e. arm1).
+
+#When ready to upload to clinicaltrials.gov, ensure that all subsequent arms are added to the xml document using the add_arm() function
+```
+
+
+```{r eval=FALSE, include = FALSE}
+int_name_1 <- #for a drug - generic name (same as in associated arm)
+int_type_1 <- #Drug, Device, Biological/Vaccine, Procedure/Surgery, Radiation, Behavioural, Genetic, Dietary Supplement, Combination Product, Diagnostic Test, Other
+int_desc_1 <-  #Do not repeat from arm description
+#Assign objects for any subsequent arms here, including the name, type and description as per above.
+
+#When ready to upload to clinicaltrials.gov, ensure that all subsequent interventions are added to the xml document using the add_intervention() function
 ```
 
 
@@ -313,50 +162,51 @@ armDescription1  <- #Description
 
 | Version  	| Date       	| Amendment Text 	| Description 	|
 |----------	|------------	|----------------	|-------------	|
-| 1        	| enter date 	|                	|             	|
+|         	|           	|                	|             	|
 
 
 <br><br>
 
 # TRIAL SUMMARY <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/data-set/)^ </font>
 
-|  World Health Organization Registration Data Set|                                                                                                                           |  
-| ----------------------------------------------- | --- |                  
-| Title                                           | `r officialTitle`                                                                                                         |
-| Primary registry and trial identifying number 	| `r primaryRegistry`	|
-| Secondary identifying numbers                 	| `r secondaryNumbers`|
-| Sources of monetary or material support       	| `r fundingStatement`|
-| Primary sponsor contact information           	| [enter details]|
-| Secondary sponsors (if any)                   	| [enter details] |
-| Central contact   	                            |`r paste(firstName, lastName, sep=" ")`|
-| Study official                                  | `r paste(off_firstName, off_lastName, sep=" ")`|
-| Brief title                                   	| `r briefTitle` |
-| Acronym                                       	| `r studyAcronym`|
-| Countries of recruitment                      	| [enter details]   	|
-| Condition(s) or focus of study                	| [MesH] 	|
-|**Interventions**                                |   |
-|`r interventionName1`                            | Type: `r interventionType1`<br><br> Description: `r interventionDescription1`|
-| **Key eligibility criteria **                   |   |
-|Age eligibility:                                 |`r paste(minAge, maxAge, sep = " - ")`|
-|Accepts healthy volunteers                       |`r healthyVolunteers`|
-|Inclusion criteria                               | `r inclusionCriteria` |
-|Exclusion criteria                               | `r exclusionCriteria` |
-| **Study design**                                |   |
-| Study type                                      | Interventional trial | 
-|Allocation                                       | `r randomAllocation` |
-|Intervention model                               | `r randomAssignment`|
-|Primary purpose                                  | `r interventionalSubtype`|
-|Phase                                            |`r phase`| 
-|**Masking**   	                                  |   |
-|Participant                                      |`r maskedSubject`|
-|Care Provider                                    |`r maskedCaregiver`|
-|Investigator                                     | `r maskedInvestigator`|
-|Outcomes Assessor                                | `r maskedAssesor`	|
-| **Date of enrollment**                        	| `r startDate`  	|
-| **Target sample size**                        	| `r sampleSize`  	|
-| **Recruitment status**                        	| Not yet recruiting 	|
-| **Primary outcomes**                            | Outcome: `r primaryOutcome1`<br><br>Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1`|
-| **Secondary outcomes **  	                      | Outcome: [enter inline rcode]Timeframe: [enter inline rcode]Description:[enter inline rcode]                          	 |
+|                              |World Health Organization Registration Data Set|
+| -----------------------------| --------------------------------------------- |                  
+| Title                        | `r officialTitle`                             |
+| Registry identifying number  | `r paste("clinicaltrials.gov", primaryRegistry, sep = " ")`|
+| Secondary identifying numbers| `r secondaryNumbers`                          |
+| Sources of support        	 | `r fundingStatement`                          |
+| Primary sponsor            	 | `r agency`                                    |
+| Secondary sponsors (if any)  | [enter details]                               |
+| Central contact   	         | `r paste(firstName, lastName, sep=" ")`       |
+| Study official               | `r paste(off_firstName, off_lastName,sep=" ")`|
+| Brief title                  | `r briefTitle`                                |
+| Acronym                      | `r studyAcronym`                              |
+| Countries of recruitment     | [enter details]   	                           |
+| Condition(s) or study focus  | [MesH] 	                                     |
+| **Interventions**            |                                               |
+| `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
+| **Key eligibility criteria **|                                               |
+| Age eligibility:             | `r paste(minAge, maxAge, sep = " - ")`        |
+| Accepts healthy volunteers   | `r healthyVolunteers`                         |
+| Inclusion criteria           | `r inclusionCriteria`                         |
+| Exclusion criteria           | `r exclusionCriteria`                         |
+| **Study design**             |                                               |
+| Study type                   | Interventional trial                          | 
+| Allocation                   | `r randomAllocation`                          |
+| Intervention model           | `r randomAssignment`                          |
+| Primary purpose              | `r interventionalSubtype`                     |
+| Phase                        |`r phase`                                      | 
+| **Masking**   	             |                                               |
+| Participant                  | `r maskedSubject`                             |
+| Care Provider                | `r maskedCaregiver`                           |
+| Investigator                 | `r maskedInvestigator`                        |                          
+| Outcomes Assessor            | `r maskedAssesor`	                           |
+| **Date of enrollment**       | `r startDate`  	                             |
+| **Target sample size**       | `r sampleSize`  	                             |
+| **Recruitment status**       | Not yet recruiting 	                         |
+| **Primary outcomes**         |                                               |
+| `r primaryOutcome1`          | Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1`|
+| **Secondary outcomes **  	   | Outcome: [enter inline rcode]Timeframe: [enter inline rcode]Description:[enter inline rcode]|
 
 <br>
 <br>
@@ -387,9 +237,11 @@ armDescription1  <- #Description
 
 ### Inclusion criteria 
 
+`r inclusionCriteria`
 
 ### Exclusion criteria
 
+`r exclusionCriteria`
 
 ## Interventions <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/interventions/)^ </font>
 
@@ -399,7 +251,11 @@ armDescription1  <- #Description
 
 >Intervention
 
+`r int_name_1`
 
+*Type*: `r int_type_1`
+
+*Description*: `r int_desc_1`
 
 >Comparison
 
@@ -425,8 +281,11 @@ armDescription1  <- #Description
 
 
 
->Primary outcome: 
+>Primary outcome: `r primaryOutcome1`
 
+*Timeframe*: `r primaryOutcomeTime1`
+
+*Description*: `r primaryOutcomeDescription1`
 
 
 >Secondary outcomes
@@ -462,7 +321,7 @@ armDescription1  <- #Description
 
 ## Sample size <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sample-size/)^ </font>
 
-
+The sample size for this study is `r sampleSize`.
 
 ## Recruitment <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/recruitment/)^ </font>
 
@@ -598,7 +457,13 @@ armDescription1  <- #Description
 
 ### Reproducible research <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/31c-reproducible-research/)^ </font>
 
+*Inidividual participant data sharing statement*
 
+`r ipddescription`
+
+*Individual participant data sharing time-frame statement*
+
+`r ipdtime`
 
 
 
@@ -622,6 +487,8 @@ armDescription1  <- #Description
 
 ## Funders <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/funding/)^ </font>
 
+`r fundingStatement`
+
 
 
 ## Roles and responsibilities
@@ -630,8 +497,7 @@ armDescription1  <- #Description
 
 
 
-### Sponsor and funder <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/ssponsor-and-funder/)^ </font>
-
+### Sponsor and funder <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sponsor-and-funder/)^ </font>
 
 
 ### Trial committees <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/committees/)^ </font>
