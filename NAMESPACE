@@ -2,7 +2,9 @@
 
 export("%>%")
 export(add_arm)
+export(add_condition)
 export(add_intervention)
+export(add_keyword)
 export(add_pr_outcome)
 export(add_sec_outcome)
 export(create_ctxml)

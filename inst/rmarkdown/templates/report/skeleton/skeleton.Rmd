@@ -58,7 +58,7 @@ maskedCaregiver <- #True, False
 maskedInvestigator <- #True, False
 maskedAssessor <-  #True, False
 sampleSize <- #planned sample size
-
+  
 criteria <- #textbox contaiing both inclusion and exclusion criteria for entry to clinicaltrials.gov
 inclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
 exclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
@@ -132,6 +132,19 @@ int_desc_1 <-  #Do not repeat from arm description
 #When ready to upload to clinicaltrials.gov, ensure that all subsequent interventions are added to the xml document using the add_intervention() function
 ```
 
+```{r}
+condition_1 <-  # Enter MeSH term for condition being studied in the trial, or Focus of the Study
+#Assign objects for any subsequent conditions here. eg. condition_2 <- "cardiac"
+
+#When ready to upload to clinicaltrials.gov, ensure that all subsequent conditions are added to the xml document using the add_condition() function
+```
+
+```{r}
+keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help users find studies in the database. 
+#Assign objects for any subsequent keywords here. eg. keyword_2 <- "sedation"
+
+#When ready to upload to clinicaltrials.gov, ensure that all subsequent conditions are added to the xml document using the add_keyword() function
+```
 
 
 |                               	|                       	|
@@ -182,7 +195,7 @@ int_desc_1 <-  #Do not repeat from arm description
 | Brief title                  | `r briefTitle`                                |
 | Acronym                      | `r studyAcronym`                              |
 | Countries of recruitment     | [enter details]   	                           |
-| Condition(s) or study focus  | [MesH] 	                                     |
+| Condition(s) or study focus  | `r paste(condition_1, keyword, 1, sep = ";")` |
 | **Interventions**            |                                               |
 | `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
 | **Key eligibility criteria **|                                               |
@@ -199,7 +212,7 @@ int_desc_1 <-  #Do not repeat from arm description
 | **Masking**   	             |                                               |
 | Participant                  | `r maskedSubject`                             |
 | Care Provider                | `r maskedCaregiver`                           |
-| Investigator                 | `r maskedInvestigator`                        |                          
+| Investigator                 | `r maskedInvestigator`                        |      
 | Outcomes Assessor            | `r maskedAssesor`	                           |
 | **Date of enrollment**       | `r startDate`  	                             |
 | **Target sample size**       | `r sampleSize`  	                             |

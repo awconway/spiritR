@@ -6,7 +6,10 @@
 \alias{add_intervention}
 \alias{add_pr_outcome}
 \alias{add_sec_outcome}
-\title{Add arms, interventions and outcomes to an xml document}
+\alias{add_condition}
+\alias{add_keyword}
+\title{Add arms, interventions and outcomes to an existing xml document for upload
+to clinicaltrials.gov}
 \usage{
 add_arm(ctxml, arm_label, arm_type, arm_desc)
 
@@ -15,25 +18,72 @@ add_intervention(ctxml, int_type, int_name, int_desc, arm_label)
 add_pr_outcome(ctxml, name, time, description)
 
 add_sec_outcome(ctxml, name, time, description)
+
+add_condition(ctxml, condition)
+
+add_keyword(ctxml, keyword)
+}
+\arguments{
+\item{ctxml}{A xml document generated from the create_ctxml() function}
+
+\item{arm_label}{Label assigned to arm of clinical trial. Arm means a
+pre-specified group or subgroup of participant(s) in a clinical trial
+assigned to receive specific intervention(s) (or no intervention).}
+
+\item{arm_type}{Either Experimental, Active comparator, Placebo Comparator,
+Sham Comparator, No Intervention, or Other.}
+
+\item{arm_desc}{Description of the arm.}
+
+\item{int_type}{Drug, Device, Biological/Vaccine, Procedure/Surgery,
+Radiation, Behavioural, Genetic, Dietary Supplement, Combination Product,
+Diagnostic Test, or Other.}
+
+\item{int_name}{Name of the intervention. For a drug, it is the generic name.}
+
+\item{int_desc}{Other details about the intervention not included in name.}
+
+\item{name}{Name of outome measure.}
+
+\item{time}{Time point(s) at which the measurement is assessed.}
+
+\item{description}{Other details about the outcome measure not included in
+the name}
+
+\item{condition}{MeSH term for condition being studied in the trial, or
+Focus of the Study}
+
+\item{keyword}{Words or phrases that best describe the protocol. Keywords
+help users find studies in the database.}
 }
 \value{
-A xml nodespace
+A xml document
 }
 \description{
-These functions add arms, interventions, primary and secondary outcomes to
-the xml document created using the create_ctxml() function. Calls to these
-functions should not be assigned to an object.
+These functions add arms, interventions, primary and secondary outcomes as
+well as conditions and keywords to an xml document created using the
+create_ctxml() function. Calls to these functions should not be assigned to
+an object.
 }
 \details{
 \itemize{
 \item \code{add_arm()}: Adds an xml nodespace containing information about the arm
-name, type and description.
+name, type and description to the xml document.
 \item \code{add_intervention()}: Adds an xml nodespace containing information about
-the intervention name, type, description and arm it is associated with.
+the intervention name, type, description and arm it is associated with to the
+xml document.
 \item \code{add_pr_outcome()}: Adds an xml nodespace containing information about the
-outcome name, time frame for measurement and additional descriptive details.
+outcome name, time frame for measurement and additional descriptive details
+to the xml document.
 \item \code{add_sec_outcome()}: Adds an xml nodespace containing information about the
-outcome name, time frame for measurement and additional descriptive details.
+outcome name, time frame for measurement and additional descriptive details
+to the xml document.
+\item \code{add_condition()}: Adds an xml nodespace containing a MeSH term for the
+condition being studied in the trial, or Focus of the Study to the xml
+document.
+\item \code{add_keyword()}: Adds an xml nodespace containing a Words or phrases that
+best describe the protocol. Keywords help users find studies in the database
+to the xml document.
 }
 }
 \examples{
@@ -62,4 +112,16 @@ add_sec_outcome(ctxml = test_ctxml,
                 time = "As measured",
                 description = "Insert description about the measure.")
 }
+
+#' \dontrun{
+add_condition(ctxml = test_ctxml,
+              condition = "Cardiac")
+}
+
+#' \dontrun{
+add_keyword(ctxml = test_ctxml,
+            keyword = "sedation")
+}
+
+
 }

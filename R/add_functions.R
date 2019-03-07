@@ -1,21 +1,54 @@
-#' Add arms, interventions and outcomes to an xml document
+#' Add arms, interventions and outcomes to an existing xml document for upload 
+#' to clinicaltrials.gov
 #' 
-#' These functions add arms, interventions, primary and secondary outcomes to 
-#' the xml document created using the create_ctxml() function. Calls to these
-#' functions should not be assigned to an object. 
+#' These functions add arms, interventions, primary and secondary outcomes as 
+#' well as conditions and keywords to an xml document created using the 
+#' create_ctxml() function. Calls to these functions should not be assigned to 
+#' an object. 
 
 #' @details 
 #' 
 #' * `add_arm()`: Adds an xml nodespace containing information about the arm
-#' name, type and description.
+#' name, type and description to the xml document.
 #' * `add_intervention()`: Adds an xml nodespace containing information about 
-#' the intervention name, type, description and arm it is associated with.
+#' the intervention name, type, description and arm it is associated with to the 
+#' xml document.
 #' * `add_pr_outcome()`: Adds an xml nodespace containing information about the
-#' outcome name, time frame for measurement and additional descriptive details.
+#' outcome name, time frame for measurement and additional descriptive details 
+#' to the xml document.
 #' * `add_sec_outcome()`: Adds an xml nodespace containing information about the
-#' outcome name, time frame for measurement and additional descriptive details.
+#' outcome name, time frame for measurement and additional descriptive details 
+#' to the xml document.
+#' * `add_condition()`: Adds an xml nodespace containing a MeSH term for the 
+#' condition being studied in the trial, or Focus of the Study to the xml 
+#' document.
+#' * `add_keyword()`: Adds an xml nodespace containing a Words or phrases that 
+#' best describe the protocol. Keywords help users find studies in the database 
+#' to the xml document.
 #' 
-#' @return A xml nodespace
+#' 
+#' @param ctxml A xml document generated from the create_ctxml() function
+#' @param arm_label Label assigned to arm of clinical trial. Arm means a 
+#' pre-specified group or subgroup of participant(s) in a clinical trial 
+#' assigned to receive specific intervention(s) (or no intervention).
+#' @param arm_type Either Experimental, Active comparator, Placebo Comparator, 
+#' Sham Comparator, No Intervention, or Other.
+#' @param arm_desc Description of the arm.
+#' @param int_name Name of the intervention. For a drug, it is the generic name.
+#' @param int_type Drug, Device, Biological/Vaccine, Procedure/Surgery, 
+#' Radiation, Behavioural, Genetic, Dietary Supplement, Combination Product, 
+#' Diagnostic Test, or Other.
+#' @param int_desc  Other details about the intervention not included in name.
+#' @param name Name of outome measure.
+#' @param time Time point(s) at which the measurement is assessed.
+#' @param description Other details about the outcome measure not included in 
+#' the name
+#' @param condition MeSH term for condition being studied in the trial, or 
+#' Focus of the Study 
+#' @param keyword Words or phrases that best describe the protocol. Keywords 
+#' help users find studies in the database.
+#'   
+#' @return A xml document
 
 #' @examples
 #' \dontrun{
@@ -46,6 +79,18 @@
 #'                 time = "As measured",
 #'                 description = "Insert description about the measure.")
 #' }
+#' 
+#' #' \dontrun{
+#' add_condition(ctxml = test_ctxml,
+#'               condition = "Cardiac")
+#' }
+#' 
+#' #' \dontrun{
+#' add_keyword(ctxml = test_ctxml,
+#'             keyword = "sedation")
+#' }
+#' 
+#' 
 #' @name add_functions
 
 #' @export
@@ -107,7 +152,24 @@ add_sec_outcome <- function(ctxml, name, time, description){
 }
 
 
+#' @export
+#' @rdname add_functions
+add_condition <- function(ctxml, condition){
+  ctxml %>% 
+    xml2::xml_find_first(".//enrollment_type") %>% 
+    xml2::xml_add_sibling("condition", condition) %>%
+    xml2::xml_root()
+}
 
+
+#' @export
+#' @rdname add_functions
+add_keyword <- function(ctxml, keyword){
+  ctxml %>% 
+    xml2::xml_find_first(".//enrollment_type") %>% 
+    xml2::xml_add_sibling("condition", keyword) %>%
+    xml2::xml_root()
+}
 
 
 
