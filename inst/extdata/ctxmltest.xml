@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<study_collection xmlns:prs="http://clinicaltrials.gov/prs">
+  <clinical_study>
+    <id_info>
+      <org_name>UHNToronto</org_name>
+      <org_study_id>Foo trial ID new</org_study_id>
+    </id_info>
+    <is_fda_regulated/>
+    <is_section_801/>
+    <delayed_posting/>
+    <is_ind_study/>
+    <brief_title>Foo trial to test auto upload new</brief_title>
+    <acronym>Footrial</acronym>
+    <official_title>Foo trial to test auto upload: A randomized trial new</official_title>
+    <sponsors>
+      <lead_sponsor>
+        <agency>University Health Network, Toronto</agency>
+      </lead_sponsor>
+      <resp_party>
+        <resp_party_type>Sponsor-Investigator</resp_party_type>
+        <investigator_username>Sponsor-Investigator</investigator_username>
+        <investigator_title>Sponsor-Investigator</investigator_title>
+        <investigator_affiliation/>
+        <name_title/>
+        <organization/>
+        <phone/>
+        <phone_ext/>
+        <email/>
+      </resp_party>
+    </sponsors>
+    <oversight_info>
+      <irb_info>
+        <approval_status/>
+      </irb_info>
+      <has_dmc/>
+      <fda_regulated_drug/>
+      <fda_regulated_device/>
+      <post_prior_to_approval/>
+    </oversight_info>
+    <brief_summary>
+      <textblock>Lay summary here</textblock>
+    </brief_summary>
+    <detailed_description>
+      <textblock/>
+    </detailed_description>
+    <overall_status>Not yet recruiting</overall_status>
+    <why_stopped/>
+    <verification_date/>
+    <start_date>2019-10</start_date>
+    <start_date_type>Anticipated</start_date_type>
+    <end_date/>
+    <last_follow_up_date>2020-12</last_follow_up_date>
+    <last_follow_up_date_type>Anticipated</last_follow_up_date_type>
+    <prim_compl_date>2020-10</prim_compl_date>
+    <primary_compl_date_type>Anticipated</primary_compl_date_type>
+    <study_design>
+      <study_type>Interventional</study_type>
+      <interventional_design>
+        <interventional_subtype>Treatment</interventional_subtype>
+        <phase>N/A</phase>
+        <assignment>Parallel</assignment>
+        <model_description>
+          <textblock/>
+        </model_description>
+        <allocation>Randomized</allocation>
+        <masking/>
+        <no_masking>False</no_masking>
+        <masked_subject>True</masked_subject>
+        <masked_caregiver>True</masked_caregiver>
+        <masked_investigator>True</masked_investigator>
+        <masked_assesor>True</masked_assesor>
+        <masking_description>
+          <textblock/>
+        </masking_description>
+        <control/>
+        <number_of_arms>1</number_of_arms>
+      </interventional_design>
+    </study_design>
+    <primary_outcome>
+      <outcome_measure>Number of correct uploads</outcome_measure>
+      <outcome_time_frame>counted every hour</outcome_time_frame>
+      <outcome_description>
+        <textblock>None</textblock>
+      </outcome_description>
+    </primary_outcome>
+    <secondary_outcome/>
+    <enrollment>200</enrollment>
+    <enrollment_type>Anticipated</enrollment_type>
+    <condition>cardiac</condition>
+    <keyword>sedation</keyword>
+    <arm_group>
+      <arm_group_label>Intervention</arm_group_label>
+      <arm_type>Experimental</arm_type>
+      <arm_group_description>
+        <textblock>Experimental upload</textblock>
+      </arm_group_description>
+    </arm_group>
+    <intervention>
+      <intervention_type>Device</intervention_type>
+      <intervention_name>R Package</intervention_name>
+      <intervention_description>
+        <textblock>Package to automatically upload to clinicaltrials.gov</textblock>
+      </intervention_description>
+      <arm_group_label>Intervention</arm_group_label>
+    </intervention>
+    <intervention>
+      <intervention_type>Device</intervention_type>
+      <intervention_name>test intervention</intervention_name>
+      <intervention_description>
+        <textblock>description for intervention</textblock>
+      </intervention_description>
+      <arm_group_label>Intervention</arm_group_label>
+    </intervention>
+    <eligibility>
+      <study_population>
+        <textblock/>
+      </study_population>
+      <sampling_method/>
+      <criteria>
+        <textblock>All trials. No exlcusions.</textblock>
+      </criteria>
+      <healthy_volunteers>No</healthy_volunteers>
+      <gender>Both</gender>
+      <gender_based>N/A</gender_based>
+      <gender_description>
+        <textblock/>
+      </gender_description>
+      <minimum_age>N/A</minimum_age>
+      <maximum_age>N/A</maximum_age>
+    </eligibility>
+    <overall_official>
+      <first_name>Aaron</first_name>
+      <middle_name/>
+      <last_name>Conway</last_name>
+      <degrees>RN PhD</degrees>
+      <role>Principal Investigator</role>
+      <affiliation>UHN</affiliation>
+    </overall_official>
+    <overall_contact>
+      <first_name>Aaron</first_name>
+      <middle_name/>
+      <last_name>Conway</last_name>
+      <degrees>RN PhD</degrees>
+      <phone>334-373-8393</phone>
+      <phone_ext/>
+      <email>asd@jffplc.com</email>
+    </overall_contact>
+    <overall_contact_backup>
+      <first_name/>
+      <middle_name/>
+      <last_name/>
+      <degrees/>
+      <phone/>
+      <phone_ext/>
+      <email/>
+    </overall_contact_backup>
+    <ipd_sharing_statement>
+      <sharing_ipd>Yes</sharing_ipd>
+      <ipd_description>
+        <textblock>Open to all on publication</textblock>
+      </ipd_description>
+      <ipd_info_type_protocol>true</ipd_info_type_protocol>
+      <ipd_info_type_sap>true</ipd_info_type_sap>
+      <ipd_info_type_icf>true</ipd_info_type_icf>
+      <ipd_info_type_csr>true</ipd_info_type_csr>
+      <ipd_info_type_analytic_code>true</ipd_info_type_analytic_code>
+      <ipd_time_frame>
+        <textblock>On publication</textblock>
+      </ipd_time_frame>
+      <ipd_access_criteria>
+        <textblock>example text</textblock>
+      </ipd_access_criteria>
+      <ipd_url>http://</ipd_url>
+    </ipd_sharing_statement>
+  </clinical_study>
+</study_collection>

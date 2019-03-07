@@ -111,7 +111,9 @@ create_ctxml <- function(){
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("secondary_outcome") %>%
     xml2::xml_add_sibling("enrollment", sampleSize) %>% 
-    xml2::xml_add_sibling("enrollment_type", "Anticipated") %>% 
+    xml2::xml_add_sibling("enrollment_type", "Anticipated") %>%
+    xml2::xml_add_sibling("condition", condition_1) %>%
+    xml2::xml_add_sibling("keyword", keyword_1) %>% 
     xml2::xml_add_sibling("arm_group") %>% 
     xml2::xml_add_child("arm_group_label", arm_label_1) %>% 
     xml2::xml_add_sibling("arm_type", arm_type_1) %>%
