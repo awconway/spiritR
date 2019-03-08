@@ -128,14 +128,22 @@ int_desc_1 <-  #Do not repeat from arm description
 #When ready to upload to clinicaltrials.gov, ensure that all subsequent interventions are added to the xml document using the add_intervention() function
 ```
 
+<<<<<<< HEAD
 ```{r include = FALSE}
+=======
+```{r}
+>>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
 condition_1 <-  # Enter MeSH term for condition being studied in the trial, or Focus of the Study
 #Assign objects for any subsequent conditions here. eg. condition_2 <- "cardiac"
 
 #When ready to upload to clinicaltrials.gov, ensure that all subsequent conditions are added to the xml document using the add_condition() function
 ```
 
+<<<<<<< HEAD
 ```{r include = FALSE}
+=======
+```{r}
+>>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
 keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help users find studies in the database. 
 #Assign objects for any subsequent keywords here. eg. keyword_2 <- "sedation"
 
@@ -182,6 +190,7 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 | -----------------------------| ------------------------------------------------------- |                  
 | Title                        | `r officialTitle`                                       |
 | Registry identifying number  | `r paste("clinicaltrials.gov", primaryRegistry, sep = " ")`|
+<<<<<<< HEAD
 | Secondary identifying numbers| `r secondaryNumbers`                                    |
 | Sources of support        	 | `r fundingStatement`                                    |
 | Primary sponsor            	 | `r agency`                                              |
@@ -214,6 +223,40 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 | **Target sample size**       | `r sampleSize`  	                                       |
 | **Recruitment status**       | Not yet recruiting 	                                   |
 | **Primary outcomes**         |                                                         |
+=======
+| Secondary identifying numbers| `r secondaryNumbers`                          |
+| Sources of support        	 | `r fundingStatement`                          |
+| Primary sponsor            	 | `r agency`                                    |
+| Secondary sponsors (if any)  | [enter details]                               |
+| Central contact   	         | `r paste(firstName, lastName, sep=" ")`       |
+| Study official               | `r paste(off_firstName, off_lastName,sep=" ")`|
+| Brief title                  | `r briefTitle`                                |
+| Acronym                      | `r studyAcronym`                              |
+| Countries of recruitment     | [enter details]   	                           |
+| Condition(s) or study focus  | `r paste(condition_1, keyword, 1, sep = ";")` |
+| **Interventions**            |                                               |
+| `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
+| **Key eligibility criteria **|                                               |
+| Age eligibility:             | `r paste(minAge, maxAge, sep = " - ")`        |
+| Accepts healthy volunteers   | `r healthyVolunteers`                         |
+| Inclusion criteria           | `r inclusionCriteria`                         |
+| Exclusion criteria           | `r exclusionCriteria`                         |
+| **Study design**             |                                               |
+| Study type                   | Interventional trial                          | 
+| Allocation                   | `r randomAllocation`                          |
+| Intervention model           | `r randomAssignment`                          |
+| Primary purpose              | `r interventionalSubtype`                     |
+| Phase                        |`r phase`                                      | 
+| **Masking**   	             |                                               |
+| Participant                  | `r maskedSubject`                             |
+| Care Provider                | `r maskedCaregiver`                           |
+| Investigator                 | `r maskedInvestigator`                        |      
+| Outcomes Assessor            | `r maskedAssesor`	                           |
+| **Date of enrollment**       | `r startDate`  	                             |
+| **Target sample size**       | `r sampleSize`  	                             |
+| **Recruitment status**       | Not yet recruiting 	                         |
+| **Primary outcomes**         |                                               |
+>>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
 | `r primaryOutcome1`          | Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1`|
 | **Secondary outcomes **  	   | Outcome: [enter inline rcode]Timeframe: [enter inline rcode]Description:[enter inline rcode]|
 

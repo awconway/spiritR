@@ -24,7 +24,11 @@ Remotes:
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 
+<<<<<<< HEAD
     testthat,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+=======
+    testthat
+>>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
