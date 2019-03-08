@@ -23,11 +23,11 @@ for insstitutional approval.}
 \item{agency}{Name of the lead sponsor. This would be the name of the
 principal investigator if it is a Sponsor-Investigator trial.}
 
-\item{resp_party_type}{Either: Sponsor; Principal Investigator (responsible
+\item{resp_party_type}{Options are: Sponsor; Principal Investigator (responsible
 party designated by sponsor) or Sponsor-Investigator (individual who
 initiates and conducts study).}
 
-\item{investigator_username}{Format is First Name Last Name \link{username}
+\item{investigator_username}{Format is First Name Last Name [\link{username}]
 eg. Aaron Conway [\link{aconway}]. This is associated with your prs log-in}
 
 \item{investigator_title}{Offical title e.g. Assistant Professor}
