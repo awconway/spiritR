@@ -5,36 +5,75 @@
 #' 
 #' @return A xml document
 #' 
+#' @param org_name The code for the organisation name associated with your PRS 
+#' clinicaltrials.gov log-in details.
+#' @param org_study_id Must be a unique study number from the organization. 
+#' Sometimes it is the number associated with the funding received or submission 
+#' for insstitutional approval.
+#' @param brief_title Brief title for the study with a limit of 300 characters
+#' @param study_acronym limit to 14 characters or enter n/a
+#' @param official_title Study title limited to 600 characters
+#' @param agency Name of the lead sponsor. This would be the name of the 
+#' principal investigator if it is a Sponsor-Investigator trial.
+#' @param resp_party_type Options are: Sponsor; Principal Investigator (responsible 
+#' party designated by sponsor) or Sponsor-Investigator (individual who 
+#' initiates and conducts study).
+#' @param investigator_username Format is First Name Last Name [[username]] 
+#' eg. Aaron Conway [[aconway]]. This is associated with your prs log-in
+#' @param investigator_title Offical title e.g. Assistant Professor
+#' @param brief_summary A short description of the clinical study, including a 
+#' brief statement of the clinical study's hypothesis, written in language 
+#' intended for the lay public. Limit is 5000 characters.
+#' @param overall_status Not yet recruiting: Participants are not yet being recruited
+#' 
+#' Recruiting: Participants are currently being recruited, whether or not any participants have yet been enrolled
+#' 
+#' Enrolling by invitation: Participants are being (or will be) selected from a predetermined population
+#' 
+#' Active, not recruiting: Study is continuing, meaning participants are receiving an intervention or being examined, but new participants are not currently being recruited or enrolled
+#' 
+#' Completed: The study has concluded normally; participants are no longer receiving an intervention or being examined (that is, last participant’s last visit has occurred)
+#' 
+#' Suspended: Study halted prematurely but potentially will resume
+#' 
+#' Terminated: Study halted prematurely and will not resume; participants are no longer being examined or receiving intervention
+#' 
+#' Withdrawn: Study halted prematurely, prior to enrollment of first participant
+#' @param start_date The anticipated start date written in yyyy-mm format
+#' 
 #' @example 
-#' ctxml <- create_ctxml()
+#' ctxml <- create_ctxml(org_name,)
 
 #' @export
 #' @rdname create_ctxml
 
-create_ctxml <- function(){
+create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
+                         agency, resp_party_type, investigator_username,
+                         investigator_title, brief_summary, overall_status,
+                         start_date){
   
   xml2::xml_new_root( "study_collection",
                       "xmlns:prs" = "http://clinicaltrials.gov/prs") %>%
     xml2::xml_add_child("clinical_study") %>% 
     xml2::xml_add_child("id_info") %>% 
-    xml2::xml_add_child("org_name", orgName) %>% 
-    xml2::xml_add_sibling("org_study_id", orgStudyID) %>% 
+    xml2::xml_add_child("org_name", org_name) %>% 
+    xml2::xml_add_sibling("org_study_id", org_study_id) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("is_fda_regulated") %>% 
     xml2::xml_add_sibling("is_section_801") %>% 
     xml2::xml_add_sibling("delayed_posting") %>% 
     xml2::xml_add_sibling("is_ind_study") %>% 
-    xml2::xml_add_sibling("brief_title", briefTitle) %>% 
-    xml2::xml_add_sibling("acronym", studyAcronym) %>% 
-    xml2::xml_add_sibling("official_title", officialTitle) %>% 
+    xml2::xml_add_sibling("brief_title", brief_title) %>% 
+    xml2::xml_add_sibling("acronym", study_acronym) %>% 
+    xml2::xml_add_sibling("official_title", official_title) %>% 
     xml2::xml_add_sibling("sponsors") %>% 
     xml2::xml_add_child("lead_sponsor") %>% 
     xml2::xml_add_child("agency", agency) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("resp_party") %>% 
-    xml2::xml_add_child("resp_party_type", respPartyType) %>% 
+    xml2::xml_add_child("resp_party_type", resp_party_type) %>% 
     xml2::xml_add_sibling("investigator_username", investigator_username) %>%
     xml2::xml_add_sibling("investigator_title", investigator_title) %>% 
     xml2::xml_add_sibling("investigator_affiliation") %>% 
@@ -58,17 +97,17 @@ create_ctxml <- function(){
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("brief_summary") %>% 
-    xml2::xml_add_child("textblock", briefSummary) %>% 
+    xml2::xml_add_child("textblock", brief_summary) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("detailed_description") %>%
     xml2::xml_add_child("textblock") %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("overall_status", overallStatus) %>% 
+    xml2::xml_add_sibling("overall_status", overall_status) %>% 
     xml2::xml_add_sibling("why_stopped") %>% 
     xml2::xml_add_sibling("verification_date") %>% 
-    xml2::xml_add_sibling("start_date", startDate) %>% 
+    xml2::xml_add_sibling("start_date", start_date) %>% 
     xml2::xml_add_sibling("start_date_type", "Anticipated") %>% 
     xml2::xml_add_sibling("end_date") %>% 
     xml2::xml_add_sibling("last_follow_up_date", studyCompletion) %>% 

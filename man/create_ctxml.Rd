@@ -4,7 +4,57 @@
 \alias{create_ctxml}
 \title{Creates xml document for upload to clinicaltrials.gov}
 \usage{
-create_ctxml()
+create_ctxml(org_name, org_study_id, brief_title, official_title, agency,
+  resp_party_type, investigator_username, investigator_title,
+  brief_summary, overall_status, start_date)
+}
+\arguments{
+\item{org_name}{The code for the organisation name associated with your PRS
+clinicaltrials.gov log-in details.}
+
+\item{org_study_id}{Must be a unique study number from the organization.
+Sometimes it is the number associated with the funding received or submission
+for insstitutional approval.}
+
+\item{brief_title}{Brief title for the study with a limit of 300 characters}
+
+\item{official_title}{Study title limited to 600 characters}
+
+\item{agency}{Name of the lead sponsor. This would be the name of the
+principal investigator if it is a Sponsor-Investigator trial.}
+
+\item{resp_party_type}{Either: Sponsor; Principal Investigator (responsible
+party designated by sponsor) or Sponsor-Investigator (individual who
+initiates and conducts study).}
+
+\item{investigator_username}{Format is First Name Last Name \link{username}
+eg. Aaron Conway [\link{aconway}]. This is associated with your prs log-in}
+
+\item{investigator_title}{Offical title e.g. Assistant Professor}
+
+\item{brief_summary}{A short description of the clinical study, including a
+brief statement of the clinical study's hypothesis, written in language
+intended for the lay public. Limit is 5000 characters.}
+
+\item{overall_status}{Not yet recruiting: Participants are not yet being recruited
+
+Recruiting: Participants are currently being recruited, whether or not any participants have yet been enrolled
+
+Enrolling by invitation: Participants are being (or will be) selected from a predetermined population
+
+Active, not recruiting: Study is continuing, meaning participants are receiving an intervention or being examined, but new participants are not currently being recruited or enrolled
+
+Completed: The study has concluded normally; participants are no longer receiving an intervention or being examined (that is, last participant’s last visit has occurred)
+
+Suspended: Study halted prematurely but potentially will resume
+
+Terminated: Study halted prematurely and will not resume; participants are no longer being examined or receiving intervention
+
+Withdrawn: Study halted prematurely, prior to enrollment of first participant}
+
+\item{start_date}{The anticipated start date written in yyyy-mm format}
+
+\item{study_acronym}{limit to 14 characters or enter n/a}
 }
 \value{
 A xml document

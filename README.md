@@ -4,12 +4,10 @@ This repository contains an Rmarkdown template for a clinical trial protocol adh
 
 Contained within the template is a section for each of the elements that should be adressed in a clinical trial protocol. Links to the SPIRIT statement guidance about what should be addressed in each element are provided.
 
-Future plans are to:
-
-* Create a function that will make use of the clinicaltrials.gov API to assist uploading information from the protocol developed in your Rmardown file to a new clinical trial record. 
+Using this Rmarkdown template for clinical trial protocol will also allow you to use of the clinicaltrials.gov API to  uploading information from your protocol developed in your Rmardown file to a new record in the registry. 
 
 
-# Installing the Template
+# Installing the package
 
 Enter the following in your console for installation (uncomment the first line if devtools is not already installed):
 
@@ -21,4 +19,7 @@ Once installed, the template will be available within the RStudio IDE by selecin
   
   
   ![](Screen-Recording.gif)
+  
+  
+Instructions for how to upload the protocol elements to clinicaltrials.gov are incuded in this vignette.
   

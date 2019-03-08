@@ -18,8 +18,8 @@
 #' upload_ct(ct_xml, UHNToronto, aconway, password)
 #' 
 #' @export
-#' @rdname upload_ct
-upload_ct <- function(ctxml, orgName, userName, passWord){
+#' @rdname upload_ctxml
+upload_ctxml <- function(ctxml, orgName, userName, passWord){
   body  <-  list(orgNAME = orgName, userName = userName, 
                  passWord = passWord,  uploadXML = ctxml, 
                  autoRelease = FALSE)
