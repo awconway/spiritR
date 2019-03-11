@@ -16,11 +16,12 @@ output:
 &nbsp;
 
 ```{r}
-# These are objects that can be assigned to auto-populate sections of the table in this protocol but are not required to be entered into the create_ctxml() function to be uploaded to clinicaltrials.gov
+# These are objects that can be assigned to auto-populate some relevant sections of the table in this protocol that are not required to be entered into the create_ctxml() function to be uploaded to clinicaltrials.gov
 primary_registry <-   
 secondaryNumbers <- #Secondary identifying numbers (if any) or N/A
 fundingStatement <- # Sources of monetary support
-
+inclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
+exclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
 ```
 
 ```{r include = FALSE}
@@ -28,7 +29,7 @@ fundingStatement <- # Sources of monetary support
 
 # This will be easiest to complete by running ?create_ctxml() in the console so that you can see descriptions of the parameters to be included in this list in the viewer panel.
 
-arguments_ctxml <- List(
+args_ctxml <- List(
 org_name =
 orgStudy_id =
 brief_title =
@@ -39,62 +40,57 @@ respPartyType =
 investigator_username = 
 investigator_title =
 brief_summary =
-overall_status =
-startDate =
-primaryCompletion <-  # anticipated date written in yyyy-mm format. The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome
-studyCompletion <- # anticipated in yyyy-mm The date the final participant was examined or received an intervention for purposes of final collection of data
-interventionalSubtype <-   #Treatment, Prevention, Diagnostic, Supportive Care, Screening, Health Services Research, Basic Science, Device Feasibility, Other
-phase <- #N/A (for trials that do not involve drug or biologic products), Early Phase 1, Phase1/Phase 2, Phase 2, Phase2/Phase 3, Phase 3, Phase 4
-randomAssignment <- #Single group, Parallel, Crossover, Factorial, Sequential
-randomAllocation <-  #Randomized, Non-randomized
-noMasking <-  #True, False
-maskedSubject <- #True, False
-maskedCaregiver <- #True, False
-maskedInvestigator <- #True, False
-maskedAssessor <-  #True, False
-sampleSize <- #planned sample size
-  
-criteria <- #textbox contaiing both inclusion and exclusion criteria for entry to clinicaltrials.gov
-inclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
-exclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
-
-healthyVolunteers <- #Yes, No
-gendersIncluded <- #Female, Male, Both
-genderBased <- #if applicable indicate if eligibility is based on self-representation of gender identitiy. Yes, No
-minAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
-maxAge <- #numeric with metric attached - e.g. 16 years or 'N/A (No Limit)'
+start_date =
+primary_compl =  
+study_compl = 
+int_subtype =   
+phase =
+assignment =
+allocation =
+no_masking =  
+masked_subject =
+masked_caregiver = 
+masked_investigator =
+masked_assessor =
+sample_size =
+eligibility_criteria =
+healthy_volunteers =
+genders_included =
+gender_based =
+min_age =
+max_age =
     
 #Central contact
-firstName <- 
-lastName <- 
-degrees <- 
-phoneNo <- 
-email <- 
+contact_firstName = 
+contact_lastName = 
+contact_degrees = 
+contact_phoneNo =
+contact_email =
     
 #Overall official
-off_firstName <-
-off_lastName <- 
-off_degrees <- 
-off_affiliation <- # Full name of the official's organization. If none, specify Unaffiliated. 
-off_role <- # Study Chair, Study Director or Study Principal Investigator
+official_first_name =
+official_last_name =
+official_degrees =
+official_affiliation = 
+official_role =
     
 #IPD
-ipdSharing <- #Yes, No, Undecided
-ipdDescription <- #Describe the IPD sharing plan, including what IPD are to be shared with other researchers.
-ipdprotocol <-  #true, false
-ipdsap <- #true, false
-ipdicf <- #true, false
-ipdcsr <- #true, false
-ipdcode <- #true, false
-ipdtime <- #Description in text box
-ipdcriteria <- #Description in text box
-ipdurl <- #insert url
+ipd_sharing =
+ipd_description =
+ipd_protocol <-  
+ipd_sap =
+ipd_icf =
+ipd_csr =
+ipd_code =
+ipd_time =
+ipd_criteria =
+ipd_url =
 )
 ```
 
 
 ```{r include = FALSE}
-primaryOutcome1 <- #limit 254 characters. Name of measure
+pr_outcome_1 <- #limit 254 characters. Name of measure
 primaryOutcomeTime1 <- #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
 primaryOutcomeDescription1 <- #Limit 999 characters. Description of the metric if not included in outcome measure title
 

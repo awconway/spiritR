@@ -166,7 +166,7 @@ add_condition <- function(ctxml, condition){
 #' @rdname add_functions
 add_keyword <- function(ctxml, keyword){
   ctxml %>% 
-    xml2::xml_find_first(".//enrollment_type") %>% 
+    xml2::xml_find_first(".//condition") %>% 
     xml2::xml_add_sibling("condition", keyword) %>%
     xml2::xml_root()
 }

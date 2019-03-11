@@ -1,7 +1,7 @@
 #' Creates xml document for upload to clinicaltrials.gov
 #' 
-#' This function will create an xml document conforming to clinicaltrials.gov requirements for 
-#' automatic upload to the registry
+#' This function will create an xml document conforming to clinicaltrials.gov 
+#' requirements for automatic upload to the registry
 #' 
 #' @return A xml document
 #' 
@@ -15,7 +15,7 @@
 #' @param official_title Study title limited to 600 characters
 #' @param agency Name of the lead sponsor. This would be the name of the 
 #' principal investigator if it is a Sponsor-Investigator trial.
-#' @param resp_party_type Options are: Sponsor; Principal Investigator (responsible 
+#' @param resp_party_type Either: Sponsor; Principal Investigator (responsible 
 #' party designated by sponsor) or Sponsor-Investigator (individual who 
 #' initiates and conducts study).
 #' @param investigator_username Format is First Name Last Name [[username]] 
@@ -24,22 +24,70 @@
 #' @param brief_summary A short description of the clinical study, including a 
 #' brief statement of the clinical study's hypothesis, written in language 
 #' intended for the lay public. Limit is 5000 characters.
-#' @param overall_status Not yet recruiting: Participants are not yet being recruited
+#' @param start_date Anticipated start date written in yyyy-mm format
+#' @param primary_compl Anticipated date written in yyyy-mm format. The date 
+#' that the final participant was examined or received an intervention for the 
+#' purposes of final collection of data for the primary outcome.
+#' @param study_compl The anticipated date (written in yyyy-mm) that the final 
+#' participant was examined or received an intervention for purposes of final 
+#' collection of data
+#' @param int_sybtype Either: Treatment; Prevention; Diagnostic; 
+#' Supportive Care; Screening; Health Services Research; Basic Science; 
+#' Device Feasibility; or Other.
+#' @param phase Either: N/A (for trials that do not involve drug or biologic 
+#' products); Early Phase 1; Phase1/Phase 2; Phase 2; Phase2/Phase 3; Phase 3; 
+#' or Phase 4.
+#' @param assignment Either: Single group; Parallel; Crossover; Factorial; or
+#' Sequential.
+#' @param allocation Either: Randomized; or Non-randomized.
+#' @param no_masking True/False
+#' @param masked_subject True/False
+#' @param masked_caregiver True/False
+#' @param masked_investigator True/False
+#' @param masked_assesor True/False
+#' @param sample_size Planned sample size
+#' @param eligibility_criteria Textbox contaiing both inclusion and exclusion 
+#' criteria
+#' @param healthy_volunteers Trial is recruiting healthy volunteers for 
+#' participation. Answer is either: Yes; or No.
+#' @param genders_included Either: Female; Male; or Both.
+#' @param gender_based If applicable, indicate if eligibility is based on 
+#' self-representation of gender identitiy. Answer is either: Yes; or No.
+#' @param min_age Numeric with years - e.g. 16 years or 'N/A (No Limit)'
+#' @param max_age Numeric with years - e.g. 80 years or 'N/A (No Limit)'
+#' @param contact_first_name Central contact first name
+#' @param contact_last_name Central contact last name
+#' @param contact_degrees Central contact's degrees/qualifications
+#' @param contact_phone Central contact phone number
+#' @param contact_email Central contact email
+#' @param official_first_name Overall official first name
+#' @param official_last_name Overall official last name
+#' @param official_degrees Overall official degrees/qualifications
+#' @param official_affiliation Full name of the official's organization. If 
+#' none, specify Unaffiliated.
+#' @param official_role Either: Study Chair; Study Director or Study Principal 
+#' Investigator.
+#' @param ipd_sharing Indicate whether there is a plan to make individual 
+#' participant data (IPD) collected in this study, including data dictionaries, 
+#' available to other researchers (typically after the end of the study). 
+#' Either: Yes; No; Undecided.
+#' @param ipd_description If yes, describe the IPD sharing plan, including what 
+#' IPD are to be shared with other researchers.
+#' @param ipd_protocol Study protocol to be shared: True/False
+#' @param ipd_sap Statistical analysis plan to be shared: True/False
+#' @param ipd_icf Information consent form to be shared: True/False
+#' @param ipd_csr Clinical study report to be shared: True/False
+#' @param ipd_code Analytic code to be shared: True/False
+#' @param ipd_time A description of when the IPD and any additional supporting 
+#' information will become available and for how long, including the start and 
+#' end dates or period of availability. Limit 1000 characters.
+#' @param ipd_criteria Describe by what access criteria IPD and any additional 
+#' supporting information will be shared, including with whom, for what types 
+#' of analyses, and by what mechanism. Limit 1000 characters.
+#' @param ipd_url The web address, if any, used to find additional information 
+#' about the plan to share IPD.
+#'  
 #' 
-#' Recruiting: Participants are currently being recruited, whether or not any participants have yet been enrolled
-#' 
-#' Enrolling by invitation: Participants are being (or will be) selected from a predetermined population
-#' 
-#' Active, not recruiting: Study is continuing, meaning participants are receiving an intervention or being examined, but new participants are not currently being recruited or enrolled
-#' 
-#' Completed: The study has concluded normally; participants are no longer receiving an intervention or being examined (that is, last participant’s last visit has occurred)
-#' 
-#' Suspended: Study halted prematurely but potentially will resume
-#' 
-#' Terminated: Study halted prematurely and will not resume; participants are no longer being examined or receiving intervention
-#' 
-#' Withdrawn: Study halted prematurely, prior to enrollment of first participant
-#' @param start_date The anticipated start date written in yyyy-mm format
 #' 
 #' @example 
 #' ctxml <- create_ctxml(org_name,)
@@ -104,7 +152,7 @@ create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
     xml2::xml_add_child("textblock") %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("overall_status", overall_status) %>% 
+    xml2::xml_add_sibling("overall_status", "Not yet recruiting") %>% 
     xml2::xml_add_sibling("why_stopped") %>% 
     xml2::xml_add_sibling("verification_date") %>% 
     xml2::xml_add_sibling("start_date", start_date) %>% 

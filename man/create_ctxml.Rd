@@ -23,7 +23,7 @@ for insstitutional approval.}
 \item{agency}{Name of the lead sponsor. This would be the name of the
 principal investigator if it is a Sponsor-Investigator trial.}
 
-\item{resp_party_type}{Options are: Sponsor; Principal Investigator (responsible
+\item{resp_party_type}{Either: Sponsor; Principal Investigator (responsible
 party designated by sponsor) or Sponsor-Investigator (individual who
 initiates and conducts study).}
 
@@ -36,30 +36,113 @@ eg. Aaron Conway [\link{aconway}]. This is associated with your prs log-in}
 brief statement of the clinical study's hypothesis, written in language
 intended for the lay public. Limit is 5000 characters.}
 
-\item{overall_status}{Not yet recruiting: Participants are not yet being recruited
-
-Recruiting: Participants are currently being recruited, whether or not any participants have yet been enrolled
-
-Enrolling by invitation: Participants are being (or will be) selected from a predetermined population
-
-Active, not recruiting: Study is continuing, meaning participants are receiving an intervention or being examined, but new participants are not currently being recruited or enrolled
-
-Completed: The study has concluded normally; participants are no longer receiving an intervention or being examined (that is, last participant’s last visit has occurred)
-
-Suspended: Study halted prematurely but potentially will resume
-
-Terminated: Study halted prematurely and will not resume; participants are no longer being examined or receiving intervention
-
-Withdrawn: Study halted prematurely, prior to enrollment of first participant}
-
-\item{start_date}{The anticipated start date written in yyyy-mm format}
+\item{start_date}{Anticipated start date written in yyyy-mm format}
 
 \item{study_acronym}{limit to 14 characters or enter n/a}
+
+\item{primary_compl}{Anticipated date written in yyyy-mm format. The date
+that the final participant was examined or received an intervention for the
+purposes of final collection of data for the primary outcome.}
+
+\item{study_compl}{The anticipated date (written in yyyy-mm) that the final
+participant was examined or received an intervention for purposes of final
+collection of data}
+
+\item{int_sybtype}{Either: Treatment; Prevention; Diagnostic;
+Supportive Care; Screening; Health Services Research; Basic Science;
+Device Feasibility; or Other.}
+
+\item{phase}{Either: N/A (for trials that do not involve drug or biologic
+products); Early Phase 1; Phase1/Phase 2; Phase 2; Phase2/Phase 3; Phase 3;
+or Phase 4.}
+
+\item{assignment}{Either: Single group; Parallel; Crossover; Factorial; or
+Sequential.}
+
+\item{allocation}{Either: Randomized; or Non-randomized.}
+
+\item{no_masking}{True/False}
+
+\item{masked_subject}{True/False}
+
+\item{masked_caregiver}{True/False}
+
+\item{masked_investigator}{True/False}
+
+\item{masked_assesor}{True/False}
+
+\item{sample_size}{Planned sample size}
+
+\item{eligibility_criteria}{Textbox contaiing both inclusion and exclusion
+criteria}
+
+\item{healthy_volunteers}{Trial is recruiting healthy volunteers for
+participation. Answer is either: Yes; or No.}
+
+\item{genders_included}{Either: Female; Male; or Both.}
+
+\item{gender_based}{If applicable, indicate if eligibility is based on
+self-representation of gender identitiy. Answer is either: Yes; or No.}
+
+\item{min_age}{Numeric with years - e.g. 16 years or 'N/A (No Limit)'}
+
+\item{max_age}{Numeric with years - e.g. 80 years or 'N/A (No Limit)'}
+
+\item{contact_first_name}{Central contact first name}
+
+\item{contact_last_name}{Central contact last name}
+
+\item{contact_degrees}{Central contact's degrees/qualifications}
+
+\item{contact_phone}{Central contact phone number}
+
+\item{contact_email}{Central contact email}
+
+\item{official_first_name}{Overall official first name}
+
+\item{official_last_name}{Overall official last name}
+
+\item{official_degrees}{Overall official degrees/qualifications}
+
+\item{official_affiliation}{Full name of the official's organization. If
+none, specify Unaffiliated.}
+
+\item{official_role}{Either: Study Chair; Study Director or Study Principal
+Investigator.}
+
+\item{ipd_sharing}{Indicate whether there is a plan to make individual
+participant data (IPD) collected in this study, including data dictionaries,
+available to other researchers (typically after the end of the study).
+Either: Yes; No; Undecided.}
+
+\item{ipd_description}{If yes, describe the IPD sharing plan, including what
+IPD are to be shared with other researchers.}
+
+\item{ipd_protocol}{Study protocol to be shared: True/False}
+
+\item{ipd_sap}{Statistical analysis plan to be shared: True/False}
+
+\item{ipd_icf}{Information consent form to be shared: True/False}
+
+\item{ipd_csr}{Clinical study report to be shared: True/False}
+
+\item{ipd_code}{Analytic code to be shared: True/False}
+
+\item{ipd_time}{A description of when the IPD and any additional supporting
+information will become available and for how long, including the start and
+end dates or period of availability. Limit 1000 characters.}
+
+\item{ipd_criteria}{Describe by what access criteria IPD and any additional
+supporting information will be shared, including with whom, for what types
+of analyses, and by what mechanism. Limit 1000 characters.}
+
+\item{ipd_url}{The web address, if any, used to find additional information
+about the plan to share IPD.}
 }
 \value{
 A xml document
 }
 \description{
-This function will create an xml document conforming to clinicaltrials.gov requirements for
-automatic upload to the registry
+This function will create an xml document conforming to clinicaltrials.gov
+requirements for automatic upload to the registry
 }
