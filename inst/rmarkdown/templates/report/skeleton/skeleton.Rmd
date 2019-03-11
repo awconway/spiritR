@@ -22,7 +22,7 @@ output:
 
 args_ctxml <- list(
 org_name =
-orgStudy_id =
+org_study_id =
 brief_title =
 study_acronym =
 official_title = 

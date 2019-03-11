@@ -31,7 +31,7 @@
 #' @param study_compl The anticipated date (written in yyyy-mm) that the final 
 #' participant was examined or received an intervention for purposes of final 
 #' collection of data
-#' @param int_sybtype Either: Treatment; Prevention; Diagnostic; 
+#' @param int_subtype Either: Treatment; Prevention; Diagnostic; 
 #' Supportive Care; Screening; Health Services Research; Basic Science; 
 #' Device Feasibility; or Other.
 #' @param phase Either: N/A (for trials that do not involve drug or biologic 
@@ -90,21 +90,17 @@
 #' @param ipd_url The web address, if any, used to find additional information 
 #' about the plan to share IPD.
 #'  
-#' 
-#' 
-#' @example 
-#' ctxml <- create_ctxml(org_name,)
-
 #' @export
 #' @rdname create_ctxml
 
-create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
-                         agency, resp_party_type, investigator_username,
-                         investigator_title, brief_summary, overall_status,
-                         start_date, study_compl, primary_compl, int_subtype,
+create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
+                         official_title,agency, resp_party_type, 
+                         investigator_username, investigator_title, 
+                         brief_summary, overall_status,start_date, 
+                         study_compl, primary_compl, int_subtype,
                          phase, assignment, allocation, no_masking, 
                          masked_subject, masked_caregiver, masked_investigator,
-                         masked_assesor, sample_size, number_arms, 
+                         masked_assessor, sample_size, number_arms, 
                          eligibility_criteria, healthy_volunteers, 
                          genders_included, gender_based, min_age, max_age, 
                          contact_first_name, contact_last_name, 

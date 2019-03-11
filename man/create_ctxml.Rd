@@ -4,17 +4,18 @@
 \alias{create_ctxml}
 \title{Creates xml document for upload to clinicaltrials.gov}
 \usage{
-create_ctxml(org_name, org_study_id, brief_title, official_title, agency,
-  resp_party_type, investigator_username, investigator_title,
-  brief_summary, overall_status, start_date, study_compl, primary_compl,
-  int_subtype, phase, assignment, allocation, no_masking, masked_subject,
-  masked_caregiver, masked_investigator, masked_assesor, sample_size,
-  number_arms, eligibility_criteria, healthy_volunteers, genders_included,
-  gender_based, min_age, max_age, contact_first_name, contact_last_name,
-  contact_degrees, contact_phone, contact_email, official_first_name,
-  official_last_name, official_degrees, official_affiliation,
-  official_role, ipd_sharing, ipd_description, ipd_protocol, ipd_sap,
-  ipd_csr, ipd_icf, ipd_code, ipd_time, ipd_criteria, ipd_url)
+create_ctxml(org_name, org_study_id, brief_title, study_acronym,
+  official_title, agency, resp_party_type, investigator_username,
+  investigator_title, brief_summary, overall_status, start_date,
+  study_compl, primary_compl, int_subtype, phase, assignment, allocation,
+  no_masking, masked_subject, masked_caregiver, masked_investigator,
+  masked_assessor, sample_size, number_arms, eligibility_criteria,
+  healthy_volunteers, genders_included, gender_based, min_age, max_age,
+  contact_first_name, contact_last_name, contact_degrees, contact_phone,
+  contact_email, official_first_name, official_last_name, official_degrees,
+  official_affiliation, official_role, ipd_sharing, ipd_description,
+  ipd_protocol, ipd_sap, ipd_csr, ipd_icf, ipd_code, ipd_time,
+  ipd_criteria, ipd_url)
 }
 \arguments{
 \item{org_name}{The code for the organisation name associated with your PRS
@@ -25,6 +26,8 @@ Sometimes it is the number associated with the funding received or submission
 for insstitutional approval.}
 
 \item{brief_title}{Brief title for the study with a limit of 300 characters}
+
+\item{study_acronym}{limit to 14 characters or enter n/a}
 
 \item{official_title}{Study title limited to 600 characters}
 
@@ -54,6 +57,10 @@ collection of data}
 that the final participant was examined or received an intervention for the
 purposes of final collection of data for the primary outcome.}
 
+\item{int_subtype}{Either: Treatment; Prevention; Diagnostic;
+Supportive Care; Screening; Health Services Research; Basic Science;
+Device Feasibility; or Other.}
+
 \item{phase}{Either: N/A (for trials that do not involve drug or biologic
 products); Early Phase 1; Phase1/Phase 2; Phase 2; Phase2/Phase 3; Phase 3;
 or Phase 4.}
@@ -70,6 +77,8 @@ Sequential.}
 \item{masked_caregiver}{True/False}
 
 \item{masked_investigator}{True/False}
+
+\item{masked_assessor}{True/False}
 
 \item{sample_size}{Planned sample size}
 
@@ -142,14 +151,6 @@ of analyses, and by what mechanism. Limit 1000 characters.}
 
 \item{ipd_url}{The web address, if any, used to find additional information
 about the plan to share IPD.}
-
-\item{study_acronym}{limit to 14 characters or enter n/a}
-
-\item{int_sybtype}{Either: Treatment; Prevention; Diagnostic;
-Supportive Care; Screening; Health Services Research; Basic Science;
-Device Feasibility; or Other.}
-
-\item{masked_assessor}{True/False}
 }
 \value{
 A xml document
