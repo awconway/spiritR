@@ -44,7 +44,7 @@
 #' @param masked_subject True/False
 #' @param masked_caregiver True/False
 #' @param masked_investigator True/False
-#' @param masked_assesor True/False
+#' @param masked_assessor True/False
 #' @param sample_size Planned sample size
 #' @param number_arms Number of arms. "Arm" means a pre-specified group or 
 #' subgroup of participant(s) in a clinical trial assigned to receive specific 
@@ -101,7 +101,19 @@
 create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
                          agency, resp_party_type, investigator_username,
                          investigator_title, brief_summary, overall_status,
-                         start_date){
+                         start_date, study_compl, primary_compl, int_subtype,
+                         phase, assignment, allocation, no_masking, 
+                         masked_subject, masked_caregiver, masked_investigator,
+                         masked_assesor, sample_size, number_arms, 
+                         eligibility_criteria, healthy_volunteers, 
+                         genders_included, gender_based, min_age, max_age, 
+                         contact_first_name, contact_last_name, 
+                         contact_degrees, contact_phone, contact_email, 
+                         official_first_name, official_last_name,
+                         official_degrees, official_affiliation,
+                         official_role, ipd_sharing, ipd_description, 
+                         ipd_protocol, ipd_sap, ipd_csr, ipd_icf, ipd_code,
+                         ipd_time, ipd_criteria, ipd_url){
   
   xml2::xml_new_root( "study_collection",
                       "xmlns:prs" = "http://clinicaltrials.gov/prs") %>%
@@ -161,39 +173,39 @@ create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
     xml2::xml_add_sibling("start_date", start_date) %>% 
     xml2::xml_add_sibling("start_date_type", "Anticipated") %>% 
     xml2::xml_add_sibling("end_date") %>% 
-    xml2::xml_add_sibling("last_follow_up_date", studyCompletion) %>% 
+    xml2::xml_add_sibling("last_follow_up_date", study_compl) %>% 
     xml2::xml_add_sibling("last_follow_up_date_type", "Anticipated") %>%
-    xml2::xml_add_sibling("prim_compl_date", primaryCompletion) %>% 
+    xml2::xml_add_sibling("prim_compl_date", primary_compl) %>% 
     xml2::xml_add_sibling("primary_compl_date_type", "Anticipated") %>% 
     xml2::xml_add_sibling("study_design") %>% 
     xml2::xml_add_child("study_type", "Interventional") %>% 
     xml2::xml_add_sibling("interventional_design") %>% 
-    xml2::xml_add_child("interventional_subtype", interventionalSubtype) %>% 
+    xml2::xml_add_child("interventional_subtype", int_subtype) %>% 
     xml2::xml_add_sibling("phase", phase) %>% 
-    xml2::xml_add_sibling("assignment", randomAssignment) %>% 
+    xml2::xml_add_sibling("assignment", assignment) %>% 
     xml2::xml_add_sibling("model_description") %>%
     xml2::xml_add_child("textblock") %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("allocation", randomAllocation) %>% 
+    xml2::xml_add_sibling("allocation", allocation) %>% 
     xml2::xml_add_sibling("masking") %>% 
-    xml2::xml_add_sibling("no_masking", noMasking) %>% 
-    xml2::xml_add_sibling("masked_subject", maskedSubject) %>% 
-    xml2::xml_add_sibling("masked_caregiver", maskedCaregiver) %>% 
-    xml2::xml_add_sibling("masked_investigator", maskedInvestigator) %>% 
-    xml2::xml_add_sibling("masked_assesor", maskedAssesor) %>% 
+    xml2::xml_add_sibling("no_masking", no_masking) %>% 
+    xml2::xml_add_sibling("masked_subject", masked_subject) %>% 
+    xml2::xml_add_sibling("masked_caregiver", masked_caregiver) %>% 
+    xml2::xml_add_sibling("masked_investigator", masked_investigator) %>% 
+    xml2::xml_add_sibling("masked_assesor", masked_assessor) %>% 
     xml2::xml_add_sibling("masking_description") %>% 
     xml2::xml_add_child("textblock") %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("control") %>% 
-    xml2::xml_add_sibling("number_of_arms", numberArms) %>% 
+    xml2::xml_add_sibling("number_of_arms", number_arms) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("primary_outcome") %>% 
     xml2::xml_add_sibling("secondary_outcome") %>%
-    xml2::xml_add_sibling("enrollment", sampleSize) %>% 
+    xml2::xml_add_sibling("enrollment", sample_size) %>% 
     xml2::xml_add_sibling("enrollment_type", "Anticipated") %>%
     xml2::xml_add_sibling("arm_group")
     xml2::xml_add_sibling("intervention") 
@@ -207,34 +219,34 @@ create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
     xml2::xml_add_child("textblock", criteria) %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("healthy_volunteers", healthyVolunteers) %>% 
-    xml2::xml_add_sibling("gender", gendersIncluded) %>% 
-    xml2::xml_add_sibling("gender_based", genderBased) %>% 
+    xml2::xml_add_sibling("healthy_volunteers", healthy_volunteers) %>% 
+    xml2::xml_add_sibling("gender", genders_included) %>% 
+    xml2::xml_add_sibling("gender_based", gender_based) %>% 
     xml2::xml_add_sibling("gender_description") %>%
     xml2::xml_add_child("textblock") %>% 
     
     xml2::xml_find_first("..") %>%  
-    xml2::xml_add_sibling("minimum_age", minAge) %>% 
-    xml2::xml_add_sibling("maximum_age", maxAge) %>% 
+    xml2::xml_add_sibling("minimum_age", min_age) %>% 
+    xml2::xml_add_sibling("maximum_age", max_age) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("overall_official") %>% 
-    xml2::xml_add_child("first_name", off_firstName) %>% 
+    xml2::xml_add_child("first_name", official_first_name) %>% 
     xml2::xml_add_sibling("middle_name") %>% 
-    xml2::xml_add_sibling("last_name", off_lastName) %>% 
-    xml2::xml_add_sibling("degrees", off_degrees) %>% 
-    xml2::xml_add_sibling("role", off_role) %>% 
-    xml2::xml_add_sibling("affiliation", off_affiliation) %>% 
+    xml2::xml_add_sibling("last_name", official_last_name) %>% 
+    xml2::xml_add_sibling("degrees", official_degrees) %>% 
+    xml2::xml_add_sibling("role", official_role) %>% 
+    xml2::xml_add_sibling("affiliation", official_affiliation) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("overall_contact") %>% 
-    xml2::xml_add_child("first_name", firstName) %>% 
+    xml2::xml_add_child("first_name", contact_first_name) %>% 
     xml2::xml_add_sibling("middle_name") %>% 
-    xml2::xml_add_sibling("last_name", lastName) %>% 
-    xml2::xml_add_sibling("degrees", degrees) %>% 
-    xml2::xml_add_sibling("phone", phoneNo) %>% 
+    xml2::xml_add_sibling("last_name", contact_last_name) %>% 
+    xml2::xml_add_sibling("degrees", contact_degrees) %>% 
+    xml2::xml_add_sibling("phone", contact_phone) %>% 
     xml2::xml_add_sibling("phone_ext") %>% 
-    xml2::xml_add_sibling("email", email) %>% 
+    xml2::xml_add_sibling("email", contact_email) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("overall_contact_backup") %>% 
@@ -248,25 +260,25 @@ create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("ipd_sharing_statement") %>% 
-    xml2::xml_add_child("sharing_ipd", ipdsharing) %>% 
+    xml2::xml_add_child("sharing_ipd", ipd_sharing) %>% 
     xml2::xml_add_sibling("ipd_description") %>% 
-    xml2::xml_add_child("textblock", ipddescription) %>% 
+    xml2::xml_add_child("textblock", ipd_description) %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("ipd_info_type_protocol", ipdprotocol) %>% 
-    xml2::xml_add_sibling("ipd_info_type_sap", ipdsap) %>% 
-    xml2::xml_add_sibling("ipd_info_type_icf", ipdicf) %>% 
-    xml2::xml_add_sibling("ipd_info_type_csr", ipdcsr) %>% 
-    xml2::xml_add_sibling("ipd_info_type_analytic_code", ipdcode) %>% 
+    xml2::xml_add_sibling("ipd_info_type_protocol", ipd_protocol) %>% 
+    xml2::xml_add_sibling("ipd_info_type_sap", ipd_sap) %>% 
+    xml2::xml_add_sibling("ipd_info_type_icf", ipd_icf) %>% 
+    xml2::xml_add_sibling("ipd_info_type_csr", ipd_csr) %>% 
+    xml2::xml_add_sibling("ipd_info_type_analytic_code", ipd_code) %>% 
     xml2::xml_add_sibling("ipd_time_frame") %>% 
-    xml2::xml_add_child("textblock", ipdtime) %>% 
+    xml2::xml_add_child("textblock", ipd_time) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("ipd_access_criteria") %>% 
-    xml2::xml_add_child("textblock", ipdcriteria) %>% 
+    xml2::xml_add_child("textblock", ipd_criteria) %>% 
     
     xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("ipd_url", ipdurl) %>% 
+    xml2::xml_add_sibling("ipd_url", ipd_url) %>% 
     xml2::xml_root()
   
   }

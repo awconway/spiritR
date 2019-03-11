@@ -6,7 +6,15 @@
 \usage{
 create_ctxml(org_name, org_study_id, brief_title, official_title, agency,
   resp_party_type, investigator_username, investigator_title,
-  brief_summary, overall_status, start_date)
+  brief_summary, overall_status, start_date, study_compl, primary_compl,
+  int_subtype, phase, assignment, allocation, no_masking, masked_subject,
+  masked_caregiver, masked_investigator, masked_assesor, sample_size,
+  number_arms, eligibility_criteria, healthy_volunteers, genders_included,
+  gender_based, min_age, max_age, contact_first_name, contact_last_name,
+  contact_degrees, contact_phone, contact_email, official_first_name,
+  official_last_name, official_degrees, official_affiliation,
+  official_role, ipd_sharing, ipd_description, ipd_protocol, ipd_sap,
+  ipd_csr, ipd_icf, ipd_code, ipd_time, ipd_criteria, ipd_url)
 }
 \arguments{
 \item{org_name}{The code for the organisation name associated with your PRS
@@ -38,19 +46,13 @@ intended for the lay public. Limit is 5000 characters.}
 
 \item{start_date}{Anticipated start date written in yyyy-mm format}
 
-\item{study_acronym}{limit to 14 characters or enter n/a}
-
-\item{primary_compl}{Anticipated date written in yyyy-mm format. The date
-that the final participant was examined or received an intervention for the
-purposes of final collection of data for the primary outcome.}
-
 \item{study_compl}{The anticipated date (written in yyyy-mm) that the final
 participant was examined or received an intervention for purposes of final
 collection of data}
 
-\item{int_sybtype}{Either: Treatment; Prevention; Diagnostic;
-Supportive Care; Screening; Health Services Research; Basic Science;
-Device Feasibility; or Other.}
+\item{primary_compl}{Anticipated date written in yyyy-mm format. The date
+that the final participant was examined or received an intervention for the
+purposes of final collection of data for the primary outcome.}
 
 \item{phase}{Either: N/A (for trials that do not involve drug or biologic
 products); Early Phase 1; Phase1/Phase 2; Phase 2; Phase2/Phase 3; Phase 3;
@@ -68,8 +70,6 @@ Sequential.}
 \item{masked_caregiver}{True/False}
 
 \item{masked_investigator}{True/False}
-
-\item{masked_assesor}{True/False}
 
 \item{sample_size}{Planned sample size}
 
@@ -126,9 +126,9 @@ IPD are to be shared with other researchers.}
 
 \item{ipd_sap}{Statistical analysis plan to be shared: True/False}
 
-\item{ipd_icf}{Information consent form to be shared: True/False}
-
 \item{ipd_csr}{Clinical study report to be shared: True/False}
+
+\item{ipd_icf}{Information consent form to be shared: True/False}
 
 \item{ipd_code}{Analytic code to be shared: True/False}
 
@@ -142,6 +142,14 @@ of analyses, and by what mechanism. Limit 1000 characters.}
 
 \item{ipd_url}{The web address, if any, used to find additional information
 about the plan to share IPD.}
+
+\item{study_acronym}{limit to 14 characters or enter n/a}
+
+\item{int_sybtype}{Either: Treatment; Prevention; Diagnostic;
+Supportive Care; Screening; Health Services Research; Basic Science;
+Device Feasibility; or Other.}
+
+\item{masked_assessor}{True/False}
 }
 \value{
 A xml document
