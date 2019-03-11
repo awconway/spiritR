@@ -94,9 +94,9 @@
 #' @rdname create_ctxml
 
 create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
-                         official_title,agency, resp_party_type, 
+                         official_title, agency, resp_party_type, 
                          investigator_username, investigator_title, 
-                         brief_summary, overall_status,start_date, 
+                         brief_summary, start_date, 
                          study_compl, primary_compl, int_subtype,
                          phase, assignment, allocation, no_masking, 
                          masked_subject, masked_caregiver, masked_investigator,
