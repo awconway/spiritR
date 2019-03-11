@@ -20,14 +20,14 @@ output:
 
 # This will be easiest to complete by running ?create_ctxml() in the console so that you can see descriptions of the parameters to be included in this list in the viewer panel.
 
-args_ctxml <- List(
+args_ctxml <- list(
 org_name =
 orgStudy_id =
 brief_title =
 study_acronym =
 official_title = 
 agency  = 
-respPartyType =
+resp_party_type =
 investigator_username = 
 investigator_title =
 brief_summary =
@@ -69,7 +69,7 @@ official_role =
 #Sharing statements
 ipd_sharing =
 ipd_description =
-ipd_protocol <-  
+ipd_protocol =  
 ipd_sap =
 ipd_icf =
 ipd_csr =
@@ -143,7 +143,7 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 |                               	|                       	|
 |-------------------------------	|-----------------------	|
 | Study Principal Investigator: 	| [enter details]       	|
-| Sponsors:                     	| `r args_ctxml[resp_party_type]`|
+| Sponsors:                     	| `r args_ctxml["resp_party_type"]`|
 | Protocol contributors:        	| [Names and affiliations]|
 | Trial identifiers:              | [enter details]    	|
 
@@ -177,38 +177,38 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 |                              | World Health Organization Registration Data Set         |
 | -----------------------------| ------------------------------------------------------- |                  
-| Title                        | `r args_ctxml[official_title]`                                       |
+| Title                        | `r args_ctxml["official_title"]`                                       |
 | Registry identifying number  | clinicaltrials.gov|
 | Secondary identifying numbers| [enter details if any]                                    |
 | Sources of support        	 | `r funding_statement`                                    |
-| Primary sponsor            	 | `r args_ctxml[agency]`                                              |
+| Primary sponsor            	 | `r args_ctxml["agency"]`                                              |
 | Secondary sponsors (if any)  | [enter details]                                         |
-| Central contact   	         | `r paste(args_ctxml[contact_first_name], args_ctxml[contact_last_name], sep=" ")`|
-| Study official               | `r paste(args_ctxml[official_first_name], args_ctxml[official_last_ame],sep=" ")`|
-| Brief title                  | `r args_ctxml[brief_title]`                                          |
-| Acronym                      | `r args_ctxml[study_acronym]`                                        |
+| Central contact   	         | `r paste(args_ctxml["contact_first_name"], args_ctxml["contact_last_name"], sep=" ")`|
+| Study official               | `r paste(args_ctxml["official_first_name"], args_ctxml["official_last_name"],sep=" ")`|
+| Brief title                  | `r args_ctxml["brief_title"]`                                          |
+| Acronym                      | `r args_ctxml["study_acronym"]`                                        |
 | Countries of recruitment     | [enter details]   	                                     |
 | Condition(s) or study focus  | `r paste(condition_1, keyword_1, sep = ";")`            |
 | **Interventions**            |                                                         |
 | `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
 | **Key eligibility criteria **|                                                         |
-| Age eligibility:             | `r paste(args_ctxml[min_age], args_ctxml[max_age], sep = " - ")`                  |
-| Accepts healthy volunteers   | `r args_ctxml[healthy_volunteers]`                                   |
+| Age eligibility:             | `r paste(args_ctxml["min_age"], args_ctxml["max_age"], sep = " - ")`                  |
+| Accepts healthy volunteers   | `r args_ctxml["healthy_volunteers"]`                                   |
 | Inclusion criteria           | `r inclusion_criteria`                                   |
 | Exclusion criteria           | `r exclusion_criteria`                                   |
 | **Study design**             |                                                         |
 | Study type                   | Interventional trial                                    | 
-| Allocation                   | `r args_ctxml[allocation]`                                    |
-| Intervention model           | `r args_ctxml[assignment]`                                    |
-| Primary purpose              | `r args_ctxml[interventional_subtype]`                               |
-| Phase                        | `r args_ctxml[phase]`                                               | 
+| Allocation                   | `r args_ctxml["allocation"]`                                    |
+| Intervention model           | `r args_ctxml["assignment"]`                                    |
+| Primary purpose              | `r args_ctxml["interventional_subtype"]`                               |
+| Phase                        | `r args_ctxml["phase"]`                                               | 
 | **Masking**   	             |                                                         |
-| Participant                  | `r args_ctxml[masked_subject]`                                       |
-| Care Provider                | `r args_ctxml[masked_caregiver]`                                     |
-| Investigator                 | `r args_ctxml[masked_investigator]`                                  |      
-| Outcomes Assessor            | `r args_ctxml[masked_assesor]`	                                     |
-| **Date of enrollment**       | `r args_ctxml[start_date]`  	                                       |
-| **Target sample size**       | `r args_ctxml[sample_size]`  	                                       |
+| Participant                  | `r args_ctxml["masked_subject"]`                                       |
+| Care Provider                | `r args_ctxml["masked_caregiver"]`                                     |
+| Investigator                 | `r args_ctxml["masked_investigator"]`                                  |      
+| Outcomes Assessor            | `r args_ctxml["masked_assesor"]`	                                     |
+| **Date of enrollment**       | `r args_ctxml["start_date"]`  	                                       |
+| **Target sample size**       | `r args_ctxml["sample_size"]`  	                                       |
 | **Recruitment status**       | Not yet recruiting 	                                   |
 | **Primary outcomes**         |                                                         |
 | **Primary outcomes**         |                                               |
@@ -329,7 +329,7 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 ## Sample size <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sample-size/)^ </font>
 
-The sample size for this study is `r args_ctxml[sample_size]`.
+The sample size for this study is `r args_ctxml["sample_size"]`.
 
 ## Recruitment <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/recruitment/)^ </font>
 
@@ -467,11 +467,11 @@ The sample size for this study is `r args_ctxml[sample_size]`.
 
 *Inidividual participant data sharing statement*
 
-`r args_ctxml[ipd_description]`
+`r args_ctxml["ipd_description"]`
 
 *Individual participant data sharing time-frame statement*
 
-`r args_ctxml[ipd_time]`
+`r args_ctxml["ipd_time"]`
 
 
 
@@ -484,14 +484,14 @@ The sample size for this study is `r args_ctxml[sample_size]`.
 
 
 **Central contact**
-`r paste(args_ctxml[contact_first_name], args_ctxml[contact_last_name], sep = " ")`
-`r args_ctxml[contact_phone]`
-`r args_ctxml[contact_email]`
+`r paste(args_ctxml["contact_first_name"], args_ctxml["contact_last_name"], sep = " ")`
+`r args_ctxml["contact_phone"]`
+`r args_ctxml["contact_email"]`
 
 
 **Sponsor**
 
-`r args_ctxml[agency]`
+`r args_ctxml["agency"]`
 
 
 
