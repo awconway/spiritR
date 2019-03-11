@@ -15,15 +15,6 @@ output:
 <p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement and was generated using <a href="http://www.github.com/awconway/spiritR/">spiritR</a></p>
 &nbsp;
 
-```{r}
-# These are objects that can be assigned to auto-populate some relevant sections of the table in this protocol that are not required to be entered into the create_ctxml() function to be uploaded to clinicaltrials.gov
-primary_registry <-   
-secondaryNumbers <- #Secondary identifying numbers (if any) or N/A
-fundingStatement <- # Sources of monetary support
-inclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
-exclusionCriteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
-```
-
 ```{r include = FALSE}
 #Create the lists by assigning values for each of the parameters in the code chunks below. Assigning values for these parameters will enable you to create an xml document to be uploaded to clinicaltrials.gov and also auto-populate some fields in your clinical trial protocol below.
 
@@ -53,6 +44,7 @@ masked_caregiver =
 masked_investigator =
 masked_assessor =
 sample_size =
+number_arms =
 eligibility_criteria =
 healthy_volunteers =
 genders_included =
@@ -74,7 +66,7 @@ official_degrees =
 official_affiliation = 
 official_role =
     
-#IPD
+#Sharing statements
 ipd_sharing =
 ipd_description =
 ipd_protocol <-  
@@ -90,28 +82,35 @@ ipd_url =
 
 
 ```{r include = FALSE}
-pr_outcome_1 <- #limit 254 characters. Name of measure
-primaryOutcomeTime1 <- #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
-primaryOutcomeDescription1 <- #Limit 999 characters. Description of the metric if not included in outcome measure title
-
-#Add in any subsequent primary and secondary outcomes here.
-#eg:  
-#outcomeName <- #limit 254 characters. Name of measure
-#outcomeTime <- #limit 254 characters. Time point(s) at which the measurement is assessed The specific duration of time over which each participant is assessed 
-#outcomeDescription <- #Limit 999 characters. Description of the metric if not included in outcome measure title
-
-#When ready to upload to clinicaltrials.gov, ensure that all subsequent primary and secondary outcomes are added to the xml document using the add_pr_outcome() and add_sec_outcome() functions
+# These are objects that can be assigned to auto-populate some relevant sections of the table in this protocol that are not required to be entered into the create_ctxml() function to be uploaded to clinicaltrials.gov
+funding_statement <- # Sources of monetary support
+inclusion_criteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
+exclusion_criteria <- # This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
 ```
 
 
 ```{r include = FALSE}
-numberArms <- #numeric
+pr_outcome_1 <- #limit 254 characters. Name of measure
+pr_outcome_time_1 <- #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
+pr_outcome_desc_1 <- #Limit 999 characters. Description of the metric if not included in outcome measure title
+    
+#Add in any subsequent primary and secondary outcomes here.
+#eg:  
+#outcome_name <- #limit 254 characters. Name of measure
+#outcome_time <- #limit 254 characters. Time point(s) at which the measurement is assessed The specific duration of time over which each participant is assessed 
+#outcome_description <- #Limit 999 characters. Description of the metric if not included in outcome measure title
+
+#When ready to upload to clinicaltrials.gov, ensure that all primary and secondary outcomes are added to the xml document using the add_pr_outcome() and add_sec_outcome() functions. Eg. add_pr_outcome(ctxml, pr_outome_1, pr_outcome_time_1, pr_outcome_desc_1)
+```
+
+
+```{r include = FALSE}
 arm_label_1 <- #"Arm" means a pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol. Limit 62 characters
 arm_type_1 <- #Experimental, Active comparator, Placebo Comparator, Sham Comparator, No Intervention, Other
 arm_desc_1  <- #Description
 #Assign objects for any subsequent arms here, including the label, type and description as per above (i.e. arm1).
 
-#When ready to upload to clinicaltrials.gov, ensure that all subsequent arms are added to the xml document using the add_arm() function
+#When ready to upload to clinicaltrials.gov, ensure that all arms are added to the xml document using the add_arm() function. Eg. add_arm(ctxml, arm_label_1, arm_type_1, arm_desc_1)
 ```
 
 
@@ -121,38 +120,32 @@ int_type_1 <- #Drug, Device, Biological/Vaccine, Procedure/Surgery, Radiation, B
 int_desc_1 <-  #Do not repeat from arm description
 #Assign objects for any subsequent arms here, including the name, type and description as per above.
 
-#When ready to upload to clinicaltrials.gov, ensure that all subsequent interventions are added to the xml document using the add_intervention() function
+#When ready to upload to clinicaltrials.gov, ensure that all interventions are added to the xml document using the add_intervention() function. Eg. add_intervention(ctxml, int_name_1, int_type_1, int_desc_1)
 ```
 
-<<<<<<< HEAD
+
 ```{r include = FALSE}
-=======
-```{r}
->>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
 condition_1 <-  # Enter MeSH term for condition being studied in the trial, or Focus of the Study
 #Assign objects for any subsequent conditions here. eg. condition_2 <- "cardiac"
 
-#When ready to upload to clinicaltrials.gov, ensure that all subsequent conditions are added to the xml document using the add_condition() function
+#When ready to upload to clinicaltrials.gov, ensure that all conditions are added to the xml document using the add_condition() function. eg add_condition(ctxml, condition_1), add_condition(ctxml, condition_2)
 ```
 
-<<<<<<< HEAD
+
 ```{r include = FALSE}
-=======
-```{r}
->>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
 keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help users find studies in the database. 
 #Assign objects for any subsequent keywords here. eg. keyword_2 <- "sedation"
 
-#When ready to upload to clinicaltrials.gov, ensure that all subsequent conditions are added to the xml document using the add_keyword() function
+#When ready to upload to clinicaltrials.gov, ensure that all keywords are added to the xml document using the add_keyword() function. eg. add_keyword(ctxml, keyword_1), add_keyword(ctxml, keyword_2)
 ```
 
 
 |                               	|                       	|
 |-------------------------------	|-----------------------	|
 | Study Principal Investigator: 	| [enter details]       	|
-| Sponsors:                     	| `r respPartyType`     	|
+| Sponsors:                     	| `r args_ctxml[resp_party_type]`|
 | Protocol contributors:        	| [Names and affiliations]|
-| Trial identifiers:              | `r primaryRegistry`   	|
+| Trial identifiers:              | [enter details]    	|
 
 
 <br><br>
@@ -184,77 +177,44 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 |                              | World Health Organization Registration Data Set         |
 | -----------------------------| ------------------------------------------------------- |                  
-| Title                        | `r officialTitle`                                       |
-| Registry identifying number  | `r paste("clinicaltrials.gov", primaryRegistry, sep = " ")`|
-<<<<<<< HEAD
-| Secondary identifying numbers| `r secondaryNumbers`                                    |
-| Sources of support        	 | `r fundingStatement`                                    |
-| Primary sponsor            	 | `r agency`                                              |
+| Title                        | `r args_ctxml[official_title]`                                       |
+| Registry identifying number  | clinicaltrials.gov|
+| Secondary identifying numbers| [enter details if any]                                    |
+| Sources of support        	 | `r funding_statement`                                    |
+| Primary sponsor            	 | `r args_ctxml[agency]`                                              |
 | Secondary sponsors (if any)  | [enter details]                                         |
-| Central contact   	         | `r paste(firstName, lastName, sep=" ")`                 |
-| Study official               | `r paste(off_firstName, off_lastName,sep=" ")`          |
-| Brief title                  | `r briefTitle`                                          |
-| Acronym                      | `r studyAcronym`                                        |
+| Central contact   	         | `r paste(args_ctxml[contact_first_name], args_ctxml[contact_last_name], sep=" ")`|
+| Study official               | `r paste(args_ctxml[official_first_name], args_ctxml[official_last_ame],sep=" ")`|
+| Brief title                  | `r args_ctxml[brief_title]`                                          |
+| Acronym                      | `r args_ctxml[study_acronym]`                                        |
 | Countries of recruitment     | [enter details]   	                                     |
-| Condition(s) or study focus  | `r paste(condition_1, keyword, 1, sep = ";")`           |
+| Condition(s) or study focus  | `r paste(condition_1, keyword_1, sep = ";")`            |
 | **Interventions**            |                                                         |
 | `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
 | **Key eligibility criteria **|                                                         |
-| Age eligibility:             | `r paste(minAge, maxAge, sep = " - ")`                  |
-| Accepts healthy volunteers   | `r healthyVolunteers`                                   |
-| Inclusion criteria           | `r inclusionCriteria`                                   |
-| Exclusion criteria           | `r exclusionCriteria`                                   |
+| Age eligibility:             | `r paste(args_ctxml[min_age], args_ctxml[max_age], sep = " - ")`                  |
+| Accepts healthy volunteers   | `r args_ctxml[healthy_volunteers]`                                   |
+| Inclusion criteria           | `r inclusion_criteria`                                   |
+| Exclusion criteria           | `r exclusion_criteria`                                   |
 | **Study design**             |                                                         |
 | Study type                   | Interventional trial                                    | 
-| Allocation                   | `r randomAllocation`                                    |
-| Intervention model           | `r randomAssignment`                                    |
-| Primary purpose              | `r interventionalSubtype`                               |
-| Phase                        | `r phase`                                               | 
+| Allocation                   | `r args_ctxml[allocation]`                                    |
+| Intervention model           | `r args_ctxml[assignment]`                                    |
+| Primary purpose              | `r args_ctxml[interventional_subtype]`                               |
+| Phase                        | `r args_ctxml[phase]`                                               | 
 | **Masking**   	             |                                                         |
-| Participant                  | `r maskedSubject`                                       |
-| Care Provider                | `r maskedCaregiver`                                     |
-| Investigator                 | `r maskedInvestigator`                                  |      
-| Outcomes Assessor            | `r maskedAssesor`	                                     |
-| **Date of enrollment**       | `r startDate`  	                                       |
-| **Target sample size**       | `r sampleSize`  	                                       |
+| Participant                  | `r args_ctxml[masked_subject]`                                       |
+| Care Provider                | `r args_ctxml[masked_caregiver]`                                     |
+| Investigator                 | `r args_ctxml[masked_investigator]`                                  |      
+| Outcomes Assessor            | `r args_ctxml[masked_assesor]`	                                     |
+| **Date of enrollment**       | `r args_ctxml[start_date]`  	                                       |
+| **Target sample size**       | `r args_ctxml[sample_size]`  	                                       |
 | **Recruitment status**       | Not yet recruiting 	                                   |
 | **Primary outcomes**         |                                                         |
-=======
-| Secondary identifying numbers| `r secondaryNumbers`                          |
-| Sources of support        	 | `r fundingStatement`                          |
-| Primary sponsor            	 | `r agency`                                    |
-| Secondary sponsors (if any)  | [enter details]                               |
-| Central contact   	         | `r paste(firstName, lastName, sep=" ")`       |
-| Study official               | `r paste(off_firstName, off_lastName,sep=" ")`|
-| Brief title                  | `r briefTitle`                                |
-| Acronym                      | `r studyAcronym`                              |
-| Countries of recruitment     | [enter details]   	                           |
-| Condition(s) or study focus  | `r paste(condition_1, keyword, 1, sep = ";")` |
-| **Interventions**            |                                               |
-| `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
-| **Key eligibility criteria **|                                               |
-| Age eligibility:             | `r paste(minAge, maxAge, sep = " - ")`        |
-| Accepts healthy volunteers   | `r healthyVolunteers`                         |
-| Inclusion criteria           | `r inclusionCriteria`                         |
-| Exclusion criteria           | `r exclusionCriteria`                         |
-| **Study design**             |                                               |
-| Study type                   | Interventional trial                          | 
-| Allocation                   | `r randomAllocation`                          |
-| Intervention model           | `r randomAssignment`                          |
-| Primary purpose              | `r interventionalSubtype`                     |
-| Phase                        |`r phase`                                      | 
-| **Masking**   	             |                                               |
-| Participant                  | `r maskedSubject`                             |
-| Care Provider                | `r maskedCaregiver`                           |
-| Investigator                 | `r maskedInvestigator`                        |      
-| Outcomes Assessor            | `r maskedAssesor`	                           |
-| **Date of enrollment**       | `r startDate`  	                             |
-| **Target sample size**       | `r sampleSize`  	                             |
-| **Recruitment status**       | Not yet recruiting 	                         |
 | **Primary outcomes**         |                                               |
->>>>>>> 4480be2e5f3143e585042fad343663eca5d6499b
-| `r primaryOutcome1`          | Timeframe: `r primaryOutcomeTime1`<br><br>Description: `r primaryOutcomeDescription1`|
-| **Secondary outcomes **  	   | Outcome: [enter inline rcode]Timeframe: [enter inline rcode]Description:[enter inline rcode]|
+| `r pr_outcome_1`          | Timeframe: `r pr_outcome_time_1`<br><br>Description: `r pr_outcome_desc_1`|
+| **Secondary outcomes **  	   |                            |
+| [enter inline rcode for secondary outome name] | Timeframe: [enter inline rcode]<br><br>Description:[enter inline rcode]|
 
 <br>
 <br>
@@ -329,11 +289,11 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 
 
->Primary outcome: `r primaryOutcome1`
+>Primary outcome: `r pr_outcome_1`
 
-*Timeframe*: `r primaryOutcomeTime1`
+*Timeframe*: `r pr_outcome_time_1`
 
-*Description*: `r primaryOutcomeDescription1`
+*Description*: `r pr_outcome_description_1`
 
 
 >Secondary outcomes
@@ -369,7 +329,7 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 ## Sample size <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/sample-size/)^ </font>
 
-The sample size for this study is `r sampleSize`.
+The sample size for this study is `r args_ctxml[sample_size]`.
 
 ## Recruitment <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/recruitment/)^ </font>
 
@@ -507,11 +467,11 @@ The sample size for this study is `r sampleSize`.
 
 *Inidividual participant data sharing statement*
 
-`r ipddescription`
+`r args_ctxml[ipd_description]`
 
 *Individual participant data sharing time-frame statement*
 
-`r ipdtime`
+`r args_ctxml[ipd_time]`
 
 
 
@@ -524,18 +484,20 @@ The sample size for this study is `r sampleSize`.
 
 
 **Central contact**
-
+`r paste(args_ctxml[contact_first_name], args_ctxml[contact_last_name], sep = " ")`
+`r args_ctxml[contact_phone]`
+`r args_ctxml[contact_email]`
 
 
 **Sponsor**
 
-
+`r args_ctxml[agency]`
 
 
 
 ## Funders <font size="3">^[`r icon::fa_question_circle(size=0.1)`](http://www.spirit-statement.org/funding/)^ </font>
 
-`r fundingStatement`
+`r funding_statement`
 
 
 

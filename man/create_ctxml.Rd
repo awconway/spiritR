@@ -73,6 +73,10 @@ Sequential.}
 
 \item{sample_size}{Planned sample size}
 
+\item{number_arms}{Number of arms. "Arm" means a pre-specified group or
+subgroup of participant(s) in a clinical trial assigned to receive specific
+intervention(s) (or no intervention) according to a protocol.}
+
 \item{eligibility_criteria}{Textbox contaiing both inclusion and exclusion
 criteria}
 

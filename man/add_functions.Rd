@@ -107,19 +107,19 @@ add_pr_outcome(ctxml = ctxml,
                description = "Insert description about the measure.")
 }
 \dontrun{
-add_sec_outcome(ctxml = test_ctxml,
+add_sec_outcome(ctxml = ctxml,
                 name = "time to upload",
                 time = "As measured",
                 description = "Insert description about the measure.")
 }
 
 #' \dontrun{
-add_condition(ctxml = test_ctxml,
+add_condition(ctxml = ctxml,
               condition = "Cardiac")
 }
 
 #' \dontrun{
-add_keyword(ctxml = test_ctxml,
+add_keyword(ctxml = ctxml,
             keyword = "sedation")
 }
 

@@ -46,6 +46,9 @@
 #' @param masked_investigator True/False
 #' @param masked_assesor True/False
 #' @param sample_size Planned sample size
+#' @param number_arms Number of arms. "Arm" means a pre-specified group or 
+#' subgroup of participant(s) in a clinical trial assigned to receive specific 
+#' intervention(s) (or no intervention) according to a protocol. 
 #' @param eligibility_criteria Textbox contaiing both inclusion and exclusion 
 #' criteria
 #' @param healthy_volunteers Trial is recruiting healthy volunteers for 
@@ -189,36 +192,11 @@ create_ctxml <- function(org_name, org_study_id, brief_title, official_title,
     xml2::xml_find_first("..") %>% 
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("primary_outcome") %>% 
-    xml2::xml_add_child("outcome_measure", primaryOutcome1) %>% 
-    xml2::xml_add_sibling("outcome_time_frame", primaryOutcomeTime1) %>% 
-    xml2::xml_add_sibling("outcome_description") %>% 
-    xml2::xml_add_child("textblock", primaryOutcomeDescription1) %>% 
-    
-    xml2::xml_find_first("..") %>% 
-    xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("secondary_outcome") %>%
     xml2::xml_add_sibling("enrollment", sampleSize) %>% 
     xml2::xml_add_sibling("enrollment_type", "Anticipated") %>%
-    xml2::xml_add_sibling("condition", condition_1) %>%
-    xml2::xml_add_sibling("keyword", keyword_1) %>% 
-    xml2::xml_add_sibling("arm_group") %>% 
-    xml2::xml_add_child("arm_group_label", arm_label_1) %>% 
-    xml2::xml_add_sibling("arm_type", arm_type_1) %>%
-    xml2::xml_add_sibling("arm_group_description") %>% 
-    xml2::xml_add_child("textblock", arm_desc_1) %>% 
-    
-    xml2::xml_find_first("..") %>% 
-    xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("intervention") %>% 
-    xml2::xml_add_child("intervention_type", int_type_1) %>% 
-    xml2::xml_add_sibling("intervention_name", int_name_1) %>% 
-    xml2::xml_add_sibling("intervention_description") %>% 
-    xml2::xml_add_child("textblock", int_desc_1) %>% 
-    
-    xml2::xml_find_first("..") %>% 
-    xml2::xml_add_sibling("arm_group_label", arm_label_1) %>% 
-    
-    xml2::xml_find_first("..") %>% 
+    xml2::xml_add_sibling("arm_group")
+    xml2::xml_add_sibling("intervention") 
     xml2::xml_add_sibling("eligibility") %>% 
     xml2::xml_add_child("study_population") %>% 
     xml2::xml_add_child("textblock") %>% 
