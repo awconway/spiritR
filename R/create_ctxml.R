@@ -203,8 +203,8 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
     xml2::xml_add_sibling("secondary_outcome") %>%
     xml2::xml_add_sibling("enrollment", sample_size) %>% 
     xml2::xml_add_sibling("enrollment_type", "Anticipated") %>%
-    xml2::xml_add_sibling("arm_group")
-    xml2::xml_add_sibling("intervention") 
+    xml2::xml_add_sibling("arm_group") %>% 
+    xml2::xml_add_sibling("intervention")  %>% 
     xml2::xml_add_sibling("eligibility") %>% 
     xml2::xml_add_child("study_population") %>% 
     xml2::xml_add_child("textblock") %>% 
