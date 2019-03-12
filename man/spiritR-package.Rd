@@ -12,7 +12,7 @@ This package contains an R Markdown template for a clinical trial
     the required information and upload it to clinicaltrials.gov.
 }
 \author{
-\strong{Maintainer}: Aaron Conway \email{aaron.conway@utoronto.ca}
+\strong{Maintainer}: Aaron Conway \email{aaron.conway@utoronto.ca} (0000-0002-9583-8636)
 
 }
 \keyword{internal}

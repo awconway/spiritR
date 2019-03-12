@@ -5,7 +5,8 @@ Authors@R:
     person(given = "Aaron",
            family = "Conway",
            role = c("aut", "cre"),
-           email = "aaron.conway@utoronto.ca")
+           email = "aaron.conway@utoronto.ca",
+           comment = c(ORCID = "0000-0002-9583-8636"))
 Description: This package contains an R Markdown template for a clinical trial 
     protocol adhering to the [SPIRIT](http://www.spirit-statement.org/) 
     checklist. It also contains functions to create a xml document containing
