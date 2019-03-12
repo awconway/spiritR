@@ -13,3 +13,9 @@ print_ctxml(ctxml)
 This function allows you to easily view the structure of the xml document
 generated using the create_ctxml() function
 }
+\examples{
+\dontrun{
+print_ctxml(ctxml)
+}
+
+}

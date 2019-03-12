@@ -11,9 +11,15 @@
 #'   account
 #' @param userName Username for a clinicaltrials.gov account
 #' @param passWord Password for a clinicaltrials.gov account
+#' 
 #' @return A message from a http post request to show that the upload was 
 #'   successful or unsuccesful 
-#'
+#'   
+#' @examples
+#' \dontrun{
+#' upload_ctxml(ctxml = ctxml, org_name ="UHNToronto", user_name = "aconway",
+#'  password = "password")
+#' }
 #' 
 #' @export
 #' @rdname upload_ctxml

@@ -26,3 +26,10 @@ successful or unsuccesful
 This function will make a http POST request to upload a XML document to the
 clinicaltrials.gov registry.
 }
+\examples{
+\dontrun{
+upload_ctxml(ctxml = ctxml, org_name ="UHNToronto", user_name = "aconway",
+ password = "password")
+}
+
+}

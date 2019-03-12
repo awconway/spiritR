@@ -89,7 +89,61 @@
 #' of analyses, and by what mechanism. Limit 1000 characters.
 #' @param ipd_url The web address, if any, used to find additional information 
 #' about the plan to share IPD.
-#'  
+#' 
+#' @examples
+#' \dontrun{
+#' create_ctxml(org_name = "UHNToronto",
+#' org_study_id = "Foo trial",
+#' brief_title = "Foo trial to test auto upload",
+#' study_acronym = "N/A",
+#' official_title = "Foo trial to test auto upload: A randomized trial",
+#' agency  = "Aaron Conway",
+#' resp_party_type = "Sponsor-Investigator",
+#' investigator_username = "aconway",
+#' investigator_title ="Assistant Professor",
+#' brief_summary = "Lay summary here",
+#' start_date = "2019-10",
+#' primary_compl =  "2020-12",
+#' study_compl = "2020-12",
+#' int_subtype = "Treatment",
+#' phase = "N/A",
+#' assignment = "Parallel",
+#' allocation = "Randomized",
+#' no_masking =  "False",
+#' masked_subject = "True",
+#' masked_caregiver = "True",
+#' masked_investigator = "True",
+#' masked_assessor = "True",
+#' number_arms = "2",
+#' sample_size = "40",
+#' eligibility_criteria = "details",
+#' healthy_volunteers = "No",
+#' genders_included = "Both",
+#' gender_based = "No",
+#' min_age = "N/A",
+#' max_age = "N/A",
+#' contact_first_name = "Aaron",
+#' contact_last_name = "Conway",
+#' contact_degrees = "PhD",
+#' contact_phone = "xxx-xxx-xxxx",
+#' contact_email = "dhsksj@hfhfk.com",
+#' official_first_name = "Aarpn",
+#' official_last_name ="Conway",
+#' official_degrees = "PhD",
+#' official_affiliation = "Assistant Professor",
+#' official_role = "Principal Investigator",
+#' ipd_sharing = "Yes",
+#' ipd_description = "details",
+#' ipd_protocol =  "True",
+#' ipd_sap = "True",
+#' ipd_icf = "True",
+#' ipd_csr = "True",
+#' ipd_code = "True",
+#' ipd_time = "On publication of results",
+#' ipd_criteria = "details",
+#' ipd_url = "http://")  
+#' }    
+#'        
 #' @export
 #' @rdname create_ctxml
 
