@@ -9,13 +9,13 @@ create_ctxml(org_name, org_study_id, brief_title, study_acronym,
   investigator_title, brief_summary, start_date, study_compl,
   primary_compl, int_subtype, phase, assignment, allocation, no_masking,
   masked_subject, masked_caregiver, masked_investigator, masked_assessor,
-  sample_size, number_arms, eligibility_criteria, healthy_volunteers,
-  genders_included, gender_based, min_age, max_age, contact_first_name,
-  contact_last_name, contact_degrees, contact_phone, contact_email,
-  official_first_name, official_last_name, official_degrees,
-  official_affiliation, official_role, ipd_sharing, ipd_description,
-  ipd_protocol, ipd_sap, ipd_csr, ipd_icf, ipd_code, ipd_time,
-  ipd_criteria, ipd_url)
+  number_arms, sample_size, eligibility_criteria, healthy_volunteers,
+  genders_included, gender_based, min_age, max_age, official_first_name,
+  official_last_name, official_degrees, official_role,
+  official_affiliation, contact_first_name, contact_last_name,
+  contact_degrees, contact_phone, contact_email, ipd_sharing,
+  ipd_description, ipd_protocol, ipd_sap, ipd_icf, ipd_csr, ipd_code,
+  ipd_time, ipd_criteria, ipd_url)
 }
 \arguments{
 \item{org_name}{The code for the organisation name associated with your PRS
@@ -80,11 +80,11 @@ Sequential.}
 
 \item{masked_assessor}{True/False}
 
-\item{sample_size}{Planned sample size}
-
 \item{number_arms}{Number of arms. "Arm" means a pre-specified group or
 subgroup of participant(s) in a clinical trial assigned to receive specific
 intervention(s) (or no intervention) according to a protocol.}
+
+\item{sample_size}{Planned sample size}
 
 \item{eligibility_criteria}{Textbox contaiing both inclusion and exclusion
 criteria}
@@ -101,6 +101,18 @@ self-representation of gender identitiy. Answer is either: Yes; or No.}
 
 \item{max_age}{Numeric with years - e.g. 80 years or 'N/A (No Limit)'}
 
+\item{official_first_name}{Overall official first name}
+
+\item{official_last_name}{Overall official last name}
+
+\item{official_degrees}{Overall official degrees/qualifications}
+
+\item{official_role}{Either: Study Chair; Study Director or Study Principal
+Investigator.}
+
+\item{official_affiliation}{Full name of the official's organization. If
+none, specify Unaffiliated.}
+
 \item{contact_first_name}{Central contact first name}
 
 \item{contact_last_name}{Central contact last name}
@@ -110,18 +122,6 @@ self-representation of gender identitiy. Answer is either: Yes; or No.}
 \item{contact_phone}{Central contact phone number}
 
 \item{contact_email}{Central contact email}
-
-\item{official_first_name}{Overall official first name}
-
-\item{official_last_name}{Overall official last name}
-
-\item{official_degrees}{Overall official degrees/qualifications}
-
-\item{official_affiliation}{Full name of the official's organization. If
-none, specify Unaffiliated.}
-
-\item{official_role}{Either: Study Chair; Study Director or Study Principal
-Investigator.}
 
 \item{ipd_sharing}{Indicate whether there is a plan to make individual
 participant data (IPD) collected in this study, including data dictionaries,
@@ -135,9 +135,9 @@ IPD are to be shared with other researchers.}
 
 \item{ipd_sap}{Statistical analysis plan to be shared: True/False}
 
-\item{ipd_csr}{Clinical study report to be shared: True/False}
-
 \item{ipd_icf}{Information consent form to be shared: True/False}
+
+\item{ipd_csr}{Clinical study report to be shared: True/False}
 
 \item{ipd_code}{Analytic code to be shared: True/False}
 

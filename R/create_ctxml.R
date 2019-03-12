@@ -100,15 +100,15 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
                          study_compl, primary_compl, int_subtype,
                          phase, assignment, allocation, no_masking, 
                          masked_subject, masked_caregiver, masked_investigator,
-                         masked_assessor, sample_size, number_arms, 
+                         masked_assessor, number_arms, sample_size, 
                          eligibility_criteria, healthy_volunteers, 
-                         genders_included, gender_based, min_age, max_age, 
+                         genders_included, gender_based, min_age, max_age,
+                         official_first_name, official_last_name,
+                         official_degrees, official_role, official_affiliation,
                          contact_first_name, contact_last_name, 
                          contact_degrees, contact_phone, contact_email, 
-                         official_first_name, official_last_name,
-                         official_degrees, official_affiliation,
-                         official_role, ipd_sharing, ipd_description, 
-                         ipd_protocol, ipd_sap, ipd_csr, ipd_icf, ipd_code,
+                         ipd_sharing, ipd_description, 
+                         ipd_protocol, ipd_sap, ipd_icf, ipd_csr, ipd_code,
                          ipd_time, ipd_criteria, ipd_url){
   
   xml2::xml_new_root( "study_collection",
@@ -212,7 +212,7 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("sampling_method") %>% 
     xml2::xml_add_sibling("criteria") %>% 
-    xml2::xml_add_child("textblock", criteria) %>% 
+    xml2::xml_add_child("textblock", eligibility_criteria) %>% 
     
     xml2::xml_find_first("..") %>% 
     xml2::xml_add_sibling("healthy_volunteers", healthy_volunteers) %>% 
