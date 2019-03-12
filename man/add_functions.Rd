@@ -93,6 +93,7 @@ to the xml document.
          arm_type =  "Active Comparator", 
          arm_desc = "Manual upload to registry")
 }
+
 \dontrun{
 add_intervention(ctxml = ctxml, 
                  int_type =  "Device", 
@@ -100,12 +101,14 @@ add_intervention(ctxml = ctxml,
                  int_desc = "The usual way to enter to the registry",
                  arm_label = "Standard")
 }
+
 \dontrun{
 add_pr_outcome(ctxml = ctxml,
                name = "correct upload",
                time = "As measured",
                description = "Insert description about the measure.")
 }
+
 \dontrun{
 add_sec_outcome(ctxml = ctxml,
                 name = "time to upload",
@@ -113,12 +116,12 @@ add_sec_outcome(ctxml = ctxml,
                 description = "Insert description about the measure.")
 }
 
-#' \dontrun{
+\dontrun{
 add_condition(ctxml = ctxml,
               condition = "Cardiac")
 }
 
-#' \dontrun{
+\dontrun{
 add_keyword(ctxml = ctxml,
             keyword = "sedation")
 }
