@@ -13,7 +13,7 @@ to clinicaltrials.gov}
 \usage{
 add_arm(ctxml, arm_label, arm_type, arm_desc)
 
-add_intervention(ctxml, int_type, int_name, int_desc, arm_label)
+add_intervention(ctxml, int_name, int_type, int_desc, arm_label)
 
 add_pr_outcome(ctxml, name, time, description)
 
@@ -35,11 +35,11 @@ Sham Comparator, No Intervention, or Other.}
 
 \item{arm_desc}{Description of the arm.}
 
+\item{int_name}{Name of the intervention. For a drug, it is the generic name.}
+
 \item{int_type}{Drug, Device, Biological/Vaccine, Procedure/Surgery,
 Radiation, Behavioural, Genetic, Dietary Supplement, Combination Product,
 Diagnostic Test, or Other.}
-
-\item{int_name}{Name of the intervention. For a drug, it is the generic name.}
 
 \item{int_desc}{Other details about the intervention not included in name.}
 

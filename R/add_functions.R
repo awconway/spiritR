@@ -96,6 +96,12 @@
 #' @export
 #' @rdname add_functions
 add_arm <- function(ctxml, arm_label, arm_type, arm_desc){
+  defined <- ls()
+  passed <- names(as.list(match.call())[-1])
+  
+  if (any(!defined %in% passed)) {
+    stop(paste("missing values for", paste(setdiff(defined, passed), collapse=", ")))
+  }
     ctxml %>% 
     xml2::xml_find_first(".//arm_group") %>% 
     xml2::xml_add_sibling("arm_group") %>% 
@@ -109,8 +115,14 @@ add_arm <- function(ctxml, arm_label, arm_type, arm_desc){
 
 #' @export
 #' @rdname add_functions
-add_intervention <- function(ctxml, int_type, int_name, int_desc, 
+add_intervention <- function(ctxml, int_name, int_type, int_desc, 
                              arm_label){
+  defined <- ls()
+  passed <- names(as.list(match.call())[-1])
+  
+  if (any(!defined %in% passed)) {
+    stop(paste("missing values for", paste(setdiff(defined, passed), collapse=", ")))
+  }
     ctxml %>% 
     xml2::xml_find_first(".//intervention") %>%
     xml2::xml_add_sibling("intervention") %>% 
@@ -127,6 +139,12 @@ add_intervention <- function(ctxml, int_type, int_name, int_desc,
 #' @export
 #' @rdname add_functions
 add_pr_outcome <- function(ctxml, name, time, description){
+  defined <- ls()
+  passed <- names(as.list(match.call())[-1])
+  
+  if (any(!defined %in% passed)) {
+    stop(paste("missing values for", paste(setdiff(defined, passed), collapse=", ")))
+  }
   ctxml %>% 
     xml2::xml_find_first(".//primary_outcome") %>% 
     xml2::xml_add_sibling("primary_outcome") %>% 
@@ -141,6 +159,12 @@ add_pr_outcome <- function(ctxml, name, time, description){
 #' @export
 #' @rdname add_functions
 add_sec_outcome <- function(ctxml, name, time, description){
+  defined <- ls()
+  passed <- names(as.list(match.call())[-1])
+  
+  if (any(!defined %in% passed)) {
+    stop(paste("missing values for", paste(setdiff(defined, passed), collapse=", ")))
+  }
   ctxml %>% 
     xml2::xml_find_first(".//secondary_outcome") %>% 
     xml2::xml_add_sibling("secondary_outcome") %>% 
