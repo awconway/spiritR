@@ -38,8 +38,8 @@ principal investigator if it is a Sponsor-Investigator trial.}
 party designated by sponsor) or Sponsor-Investigator (individual who
 initiates and conducts study).}
 
-\item{investigator_username}{Format is First Name Last Name [\link{username}]
-eg. Aaron Conway [\link{aconway}]. This is associated with your prs log-in}
+\item{investigator_username}{The username associated with your
+clinicaltrials.gov log-in}
 
 \item{investigator_title}{Offical title e.g. Assistant Professor}
 
@@ -53,7 +53,7 @@ intended for the lay public. Limit is 5000 characters.}
 participant was examined or received an intervention for purposes of final
 collection of data}
 
-\item{primary_compl}{Anticipated date written in yyyy-mm format. The date
+\item{primary_compl}{Anticipated date written in yyyy-mm-dd format. The date
 that the final participant was examined or received an intervention for the
 purposes of final collection of data for the primary outcome.}
 

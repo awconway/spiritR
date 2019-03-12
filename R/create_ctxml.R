@@ -18,14 +18,14 @@
 #' @param resp_party_type Either: Sponsor; Principal Investigator (responsible 
 #' party designated by sponsor) or Sponsor-Investigator (individual who 
 #' initiates and conducts study).
-#' @param investigator_username Format is First Name Last Name [[username]] 
-#' eg. Aaron Conway [[aconway]]. This is associated with your prs log-in
+#' @param investigator_username The username associated with your 
+#' clinicaltrials.gov log-in
 #' @param investigator_title Offical title e.g. Assistant Professor
 #' @param brief_summary A short description of the clinical study, including a 
 #' brief statement of the clinical study's hypothesis, written in language 
 #' intended for the lay public. Limit is 5000 characters.
 #' @param start_date Anticipated start date written in yyyy-mm format
-#' @param primary_compl Anticipated date written in yyyy-mm format. The date 
+#' @param primary_compl Anticipated date written in yyyy-mm-dd format. The date 
 #' that the final participant was examined or received an intervention for the 
 #' purposes of final collection of data for the primary outcome.
 #' @param study_compl The anticipated date (written in yyyy-mm) that the final 
@@ -203,6 +203,8 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
     xml2::xml_add_sibling("secondary_outcome") %>%
     xml2::xml_add_sibling("enrollment", sample_size) %>% 
     xml2::xml_add_sibling("enrollment_type", "Anticipated") %>%
+    xml2::xml_add_sibling("condition") %>%
+    xml2::xml_add_sibling("keyword") %>%
     xml2::xml_add_sibling("arm_group") %>% 
     xml2::xml_add_sibling("intervention")  %>% 
     xml2::xml_add_sibling("eligibility") %>% 

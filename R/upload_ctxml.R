@@ -14,14 +14,12 @@
 #' @return A message from a http post request to show that the upload was 
 #'   successful or unsuccesful 
 #'
-#' @example 
-#' upload_ct(ct_xml, UHNToronto, aconway, password)
 #' 
 #' @export
 #' @rdname upload_ctxml
-upload_ctxml <- function(ctxml, orgName, userName, passWord){
-  body  <-  list(orgNAME = orgName, userName = userName, 
-                 passWord = passWord,  uploadXML = ctxml, 
+upload_ctxml <- function(ctxml, org_name, user_name, password){
+  body  <-  list(orgNAME = org_name, userName = user_name, 
+                 passWord = password,  uploadXML = ctxml, 
                  autoRelease = FALSE)
   httr::POST("https://register.clinicaltrials.gov/prs/app/action/ExternalUpload", 
              body = body, encode = 'form')

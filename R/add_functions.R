@@ -156,7 +156,7 @@ add_sec_outcome <- function(ctxml, name, time, description){
 #' @rdname add_functions
 add_condition <- function(ctxml, condition){
   ctxml %>% 
-    xml2::xml_find_first(".//enrollment_type") %>% 
+    xml2::xml_find_first(".//condition") %>% 
     xml2::xml_add_sibling("condition", condition) %>%
     xml2::xml_root()
 }
@@ -166,8 +166,8 @@ add_condition <- function(ctxml, condition){
 #' @rdname add_functions
 add_keyword <- function(ctxml, keyword){
   ctxml %>% 
-    xml2::xml_find_first(".//condition") %>% 
-    xml2::xml_add_sibling("condition", keyword) %>%
+    xml2::xml_find_first(".//keyword") %>% 
+    xml2::xml_add_sibling("keyword", keyword) %>%
     xml2::xml_root()
 }
 

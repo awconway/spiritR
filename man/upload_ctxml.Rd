@@ -4,7 +4,7 @@
 \alias{upload_ctxml}
 \title{Upload an xml object to the clinicaltrials.gov registry}
 \usage{
-upload_ctxml(ctxml, orgName, userName, passWord)
+upload_ctxml(ctxml, org_name, user_name, password)
 }
 \arguments{
 \item{ctxml}{A xml document created using  create_ctxml() and updated with
