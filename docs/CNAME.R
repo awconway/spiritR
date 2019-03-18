@@ -1,1 +1,1 @@
-www.aaronconway.dev/spiritr
+www.aaronconway.dev/spiritR/
