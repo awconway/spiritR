@@ -7,10 +7,10 @@
 #' @param ctxml A xml document created using  create_ctxml() and updated with 
 #' any add_arms(), add_interventions(), add_pr_outcomes() and add_sec_outcomes()
 #' that may be required.
-#' @param orgName The organisation name associated with a clinicaltrials.gov 
+#' @param org_name The organisation name associated with a clinicaltrials.gov 
 #'   account
-#' @param userName Username for a clinicaltrials.gov account
-#' @param passWord Password for a clinicaltrials.gov account
+#' @param user_name Username for a clinicaltrials.gov account
+#' @param password Password for a clinicaltrials.gov account
 #' 
 #' @return A message from a http post request to show that the upload was 
 #'   successful or unsuccesful 

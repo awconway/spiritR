@@ -11,12 +11,12 @@ upload_ctxml(ctxml, org_name, user_name, password)
 any add_arms(), add_interventions(), add_pr_outcomes() and add_sec_outcomes()
 that may be required.}
 
-\item{orgName}{The organisation name associated with a clinicaltrials.gov
+\item{org_name}{The organisation name associated with a clinicaltrials.gov
 account}
 
-\item{userName}{Username for a clinicaltrials.gov account}
+\item{user_name}{Username for a clinicaltrials.gov account}
 
-\item{passWord}{Password for a clinicaltrials.gov account}
+\item{password}{Password for a clinicaltrials.gov account}
 }
 \value{
 A message from a http post request to show that the upload was
