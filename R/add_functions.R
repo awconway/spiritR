@@ -112,6 +112,25 @@ add_arm <- function(ctxml, arm_label, arm_type, arm_desc){
     xml2::xml_root()
   }
 
+#' @export
+#' @rdname add_functions
+add_group <- function(ctxml, group_label, group_desc){
+  defined <- ls()
+  passed <- names(as.list(match.call())[-1])
+  
+  if (any(!defined %in% passed)) {
+    stop(paste("missing values for", paste(setdiff(defined, passed), collapse=", ")))
+  }
+  ctxml %>% 
+    xml2::xml_find_first(".//arm_group") %>% 
+    xml2::xml_add_sibling("arm_group") %>% 
+    xml2::xml_add_child("arm_group_label", group_label) %>% 
+    xml2::xml_add_sibling("arm_type") %>%
+    xml2::xml_add_sibling("arm_group_description") %>% 
+    xml2::xml_add_child("textblock", group_desc) %>% 
+    xml2::xml_root()
+}
+
 
 #' @export
 #' @rdname add_functions

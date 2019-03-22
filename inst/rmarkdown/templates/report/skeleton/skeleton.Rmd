@@ -183,12 +183,12 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 | Sources of support        	 | `r funding_statement`                                    |
 | Primary sponsor            	 | `r args_ctxml$agency`                                              |
 | Secondary sponsors (if any)  | [enter details]                                         |
-| Central contact   	         | `r paste(args_ctxml$contact_first_name, args_ctxml$contact_last_name, sep=" ")`|
+| Central contact   	         | `r args_ctxml$contact_first_name, args_ctxml$contact_last_name, sep=" ")`|
 | Study official               | `r paste(args_ctxml$official_first_name, args_ctxml$official_last_name,sep=" ")`|
 | Brief title                  | `r args_ctxml$brief_title`                                          |
 | Acronym                      | `r args_ctxml$study_acronym`                                        |
 | Countries of recruitment     | [enter details]   	                                     |
-| Condition(s) or study focus  | `r paste(condition_1, keyword_1, sep = "; ")`            |
+| Condition(s) or study focus  | `r condition_1`; `r keyword_1`            |
 | **Interventions**            |                                                         |
 | `r int_name_1`               | Type: `r int_type_1`<br><br> Description: `r int_desc_1`|
 | **Key eligibility criteria **|                                                         |
@@ -293,7 +293,7 @@ keyword_1 <-  # Words or phrases that best describe the protocol. Keywords help 
 
 *Timeframe*: `r pr_outcome_time_1`
 
-*Description*: `r pr_outcome_description_1`
+*Description*: `r pr_outcome_desc_1`
 
 
 >Secondary outcomes
