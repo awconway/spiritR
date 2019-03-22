@@ -8,12 +8,9 @@ output:
     toc: true
     toc_float: true
     number_sections: true
+    includes:
+      in_header: before.html
 ---
-
-
-&nbsp;
-<p style="text-align: left;"><span style="color: #808080;">This protocol contains all elements from the  <a href="http://www.spirit-statement.org/">SPIRIT</a> statement and was generated using <a href="http://www.github.com/awconway/spiritR/">spiritR</a></p>
-&nbsp;
 
 ```{r include = FALSE}
 #Create the lists by assigning values for each of the parameters in the code chunks below. Assigning values for these parameters will enable you to create an xml document to be uploaded to clinicaltrials.gov and also auto-populate some fields in your clinical trial protocol below.
