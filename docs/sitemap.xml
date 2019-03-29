@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://spiritr.netlify.com/index.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/add_functions.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/create_ctxml.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/create_obsxml.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/print_ctxml.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/spiritR-package.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/reference/upload_ctxml.html</loc>
+  </url>
+  <url>
+    <loc>https://spiritr.netlify.com/articles/spiritR.html</loc>
+  </url>
+</urlset>

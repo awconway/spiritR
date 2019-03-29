@@ -64,7 +64,7 @@
       <h1>spiritR: a workflow to enable direct upload of a clinical trial protocol to clinicaltrials.gov</h1>
                         <h4 class="author">Aaron Conway</h4>
             
-            <h4 class="date">2019-03-19</h4>
+            <h4 class="date">2019-03-29</h4>
       
       
       <div class="hidden name"><code>spiritR.Rmd</code></div>
@@ -82,7 +82,7 @@
 <h2 class="hasAnchor">
 <a href="#registering-a-clinical-trial" class="anchor"></a>Registering a clinical trial</h2>
 <p>Pre-registering core study design aspects of a clinical trial minimises the potential for reporting bias. Professional bodies, including the International Committee of Medical Journal Editors, as well as regulatory laws, such as the US Food and Druf Adminstration Amendmednt Act, mandate that clinical trials are registered <span class="citation">(Califf et al. 2012; De Angelis et al. 2005)</span>. The largest clinical trial registry in the world is <a href="http://www.clinicaltrials.gov">clinicaltrials.gov</a>.</p>
-<p>The typical workflow for researchers planning a randomized controlled trial is to intially generate a clinical trial protocol using word processing software. The information required to register a protocol in the clinicaltrials.gov registry is then cut and paste from that document into the relevant section of the clinicaltrials.gov webpage. The spiritR package aims to reduce the repitition involved in this process.</p>
+<p>The typical workflow for researchers planning a randomized controlled trial is to initially generate a clinical trial protocol using word processing software. The information required to register a protocol in the clinicaltrials.gov registry is then cut and paste from that document into the relevant section of the clinicaltrials.gov webpage. The spiritR package aims to reduce the repetition involved in this process.</p>
 <p>Clinicaltrials.gov permits xml documents that contain the elements required for clinical trial registration to be automatically uploaded through their application programming interface (API). The spiritR package uses functions from the xml2 R package to develop an xml document in a format that adheres to clinicaltrials.gov requirements <span class="citation">(Wickham, Hester, and Ooms 2018)</span>. The httr package is then used to generate a http POST request with parameters needed to interact with the clinicaltrials.gov API <span class="citation">(Wickham 2018)</span>.</p>
 </div>
 <div id="writing-a-protocol-using-the-spiritr-rmarkdown-template" class="section level2">
