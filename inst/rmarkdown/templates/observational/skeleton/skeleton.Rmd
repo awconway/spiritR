@@ -4,7 +4,6 @@ author: "Version 1"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 csl: nature.csl
 subtitle: Title
-bibliography: references.bib
 output:
   html_document:
     includes:
