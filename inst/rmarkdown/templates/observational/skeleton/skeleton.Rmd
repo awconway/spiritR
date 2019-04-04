@@ -1,0 +1,418 @@
+---
+title: "Research Protocol"
+author: "Version 1"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+csl: nature.csl
+subtitle: Title
+output:
+  html_document:
+    includes:
+      in_header: lineheight.html
+      before_body: before.html
+    number_sections: yes
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r include = FALSE}
+#Create the lists by assigning values for each of the parameters in the code chunks below. Assigning values for these parameters will enable you to create an xml document to be uploaded to clinicaltrials.gov and also auto-populate some fields in your clinical trial protocol below.
+
+# This will be easiest to complete by running ?create_ctxml() in the console so that you can see descriptions of the parameters to be included in this list in the viewer panel.
+org_name = "UHNToronto"
+org_study_id = "CAPCR"
+brief_title = ""
+study_acronym = "N/A"
+official_title = ""
+agency  = "University Health Network, Toronto"
+resp_party_type = "Sponsor-Investigator"
+investigator_username = "aconway"
+investigator_title = "Assistant Professor"
+brief_summary = ""
+start_date = "2019-08"
+primary_compl = "2020-08" 
+study_compl = "2021-08"
+obs_design = "Cohort"
+biospec_retention = "None"
+biospec_description = "N/A"
+timing = "Prospective"
+sample_size = "200"
+number_groups = "1"
+study_population = ""
+sampling_method = "Non-probability"
+eligibility_criteria = ""
+healthy_volunteers = "No"
+genders_included = "Both"
+gender_based = "No"
+min_age = "16"
+max_age = "N/A"
+    
+#Central contact
+contact_first_name = "Aaron"
+contact_last_name = "Conway"
+contact_degrees = "RN PhD"
+contact_phone = "(416) 340-4654"
+contact_email = "aaron.conway@uhn.ca"
+    
+#Overall official
+official_first_name = "Aaron"
+official_last_name = "Conway"
+official_degrees = "RN PhD"
+official_affiliation = "University of Toronto"
+official_role = "Assistant Professor"
+    
+#Sharing statements
+ipd_sharing = "Yes"
+ipd_description = "Study data, participant-level data sets (without identifying information) and code for statistical analyses will be shared in a publicly accessible repository at the time of publication."
+ipd_protocol =  "True"
+ipd_sap = "True"
+ipd_icf = "False"
+ipd_csr = "False"
+ipd_code = "True"
+ipd_time = "Participant-level data sets (without identifying information) will be made available at the time of publication of results."
+ipd_criteria = "Available through a public repository"
+ipd_url = "www.aaronconway.info"
+```
+
+
+```{r include = FALSE}
+# These are objects that can be assigned to auto-populate some relevant sections of the table in this protocol that are not required to be entered into the create_ctxml() function to be uploaded to clinicaltrials.gov
+funding_statement <- "" # Sources of monetary support
+inclusion_criteria <- ""# This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.
+exclusion_criteria <- ""# This is for the trial summary box in the protocol. Include a section of text (eg"1. Emergency admission. <br> 2." ) with <br> after each item not \n for new lines otherwise the markdown table will not be correct.   
+```
+
+
+```{r include = FALSE}
+pr_outcome_1 <- "" #limit 254 characters. Name of measure
+pr_outcome_time_1 <- "" #limit 254 characters. Time point(s) at which the measurement is assessed. The specific duration of time over which each participant is assessed 
+pr_outcome_desc_1 <- "" #Limit 999 characters. Description of the metric if not included in outcome measure title
+    
+#Add in any subsequent primary and secondary outcomes here.
+#eg:  
+#outcome_name <- #limit 254 characters. Name of measure
+#outcome_time <- #limit 254 characters. Time point(s) at which the measurement is assessed The specific duration of time over which each participant is assessed 
+#outcome_description <- #Limit 999 characters. Description of the metric if not included in outcome measure title
+
+#When ready to upload to clinicaltrials.gov, ensure that all primary and secondary outcomes are added to the xml document using the add_pr_outcome() and add_sec_outcome() functions. Eg. add_pr_outcome(ctxml, pr_outome_1, pr_outcome_time_1, pr_outcome_desc_1)
+```
+
+
+```{r include = FALSE}
+group_label_1 <- "" #The short name used to identify the group. 
+group_desc_1  <- "" # Explanation of the nature of the study group (for example, those with a condition and those without a condition; those with an exposure and those without an exposure). Limit: 1000 characters.
+
+#When ready to upload to clinicaltrials.gov, ensure that all groups are added to the xml document using the add_group() function. Eg. add_group(ctxml, group_label_1, group_desc_1)
+```
+
+
+```{r include = FALSE}
+condition_1 <- "Cardiac"
+condition_2  <- "Anesthesia" # Enter MeSH term for condition being studied in the trial, or Focus of the Study
+#Assign objects for any subsequent conditions here. eg. condition_2 <- "cardiac"
+
+#When ready to upload to clinicaltrials.gov, ensure that all conditions are added to the xml document using the add_condition() function. eg add_condition(ctxml, condition_1), add_condition(ctxml, condition_2)
+```
+
+
+```{r include = FALSE}
+keyword_1 <- "Sedation"
+keyword_2 <- ""
+keyword_3 <- " "
+keyword_4 <- "" # Words or phrases that best describe the protocol. Keywords help users find studies in the database. 
+#Assign objects for any subsequent keywords here. eg. keyword_2 <- "sedation"
+
+#When ready to upload to clinicaltrials.gov, ensure that all keywords are added to the xml document using the add_keyword() function. eg. add_keyword(ctxml, keyword_1), add_keyword(ctxml, keyword_2)
+```
+
+<br><br>
+
+|  |  |
+| --- | --- |
+| Study Principal Investigator: | **Aaron Conway, RN, PhD** <br>RBC Chair in Cardiovascular Nursing Research <br>Peter Munk Cardiac Centre, Toronto General Hospital, University Health Network <br>Assistant Professor<br> Lawrence S. Bloomberg Faculty of Nursing, University of Toronto <br><br>| 
+| Sponsors: | Investigator-sponsored trial <br><br>|
+| Protocol contributors: |     |
+| Trial identifiers: | CAPCR   |
+
+
+<br><br>
+**ABBREVIATIONS**
+
+| Abbreviation 	| Explanation                              	     |
+|--------------	|------------------------------------------	     |
+| PHI          	| Personal Health Information              	     |
+| PI           	| Principal Investigator                   	     |
+| RA           	| Research Assistant                       	     |
+| REB          	| Research Ethics Board                    	     |
+| ETCO~2~       | End-tidal carbon dioxide                       |
+| SpO~2~        | Percentage of hemoglobin saturated with oxygen |
+
+
+<br><br>
+
+**REVISION HISTORY** 
+
+
+| Version  	| Date       	| Amendment Text 	| Description 	|
+|----------	|------------	|----------------	|-------------	|
+|         	|           	|                	|             	|
+
+
+<br><br>
+
+# TRIAL SUMMARY
+
+|                              | World Health Organization Registration Data Set         |
+| -----------------------------| ------------------------------------------------------- |                  
+| Title                        | `r official_title`                                       |
+| Registry identifying number  | clinicaltrials.gov|
+| Secondary identifying numbers| N/A                                   |
+| Sources of support        	 | `r funding_statement`                                    |
+| Primary sponsor            	 | Sponsor-Invesstigator                                      |
+| Secondary sponsors (if any)  | N/A                                        |
+| Central contact   	         | `r paste(contact_first_name, contact_last_name, sep=" ")`|
+| Study official               | `r paste(official_first_name, official_last_name,sep=" ")`|
+| Brief title                  | `r brief_title`                                          |
+| Acronym                      | `r study_acronym`                                        |
+| Countries of recruitment     | Canada  	                                     |
+| Condition(s) or study focus  | `r condition_1`; `r condition_2`; `r keyword_1`            |
+| **Key eligibility criteria **|                                                         |
+| Age eligibility:             | `r paste(min_age, max_age, sep = " - ")`                  |
+| Accepts healthy volunteers   | `r healthy_volunteers`                                   |
+| Inclusion criteria           | `r inclusion_criteria`                                   |
+| Exclusion criteria           | `r exclusion_criteria`                                   |
+| **Study design**             |                                                         |
+| Study type                   | Observational Study                                    | 
+| Timing                       | `r timing`                                   |
+| Sampling method              | `r sampling_method`                                    | 
+| **Date of enrollment**       | `r paste("Anticipated", start_date, sep = ": ")`  	                                       |
+| **Target sample size**       | `r sample_size`  	                                       |
+| **Recruitment status**       | Not yet recruiting 	                                   |
+| **Primary outcomes**         |                                               |
+| `r pr_outcome_1`          | Timeframe: `r pr_outcome_time_1`<br><br>Description: `r pr_outcome_desc_1`|
+| **Secondary outcomes **  	   |                            |
+| [enter inline rcode for secondary outome name] | Timeframe: [enter inline rcode]<br><br>Description:[enter inline rcode]|
+
+<br>
+<br>
+
+# INTRODUCTION
+
+## Background and rationale
+
+
+
+## Objectives
+
+ 
+
+# METHODS
+
+## Study Design
+
+This study will use a `r timing`, `r obs_design` design. 
+
+## Study setting
+
+Peter Munk Cardiac Centre Cardiac Cath Labs at Toronto General Hospital, University Health Network.
+
+## Participants
+
+`r study_population`
+
+### Inclusion criteria 
+
+`r inclusion_criteria`
+
+### Exclusion criteria
+
+`r exclusion_criteria`
+
+## Definition of Key Variables
+
+
+>Primary outcome: `r pr_outcome_1`
+
+*Timeframe*: `r pr_outcome_time_1`
+
+*Description*: `r pr_outcome_desc_1`
+
+
+>Secondary outcomes
+
+
+
+
+
+
+
+## Sample size 
+
+It is expected that this will be approximately `r sample_size` patients.  
+
+
+## Data collection 
+
+### Procedures and evaluations
+
+
+
+
+
+
+## Data management 
+
+**Data Forms and Data Entry**
+
+A case report form developed in REDCap to extract information about the demographic characteristics of the sample. All personal information such as the patient&#39;s name, date of birth, health information, and UHN MRN will be removed from the data and will be replaced with a participant ID number.
+
+
+**Data Transmission and Editing**
+
+Using REDCap^TM^, range checks will be applied to minimize errors in data entry.
+
+**Security and Back-Up of Data**
+
+All forms related to study data will be kept in locked cabinets. Access to the study data will be restricted. A password system will be utilized to control access to electronic files related to the study on a secure UHN Network in
+compliance with UHN&#39;s policy and procedural manual on storage, transport and destruction of confidential information. These passwords will be changed on a regular basis. In compliance with UHN&#39;s policy &amp; procedure manual on &quot;Research: Data Ownership, Stewardship &amp; Security of Health Information&quot;, the institution will be responsible for providing hard data backs ups of all UHN Information and Technology (IT) systems for disaster recovery purposes.
+
+## Statistical methods
+
+### Outcomes 
+
+
+### Additional analyses 
+
+
+
+### Analysis population and missing data 
+
+
+## Data monitoring
+
+### Formal committee 
+
+
+
+# ETHICS AND DISSEMINATION
+
+## Research ethics approval 
+
+This protocol will be reviewed and approved by the sponsor and entered into the Coordinated Approval Process for Clinical Research (CAPCR) to receive approval from UHN&#39;s Research Ethics Board (REB) and Institutional Authorization with respect to scientific content and compliance with applicable research and human subjects regulations.
+
+The protocol and other requested documents — and any subsequent modifications — will also be submitted through CAPCR to be reviewed by UHN&#39;s REB for ethics approval, and the Executive Vice President of Science and Research or designate for institutional authorization.
+
+Subsequent to initial review and approval, an annual study renewal will be submitted to CAPCR for the UHN&#39;s REB to review at least 14-30 days before the study&#39;s REB expiry date. The Investigator will make safety and progress reports to the REB at least annually and within three months of study termination or completion at the study site.
+
+
+## Protocol amendments 
+
+Any modifications to the protocol which may impact on the conduct of the study, potential benefit of the patient or may affect patient safety, including changes of study objectives, study design, patient population, sample sizes, study procedures, or significant administrative aspects will require a formal amendment to the protocol. Such amendment will be agreed upon by the High-Flow Nasal Oxygen (HFNO) study team, and approved by UHN&#39;s Research Ethics Board (REB) prior to implementation.
+
+
+## Informed consent process 
+
+Informed consent will not be sought for this study, as it will only involve analysis of data already collected as part of routine practice. It would also not be feasible to contact patients for their consent to participate due to the large number of patients' medical records to be reviewed. 
+
+### Ancillary studies 
+
+No biological specimens will be collected in this trial. Data collected in this trial will not be used in ancillary studies.
+
+## Confidentiality 
+
+All study-related information will be stored securely in compliance with UHN&#39;s &quot;Storage, Transport &amp; Destruction of Confidential Information&quot; policy. All participant information will be stored in locked file cabinets in areas with limited access. The types of Participant Health Information (PHI) that will be collected for this study have been limited to that which is necessary for the purposes of the research study, and will be de-identified. PHI will not be used or disclosed for purposes other than those which it was collected, except with the express consent of the individual or as required by law. All personal information such as the patient&#39;s name, date of birth, health information, and UHN MRN will be removed from the data and will be replaced with a participant ID number. A list linking the participant ID number with patient names will be stored in an electronic file by the study team on a secure UHN Network. Thus, all reports, data collection, process, and administrative forms will be de-identified.
+
+All information collected during this study, including PHI, will be kept confidential and will not be shared with anyone outside the study unless required by law. Participants will not be named in any reports, publications, or presentations that may come from this study. Participant de-identified data from this study may be used for other research purposes. If the study data is shared with other researchers, information that links study data directly to the participant will not be shared.
+
+
+
+
+## Declaration of interests 
+
+There are no conflict of interests to declare.
+
+
+## Access to data 
+
+All members of the study team will be given access to the cleaned data sets. The study data sets will be housed on the UHN computer system, and all data sets will be password protected. To ensure confidentiality, data dispersed to the study team members will not contain any identifying participant information.
+
+
+## Dissemination policy 
+
+### Study results 
+
+The study results will be reported in publications and presentations.
+
+
+### Authorship 
+
+The study&#39;s investigators will be authors on the reporting and presentation of the trial&#39;s results. Topics suggested for presentation or publication will be circulated among the study team.
+
+### Reproducible research 
+
+*Inidividual participant data sharing statement*
+
+`r ipd_description`
+
+*Individual participant data sharing time-frame statement*
+
+`r ipd_time`
+
+
+
+# STUDY ADMINISTRATION
+
+## Key contacts
+
+**Study Principal Investigator**
+
+Aaron Conway, RN, PhD
+
+RBC Chair in Cardiovascular Nursing Research Peter Munk Cardiac Centre Toronto General Hospital University Health Network Assistant Professor Lawrence S. Bloomberg Faculty of Nursing University of Toronto
+
+Toronto General Hospital Heart &amp; Circulation Admin 4NU - 476 585 University Ave Toronto, ON M5G 2N2
+
+(416) 340-4654
+
+aaron.conway@uhn.ca
+
+
+**Central contact**
+
+`r paste(contact_first_name, contact_last_name, sep = " ")`
+
+Phone: `r contact_phone`
+
+Email:`r contact_email`
+
+
+**Sponsor**
+
+`r agency`
+
+
+
+## Funders 
+
+`r funding_statement`
+
+
+
+## Roles and responsibilities
+
+### Protocol contributors 
+
+
+### Sponsor and funder 
+
+
+### Trial committees 
+
+N/A
+
+
+
+# REFERENCES
+
+# Appendix
+
