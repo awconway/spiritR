@@ -2,7 +2,8 @@
   
 # spiritR
 
-This package contains an Rmarkdown template for a clinical trial protocol adhering to the [SPIRIT](http://www.spirit-statement.org/) checklist.
+This package contains an Rmarkdown template for a clinical trial protocol adhering to the [SPIRIT](http://www.spirit-statement.org/) checklist. This package was inspired by the Spirit Electronic Protocol Tool & Resource (SEPTRE) software program.
+
 
 Contained within the template is a section for each of the elements that should be adressed in a clinical trial protocol. Links to the SPIRIT statement guidance about what should be addressed in each element are provided.
 
