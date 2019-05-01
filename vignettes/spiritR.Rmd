@@ -23,7 +23,7 @@ The [SPIRIT](http://spirit-statement.org) (Standard Protocol Items for Intervent
 
 ## Registering a clinical trial
 
-Pre-registering core study design aspects of a clinical trial minimises the potential for reporting bias. Professional bodies, including the International Committee of Medical Journal Editors, as well as regulatory laws, such as the US Food and Druf Adminstration Amendmednt Act, mandate that clinical trials are registered [@califf2012characteristics; @de2005clinical]. The largest clinical trial registry in the world is [clinicaltrials.gov](http://www.clinicaltrials.gov).
+Pre-registering core study design aspects of a clinical trial minimises the potential for reporting bias. Professional bodies, including the International Committee of Medical Journal Editors, as well as regulatory laws, such as the US Food and Drug Administration Amendment Act, mandate that clinical trials are registered [@califf2012characteristics; @de2005clinical]. The largest clinical trial registry in the world is [clinicaltrials.gov](http://www.clinicaltrials.gov).
 
 The typical workflow for researchers planning a randomized controlled trial is to initially generate a clinical trial protocol using word processing software. The information required to register a protocol in the clinicaltrials.gov registry is then cut and paste from that document into the relevant section of the clinicaltrials.gov webpage. The spiritR package aims to reduce the repetition involved in this process. 
 
@@ -33,9 +33,9 @@ Clinicaltrials.gov permits xml documents that contain the elements required for 
 
 >Once installed, the spiritR Rmarkdown template will be available in RStudio. This template will only work for interventional trials. There are options to register Observational and Epidemiological studies on clinicaltrials.gov but this template will not meet the requirements for the xml upload for these other types of studies.
 
-At the begining of the Rmarkdown template are several R code chunks. Contained within these R code chunks are templates to create a list of object names with instructions for what content should be assigned to each. Assigning information to these values is vital to the intended workflow and will achieve two purposes:
+At the beginning of the Rmarkdown template are several R code chunks. Contained within these R code chunks are templates to create a list of object names with instructions for what content should be assigned to each. Assigning information to these values is vital to the intended workflow and will achieve two purposes:
 
-1. To populate a table at the begining of the protocol document displaying the World Health Organization Regitration Data Set; and
+1. To populate a table at the begining of the protocol document displaying the World Health Organization Registration Data Set; and
 
 2. To populate an xml document that can be uploaded directly to the clinicaltrials.gov registry using the ```create_ctxml()``` function.
 
@@ -54,7 +54,7 @@ The ```create_ctxml()``` function will create the initial xml document containin
 
 ### Add arms, interventions, outcomes, conditions and keywords to the xml document
 
-This family of functions will add nodespaces to the initial xml document generated from ```create_ctxml()``` with elements that are unique to a particular clinical trial. For example, every clinical trial must have at least one primary outcome and likely multiple secondary outcomes. However, the total number of primary and seconday outcomes will vary between studies. As such, the ```add_pr_outcome()``` and ```add_sec_outcome()``` functions are included in the spiritR package so that clinical trial protocol authors can tailor the xml document for upload to clinicaltrials.gov with the specific number of outcomes and details of their study. Likewise, all clinical trials must have at least one arm testing one intervention but the total number can vary. The ```add_arm()```, ```add_intervention()```, ```add_condition()``` and ```add_keyword()``` functions provide the functionality to add xml nodespaces containing this information to the initial xml document.
+This family of functions will add nodespaces to the initial xml document generated from ```create_ctxml()``` with elements that are unique to a particular clinical trial. For example, every clinical trial must have at least one primary outcome and likely multiple secondary outcomes. However, the total number of primary and secondary outcomes will vary between studies. As such, the ```add_pr_outcome()``` and ```add_sec_outcome()``` functions are included in the spiritR package so that clinical trial protocol authors can tailor the xml document for upload to clinicaltrials.gov with the specific number of outcomes and details of their study. Likewise, all clinical trials must have at least one arm testing one intervention but the total number can vary. The ```add_arm()```, ```add_intervention()```, ```add_condition()``` and ```add_keyword()``` functions provide the functionality to add xml nodespaces containing this information to the initial xml document.
 
 ### Inspect the structure of the xml document
 
