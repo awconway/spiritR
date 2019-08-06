@@ -50,7 +50,7 @@ For clarification regarding the content to be assigned to these parameters, plea
 
 ### Create the initial xml document
 
-The ```create_ctxml()``` function will create the initial xml document containing elements common to all clinical trial protocols. First be sure to run the code chunks in the Rmarkdown spiritR clinical trial protocol containing the lists of arguments. Then, create an xml document by calling do.call("create_ctxml", arguments_ctxml). 
+The ```create_ctxml()``` function will create the initial xml document containing elements common to all clinical trial protocols. First be sure to run the code chunks in the Rmarkdown spiritR clinical trial protocol containing the lists of arguments. Then, create an xml document by calling do.call("create_ctxml", args_ctxml). 
 
 ### Add arms, interventions, outcomes, conditions and keywords to the xml document
 
