@@ -9,7 +9,7 @@
 #' clinicaltrials.gov log-in details.
 #' @param org_study_id Must be a unique study number from the organization. 
 #' Sometimes it is the number associated with the funding received or submission 
-#' for insstitutional approval.
+#' for institutional approval.
 #' @param brief_title Brief title for the study with a limit of 300 characters
 #' @param study_acronym limit to 14 characters or enter n/a
 #' @param official_title Study title limited to 600 characters
@@ -164,6 +164,86 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
                          ipd_sharing, ipd_description, 
                          ipd_protocol, ipd_sap, ipd_icf, ipd_csr, ipd_code,
                          ipd_time, ipd_criteria, ipd_url){
+  
+  if (nchar(brief_title)>=300){
+    stop("brief_title must be less than 300 characters")
+  }
+  
+  if (nchar(study_acronym)>=14){
+    stop("study_acronym is limited to 14 characters")
+  }
+  
+  if (nchar(official_title)>=600){
+    stop("official_title is limited to 600 characters")
+  }
+  
+  if (!grepl("Sponsor|Principal Investigator| Sponsor-Investigator", resp_party_type)){
+    stop("resp_party_type must be either Sponsor, Principal Investigator or Sponsor-Investigator")
+  }
+  
+  if (nchar(brief_summary)>=5000){
+    stop("brief_summary is limited to 5000 characters")
+  }
+  
+  if (!grepl("[0-9]{4}-[0-9]{2}", start_date)){
+    stop("start_date must be in yyyy-mm format")
+  }
+  
+  if (!grepl("[0-9]{4}-[0-9]{2}", study_compl)){
+    stop("study_compl must be in yyyy-mm format")
+  }
+  
+  if (!grepl("[0-9]{4}-[0-9]{2}", primary_compl)){
+    stop("primary_compl must be in yyyy-mm format")
+  }
+  
+  if (!grepl("Treatment|Prevention|Diagnostic|Supportive Care|Screening|Health Services Research|Basic Science|Device Feasibility|Other", 
+             int_subtype)){
+    stop("int_subtype must be either Treatment; Prevention; Diagnostic; 
+         Supportive Care; Screening; Health Services Research; Basic Science; 
+         Device Feasibility; or Other")
+  }
+  
+  if (!grepl("N/A|Early Phase 1|Phase1/Phase 2|Phase 2|Phase2/Phase 3|Phase 3|Phase 4", 
+             phase)){
+    stop("phase must be either N/A; Early Phase 1; Phase1/Phase 2; Phase 2; Phase2/Phase 3; Phase 3; or Phase 4")
+  }
+  
+  if (!grepl("Single group|Parallel|Crossover|Factorial|Sequential", 
+             assignment)){
+    stop("assignment must be either Single group; Parallel; Crossover; Factorial; or Sequential")
+  }
+  
+  if (!grepl("Randomized|Non-randomized", 
+             allocation)){
+    stop("allocation must be either Randomized; or Non-randomized")
+  }
+  
+  if (!grepl("True|False", 
+             no_masking)){
+    stop("no_masking must be either True or False")
+  }
+  
+  if (!grepl("True|False", 
+             masked_subject)){
+    stop("masked_subject must be either True or False")
+  }
+  
+  if (!grepl("True|False", 
+             masked_caregiver)){
+    stop("masked_caregiver must be either True or False")
+  }
+  
+  if (!grepl("True|False", 
+             masked_investigator)){
+    stop("masked_investigator must be either True or False")
+  }
+  
+  if (!grepl("True|False", 
+             masked_assessor)){
+    stop("masked_assessor must be either True or False")
+  }
+  
   
   xml2::xml_new_root( "study_collection",
                       "xmlns:prs" = "http://clinicaltrials.gov/prs") %>%
