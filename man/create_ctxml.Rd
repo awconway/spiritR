@@ -23,7 +23,7 @@ clinicaltrials.gov log-in details.}
 
 \item{org_study_id}{Must be a unique study number from the organization.
 Sometimes it is the number associated with the funding received or submission
-for insstitutional approval.}
+for institutional approval.}
 
 \item{brief_title}{Brief title for the study with a limit of 300 characters}
 
