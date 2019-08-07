@@ -3,7 +3,6 @@
 \name{add_functions}
 \alias{add_functions}
 \alias{add_arm}
-\alias{add_group}
 \alias{add_intervention}
 \alias{add_pr_outcome}
 \alias{add_sec_outcome}
@@ -13,8 +12,6 @@
 to clinicaltrials.gov}
 \usage{
 add_arm(ctxml, arm_label, arm_type, arm_desc)
-
-add_group(ctxml, group_label, group_desc)
 
 add_intervention(ctxml, int_name, int_type, int_desc, arm_label)
 

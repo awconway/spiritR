@@ -3,7 +3,6 @@
 export("%>%")
 export(add_arm)
 export(add_condition)
-export(add_group)
 export(add_intervention)
 export(add_keyword)
 export(add_pr_outcome)
