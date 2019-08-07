@@ -64,7 +64,7 @@
       <h1>spiritR: a workflow to enable direct upload of a clinical trial protocol to clinicaltrials.gov</h1>
                         <h4 class="author">Aaron Conway</h4>
             
-            <h4 class="date">2019-05-01</h4>
+            <h4 class="date">2019-08-07</h4>
       
       
       <div class="hidden name"><code>spiritR.Rmd</code></div>
@@ -108,7 +108,7 @@
 <div id="create-the-initial-xml-document" class="section level3">
 <h3 class="hasAnchor">
 <a href="#create-the-initial-xml-document" class="anchor"></a>Create the initial xml document</h3>
-<p>The <code><a href="../reference/create_ctxml.html">create_ctxml()</a></code> function will create the initial xml document containing elements common to all clinical trial protocols. First be sure to run the code chunks in the Rmarkdown spiritR clinical trial protocol containing the lists of arguments. Then, create an xml document by calling do.call(“create_ctxml”, arguments_ctxml).</p>
+<p>The <code><a href="../reference/create_ctxml.html">create_ctxml()</a></code> function will create the initial xml document containing elements common to all clinical trial protocols. First be sure to run the code chunks in the Rmarkdown spiritR clinical trial protocol containing the lists of arguments. Then, create an xml document by calling <code>ctxml &lt;- do.call(spiritR::create_ctxml, args_ctxml)</code>.</p>
 </div>
 <div id="add-arms-interventions-outcomes-conditions-and-keywords-to-the-xml-document" class="section level3">
 <h3 class="hasAnchor">
@@ -130,9 +130,8 @@
 <li>Username for a clinicaltrials.gov account; and</li>
 <li>Password for a clinicaltrials.gov account.</li>
 </ol>
-<p>There are three possible outcomes for a call to <code><a href="../reference/upload_ctxml.html">upload_ctxml()</a></code>. As per the <a href="https://prsinfo.clinicaltrials.gov/prs-users-guide.html#xml">guidance</a> from clinicaltrials.gov, a correct http POST request will generate a 200 status code and generate an XML response indicating that the upload was either successful or unsuccessful as per the sample below:</p>
-<p><img src="example-response.png"></p>
-<p>It is possible that a failed upload resulting in a 400 status code in the place of an XML response could be due to incorrect input parameters such as the organization name, username or password for the account.</p>
+<p>There are three possible outcomes for a call to <code><a href="../reference/upload_ctxml.html">upload_ctxml()</a></code>. As per the <a href="https://prsinfo.clinicaltrials.gov/prs-users-guide.html#xml">guidance</a> from clinicaltrials.gov, a correct http POST request will generate a list that contains two elements. The ‘content’ element is a list of the messages parsed from the XML response. The ‘response’ elements is the original XML response.</p>
+<p>It is possible that a failed upload could be due to incorrect input parameters such as the organization name, username or password for the account.</p>
 <blockquote>
 <p>Even in the event of a successful upload, this function has been programmed with the http POST request ‘autoRELEASE’ argument set to FALSE. This means that users will need to log-in to clinicaltrials.gov directly to inspect their upload, attend to any warning messages that may have been alerted, and then ‘release’ the submission for PRS review by clinicaltrials.gov.</p>
 </blockquote>

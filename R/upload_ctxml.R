@@ -27,6 +27,36 @@ upload_ctxml <- function(ctxml, org_name, user_name, password){
   body  <-  list(orgNAME = org_name, userName = user_name, 
                  passWord = password,  uploadXML = ctxml, 
                  autoRelease = FALSE)
-  httr::POST("https://register.clinicaltrials.gov/prs/app/action/ExternalUpload", 
+  resp <- httr::POST("https://register.clinicaltrials.gov/prs/app/action/ExternalUpload", 
              body = body, encode = 'form')
+
+  parsed <- xml2::read_xml(resp)
+  if (httr::http_error(resp)) {
+    stop(
+      sprintf(
+        "Upload API request failed [%s]\n%s",
+        httr::status_code(resp),
+        xml2::xml_text(parsed)
+      ),
+      call. = FALSE
+    )
+  }
+  
+  if (xml2::xml_text(xml2::xml_find_first(parsed, "uploadStatus"))=="ERROR") {
+    stop(
+      sprintf(
+        "Upload API request failed [%s]",
+        xml2::xml_text(xml2::xml_find_first(parsed, "failureMessage"))
+      ),
+      call. = FALSE
+    )
+  }
+  
+  structure(
+    list(
+      content = xml2::as_list(parsed),
+      response = resp
+    ),
+    class = "prs_clinicaltrials_api"
+  )
 }

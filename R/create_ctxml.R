@@ -244,6 +244,83 @@ create_ctxml <- function(org_name, org_study_id, brief_title, study_acronym,
     stop("masked_assessor must be either True or False")
   }
   
+  if (nchar(eligibility_criteria)>=15000){
+    stop("eligibility criteria is limited to 15000 characters")
+  }
+  
+  if (!grepl("Yes|No", 
+             healthy_volunteers)){
+    stop("healthy_volunteers must be either Yes or No")
+  }
+  
+  if (!grepl("Female|Male|Both", 
+             genders_included)){
+    stop("genders_included must be either Female, Male or Both")
+  }
+  
+  if (!grepl("Yes|No", 
+             gender_based)){
+    stop("gender_based must be either Yes or No")
+  }
+  
+  if (!grepl("[0-9]{1} years|[0-9]{2} years|N/A", 
+             min_age)){
+    stop("min_age must be either a number with year (e.g. 16 years) or N/A if
+         there is no limit")
+  }
+  
+  if (!grepl("[0-9]{1} years|[0-9]{2} years|N/A", 
+             max_age)){
+    stop("max_age must be either a number with year (e.g. 16 years) or N/A if
+         there is no limit")
+  }
+  
+  if (!grepl("Study Chair|Study Director|Study Principal Investigator", 
+             official_role)){
+    stop("official_role must be either Study Chair; Study Director or Study Principal Investigator.")
+  }
+  
+  if (!grepl("Yes|No|Undecided", 
+             ipd_sharing)){
+    stop("ipd_sharing must be either Yes, No or Undecided")
+  }
+  
+  if (!grepl("Yes|No|Undecided", 
+             ipd_sharing)){
+    stop("ipd_sharing must be either Yes, No or Undecided")
+  }
+  
+  if (nchar(ipd_description)>=1000){
+    stop("ipd_description is limited to 1000 characters")
+  }
+  
+  if (nchar(ipd_time)>=1000){
+    stop("ipd_time is limited to 1000 characters")
+  }
+  
+  if (!grepl("True|False", ipd_protocol)){
+    stop("ipd_protocol must be either True or False")
+  }
+  
+  if (!grepl("True|False", ipd_sap)){
+    stop("ipd_sap must be either True or False")
+  }
+  
+  if (!grepl("True|False", ipd_icf)){
+    stop("ipd_icf must be either True or False")
+  }
+  
+  if (!grepl("True|False", ipd_csr)){
+    stop("ipd_csr must be either True or False")
+  }
+  
+  if (!grepl("True|False", ipd_code)){
+    stop("ipd_code must be either True or False")
+  }
+  
+  if (nchar(ipd_criteria)>=1000){
+    stop("ipd_criteria is limited to 1000 characters")
+  }
   
   xml2::xml_new_root( "study_collection",
                       "xmlns:prs" = "http://clinicaltrials.gov/prs") %>%
