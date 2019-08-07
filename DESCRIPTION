@@ -1,6 +1,6 @@
 Package: spiritR
 Title: Template for clinical trial protocol
-Version: 0.1
+Version: 0.1.0.9000
 Authors@R: 
     person(given = "Aaron",
            family = "Conway",
@@ -28,7 +28,6 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    pkgdown,
-    spelling
+    pkgdown
 VignetteBuilder: knitr
 Language: en-US
