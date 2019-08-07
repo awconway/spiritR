@@ -47,15 +47,15 @@ testthat::test_that("create_ctxml is xml document", {
                             contact_email = "dhsksj@hfhfk.com",
                             
                             #Overall official
-                            official_first_name = "hjkdskja",
-                            official_last_name ="fhdjksah",
-                            official_degrees = "ffj",
-                            official_affiliation = "fdjkhf",
-                            official_role = "fhdjhsfjk",
+                            official_first_name = "Aaron",
+                            official_last_name ="Conway",
+                            official_degrees = "PhD",
+                            official_affiliation = "UHN",
+                            official_role = "Study Principal Investigator",
                             
                             #Sharing statements
                             ipd_sharing = "Yes",
-                            ipd_description = "detils",
+                            ipd_description = "details",
                             ipd_protocol =  "True",
                             ipd_sap = "True",
                             ipd_icf = "True",
