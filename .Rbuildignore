@@ -6,3 +6,4 @@
 ^docs$
 ^netlify\.toml$
 ^\.travis\.yml$
+^cran-comments\.md$
