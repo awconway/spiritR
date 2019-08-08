@@ -7,3 +7,4 @@
 ^netlify\.toml$
 ^\.travis\.yml$
 ^cran-comments\.md$
+^CRAN-RELEASE$
