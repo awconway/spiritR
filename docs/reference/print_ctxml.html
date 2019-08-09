@@ -64,7 +64,7 @@ generated using the create_ctxml() function" />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spiritR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -123,9 +123,219 @@ generated using the create_ctxml() function</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>print_ctxml</span>(<span class='no'>ctxml</span>)
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='no'>args_ctxml</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
+<span class='kw'>org_name</span> <span class='kw'>=</span> <span class='st'>"UHNToronto"</span>,
+<span class='kw'>org_study_id</span> <span class='kw'>=</span> <span class='st'>"Foo trial 20190806"</span>,
+<span class='kw'>brief_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload 20190806"</span>,
+<span class='kw'>study_acronym</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
+<span class='kw'>official_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload: A randomized trial new 20190806"</span>,
+<span class='kw'>agency</span>  <span class='kw'>=</span> <span class='st'>"Aaron Conway"</span>,
+<span class='kw'>resp_party_type</span> <span class='kw'>=</span> <span class='st'>"Sponsor-Investigator"</span>,
+<span class='kw'>investigator_username</span> <span class='kw'>=</span> <span class='st'>"aconway"</span>,
+<span class='kw'>investigator_title</span> <span class='kw'>=</span><span class='st'>"Assistant Professor"</span>,
+<span class='kw'>brief_summary</span> <span class='kw'>=</span> <span class='st'>"Lay summary here"</span>,
+<span class='kw'>start_date</span> <span class='kw'>=</span> <span class='st'>"2019-10"</span>,
+<span class='kw'>primary_compl</span> <span class='kw'>=</span>  <span class='st'>"2020-12"</span>,
+<span class='kw'>study_compl</span> <span class='kw'>=</span> <span class='st'>"2020-12"</span>,
+<span class='kw'>int_subtype</span> <span class='kw'>=</span> <span class='st'>"Health Services Research"</span>,
+<span class='kw'>phase</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
+<span class='kw'>assignment</span> <span class='kw'>=</span> <span class='st'>"Parallel"</span>,
+<span class='kw'>allocation</span> <span class='kw'>=</span> <span class='st'>"Randomized"</span>,
+<span class='kw'>no_masking</span> <span class='kw'>=</span>  <span class='st'>"False"</span>,
+<span class='kw'>masked_subject</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>masked_caregiver</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>masked_investigator</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>masked_assessor</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>number_arms</span> <span class='kw'>=</span> <span class='fl'>2</span>,
+<span class='kw'>sample_size</span> <span class='kw'>=</span> <span class='st'>"40"</span>,
+<span class='kw'>eligibility_criteria</span> <span class='kw'>=</span> <span class='st'>"Inclusion Criteria
+- Adults
+Exclusion Criteria
+- Children"</span>,
+<span class='kw'>healthy_volunteers</span> <span class='kw'>=</span> <span class='st'>"No"</span>,
+<span class='kw'>genders_included</span> <span class='kw'>=</span> <span class='st'>"Both"</span>,
+<span class='kw'>gender_based</span> <span class='kw'>=</span> <span class='st'>"No"</span>,
+<span class='kw'>min_age</span> <span class='kw'>=</span> <span class='st'>"1 years"</span>,
+<span class='kw'>max_age</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
+<span class='co'>#Central contact</span>
+<span class='kw'>contact_first_name</span> <span class='kw'>=</span> <span class='st'>"Aaron"</span>,
+<span class='kw'>contact_last_name</span> <span class='kw'>=</span> <span class='st'>"Conway"</span>,
+<span class='kw'>contact_degrees</span> <span class='kw'>=</span> <span class='st'>"PhD"</span>,
+<span class='kw'>contact_phone</span> <span class='kw'>=</span> <span class='st'>"649-728-8499"</span>,
+<span class='kw'>contact_email</span> <span class='kw'>=</span> <span class='st'>"aaron.conway@utoronto.ca"</span>,
+<span class='co'>#Overall official</span>
+<span class='kw'>official_first_name</span> <span class='kw'>=</span> <span class='st'>"Aaron"</span>,
+<span class='kw'>official_last_name</span> <span class='kw'>=</span><span class='st'>"Conway"</span>,
+<span class='kw'>official_degrees</span> <span class='kw'>=</span> <span class='st'>"PhD"</span>,
+<span class='kw'>official_affiliation</span> <span class='kw'>=</span> <span class='st'>"UHN"</span>,
+<span class='kw'>official_role</span> <span class='kw'>=</span> <span class='st'>"Study Principal Investigator"</span>,
+<span class='co'>#Sharing statements</span>
+<span class='kw'>ipd_sharing</span> <span class='kw'>=</span> <span class='st'>"Yes"</span>,
+<span class='kw'>ipd_description</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
+<span class='kw'>ipd_protocol</span> <span class='kw'>=</span>  <span class='st'>"True"</span>,
+<span class='kw'>ipd_sap</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>ipd_icf</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>ipd_csr</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>ipd_code</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
+<span class='kw'>ipd_time</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
+<span class='kw'>ipd_criteria</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
+<span class='kw'>ipd_url</span> <span class='kw'>=</span> <span class='st'>"http://www.aaronconway.info"</span>
+)
+
+<span class='no'>ctxml</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/do.call'>do.call</a></span>(<span class='no'>create_ctxml</span>, <span class='no'>args_ctxml</span>)
+
+<span class='fu'>print_ctxml</span>(<span class='no'>ctxml</span>)</div><div class='output co'>#&gt; &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+#&gt; &lt;study_collection xmlns:prs="http://clinicaltrials.gov/prs"&gt;
+#&gt;   &lt;clinical_study&gt;
+#&gt;     &lt;id_info&gt;
+#&gt;       &lt;org_name&gt;UHNToronto&lt;/org_name&gt;
+#&gt;       &lt;org_study_id&gt;Foo trial 20190806&lt;/org_study_id&gt;
+#&gt;     &lt;/id_info&gt;
+#&gt;     &lt;is_fda_regulated/&gt;
+#&gt;     &lt;is_section_801/&gt;
+#&gt;     &lt;delayed_posting/&gt;
+#&gt;     &lt;is_ind_study/&gt;
+#&gt;     &lt;brief_title&gt;Foo trial to test auto upload 20190806&lt;/brief_title&gt;
+#&gt;     &lt;acronym&gt;N/A&lt;/acronym&gt;
+#&gt;     &lt;official_title&gt;Foo trial to test auto upload: A randomized trial new 20190806&lt;/official_title&gt;
+#&gt;     &lt;sponsors&gt;
+#&gt;       &lt;lead_sponsor&gt;
+#&gt;         &lt;agency&gt;Aaron Conway&lt;/agency&gt;
+#&gt;       &lt;/lead_sponsor&gt;
+#&gt;       &lt;resp_party&gt;
+#&gt;         &lt;resp_party_type&gt;Sponsor-Investigator&lt;/resp_party_type&gt;
+#&gt;         &lt;investigator_username&gt;aconway&lt;/investigator_username&gt;
+#&gt;         &lt;investigator_title&gt;Assistant Professor&lt;/investigator_title&gt;
+#&gt;         &lt;investigator_affiliation/&gt;
+#&gt;         &lt;name_title/&gt;
+#&gt;         &lt;organization/&gt;
+#&gt;         &lt;phone/&gt;
+#&gt;         &lt;phone_ext/&gt;
+#&gt;         &lt;email/&gt;
+#&gt;       &lt;/resp_party&gt;
+#&gt;     &lt;/sponsors&gt;
+#&gt;     &lt;oversight_info&gt;
+#&gt;       &lt;irb_info&gt;
+#&gt;         &lt;approval_status/&gt;
+#&gt;       &lt;/irb_info&gt;
+#&gt;       &lt;has_dmc/&gt;
+#&gt;       &lt;fda_regulated_drug/&gt;
+#&gt;       &lt;fda_regulated_device/&gt;
+#&gt;       &lt;post_prior_to_approval/&gt;
+#&gt;     &lt;/oversight_info&gt;
+#&gt;     &lt;brief_summary&gt;
+#&gt;       &lt;textblock&gt;Lay summary here&lt;/textblock&gt;
+#&gt;     &lt;/brief_summary&gt;
+#&gt;     &lt;detailed_description&gt;
+#&gt;       &lt;textblock/&gt;
+#&gt;     &lt;/detailed_description&gt;
+#&gt;     &lt;overall_status&gt;Not yet recruiting&lt;/overall_status&gt;
+#&gt;     &lt;why_stopped/&gt;
+#&gt;     &lt;verification_date/&gt;
+#&gt;     &lt;start_date&gt;2019-10&lt;/start_date&gt;
+#&gt;     &lt;start_date_type&gt;Anticipated&lt;/start_date_type&gt;
+#&gt;     &lt;end_date/&gt;
+#&gt;     &lt;last_follow_up_date&gt;2020-12&lt;/last_follow_up_date&gt;
+#&gt;     &lt;last_follow_up_date_type&gt;Anticipated&lt;/last_follow_up_date_type&gt;
+#&gt;     &lt;prim_compl_date&gt;2020-12&lt;/prim_compl_date&gt;
+#&gt;     &lt;primary_compl_date_type&gt;Anticipated&lt;/primary_compl_date_type&gt;
+#&gt;     &lt;study_design&gt;
+#&gt;       &lt;study_type&gt;Interventional&lt;/study_type&gt;
+#&gt;       &lt;interventional_design&gt;
+#&gt;         &lt;interventional_subtype&gt;Health Services Research&lt;/interventional_subtype&gt;
+#&gt;         &lt;phase&gt;N/A&lt;/phase&gt;
+#&gt;         &lt;assignment&gt;Parallel&lt;/assignment&gt;
+#&gt;         &lt;model_description&gt;
+#&gt;           &lt;textblock/&gt;
+#&gt;         &lt;/model_description&gt;
+#&gt;         &lt;allocation&gt;Randomized&lt;/allocation&gt;
+#&gt;         &lt;masking/&gt;
+#&gt;         &lt;no_masking&gt;False&lt;/no_masking&gt;
+#&gt;         &lt;masked_subject&gt;True&lt;/masked_subject&gt;
+#&gt;         &lt;masked_caregiver&gt;True&lt;/masked_caregiver&gt;
+#&gt;         &lt;masked_investigator&gt;True&lt;/masked_investigator&gt;
+#&gt;         &lt;masked_assesor&gt;True&lt;/masked_assesor&gt;
+#&gt;         &lt;masking_description&gt;
+#&gt;           &lt;textblock/&gt;
+#&gt;         &lt;/masking_description&gt;
+#&gt;         &lt;control/&gt;
+#&gt;         &lt;number_of_arms&gt;2&lt;/number_of_arms&gt;
+#&gt;       &lt;/interventional_design&gt;
+#&gt;     &lt;/study_design&gt;
+#&gt;     &lt;primary_outcome/&gt;
+#&gt;     &lt;secondary_outcome/&gt;
+#&gt;     &lt;enrollment&gt;40&lt;/enrollment&gt;
+#&gt;     &lt;enrollment_type&gt;Anticipated&lt;/enrollment_type&gt;
+#&gt;     &lt;condition/&gt;
+#&gt;     &lt;keyword/&gt;
+#&gt;     &lt;arm_group/&gt;
+#&gt;     &lt;intervention/&gt;
+#&gt;     &lt;eligibility&gt;
+#&gt;       &lt;study_population&gt;
+#&gt;         &lt;textblock/&gt;
+#&gt;       &lt;/study_population&gt;
+#&gt;       &lt;sampling_method/&gt;
+#&gt;       &lt;criteria&gt;
+#&gt;         &lt;textblock&gt;Inclusion Criteria
+#&gt; - Adults
+#&gt; Exclusion Criteria
+#&gt; - Children&lt;/textblock&gt;
+#&gt;       &lt;/criteria&gt;
+#&gt;       &lt;healthy_volunteers&gt;No&lt;/healthy_volunteers&gt;
+#&gt;       &lt;gender&gt;Both&lt;/gender&gt;
+#&gt;       &lt;gender_based&gt;No&lt;/gender_based&gt;
+#&gt;       &lt;gender_description&gt;
+#&gt;         &lt;textblock/&gt;
+#&gt;       &lt;/gender_description&gt;
+#&gt;       &lt;minimum_age&gt;1 years&lt;/minimum_age&gt;
+#&gt;       &lt;maximum_age&gt;N/A&lt;/maximum_age&gt;
+#&gt;     &lt;/eligibility&gt;
+#&gt;     &lt;overall_official&gt;
+#&gt;       &lt;first_name&gt;Aaron&lt;/first_name&gt;
+#&gt;       &lt;middle_name/&gt;
+#&gt;       &lt;last_name&gt;Conway&lt;/last_name&gt;
+#&gt;       &lt;degrees&gt;PhD&lt;/degrees&gt;
+#&gt;       &lt;role&gt;Study Principal Investigator&lt;/role&gt;
+#&gt;       &lt;affiliation&gt;UHN&lt;/affiliation&gt;
+#&gt;     &lt;/overall_official&gt;
+#&gt;     &lt;overall_contact&gt;
+#&gt;       &lt;first_name&gt;Aaron&lt;/first_name&gt;
+#&gt;       &lt;middle_name/&gt;
+#&gt;       &lt;last_name&gt;Conway&lt;/last_name&gt;
+#&gt;       &lt;degrees&gt;PhD&lt;/degrees&gt;
+#&gt;       &lt;phone&gt;649-728-8499&lt;/phone&gt;
+#&gt;       &lt;phone_ext/&gt;
+#&gt;       &lt;email&gt;aaron.conway@utoronto.ca&lt;/email&gt;
+#&gt;     &lt;/overall_contact&gt;
+#&gt;     &lt;overall_contact_backup&gt;
+#&gt;       &lt;first_name/&gt;
+#&gt;       &lt;middle_name/&gt;
+#&gt;       &lt;last_name/&gt;
+#&gt;       &lt;degrees/&gt;
+#&gt;       &lt;phone/&gt;
+#&gt;       &lt;phone_ext/&gt;
+#&gt;       &lt;email/&gt;
+#&gt;     &lt;/overall_contact_backup&gt;
+#&gt;     &lt;ipd_sharing_statement&gt;
+#&gt;       &lt;sharing_ipd&gt;Yes&lt;/sharing_ipd&gt;
+#&gt;       &lt;ipd_description&gt;
+#&gt;         &lt;textblock&gt;details&lt;/textblock&gt;
+#&gt;       &lt;/ipd_description&gt;
+#&gt;       &lt;ipd_info_type_protocol&gt;True&lt;/ipd_info_type_protocol&gt;
+#&gt;       &lt;ipd_info_type_sap&gt;True&lt;/ipd_info_type_sap&gt;
+#&gt;       &lt;ipd_info_type_icf&gt;True&lt;/ipd_info_type_icf&gt;
+#&gt;       &lt;ipd_info_type_csr&gt;True&lt;/ipd_info_type_csr&gt;
+#&gt;       &lt;ipd_info_type_analytic_code&gt;True&lt;/ipd_info_type_analytic_code&gt;
+#&gt;       &lt;ipd_time_frame&gt;
+#&gt;         &lt;textblock&gt;details&lt;/textblock&gt;
+#&gt;       &lt;/ipd_time_frame&gt;
+#&gt;       &lt;ipd_access_criteria&gt;
+#&gt;         &lt;textblock&gt;details&lt;/textblock&gt;
+#&gt;       &lt;/ipd_access_criteria&gt;
+#&gt;       &lt;ipd_url&gt;http://www.aaronconway.info&lt;/ipd_url&gt;
+#&gt;     &lt;/ipd_sharing_statement&gt;
+#&gt;   &lt;/clinical_study&gt;
+#&gt; &lt;/study_collection&gt;</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

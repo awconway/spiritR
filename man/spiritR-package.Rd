@@ -4,12 +4,15 @@
 \name{spiritR-package}
 \alias{spiritR}
 \alias{spiritR-package}
-\title{spiritR: Template for clinical trial protocol}
+\title{spiritR: Template for Clinical Trial Protocol}
 \description{
 Contains an R Markdown template for a clinical trial 
-    protocol adhering to the SPIRIT checklist and functions to create a xml 
-    document containing the required information and upload it to 
-    clinicaltrials.gov.
+    protocol adhering to the SPIRIT statement. The SPIRIT (Standard Protocol 
+    Items for Interventional Trials) statement outlines recommendations for a 
+    minimum set of elements to be addressed in a  clinical trial protocol. 
+    Also contains functions to create a xml document from the template and 
+    upload it to clinicaltrials.gov<https://www.clinicaltrials.gov/> for 
+    trial registration.
 }
 \author{
 \strong{Maintainer}: Aaron Conway \email{aaron.conway@utoronto.ca} (0000-0002-9583-8636)

@@ -160,12 +160,12 @@ This function will create an xml document conforming to clinicaltrials.gov
 requirements for automatic upload to the registry
 }
 \examples{
-\dontrun{
-create_ctxml(org_name = "UHNToronto",
-org_study_id = "Foo trial",
-brief_title = "Foo trial to test auto upload",
+args_ctxml <- list(
+org_name = "UHNToronto",
+org_study_id = "Foo trial 20190806",
+brief_title = "Foo trial to test auto upload 20190806",
 study_acronym = "N/A",
-official_title = "Foo trial to test auto upload: A randomized trial",
+official_title = "Foo trial to test auto upload: A randomized trial new 20190806",
 agency  = "Aaron Conway",
 resp_party_type = "Sponsor-Investigator",
 investigator_username = "aconway",
@@ -174,7 +174,7 @@ brief_summary = "Lay summary here",
 start_date = "2019-10",
 primary_compl =  "2020-12",
 study_compl = "2020-12",
-int_subtype = "Treatment",
+int_subtype = "Health Services Research",
 phase = "N/A",
 assignment = "Parallel",
 allocation = "Randomized",
@@ -183,24 +183,30 @@ masked_subject = "True",
 masked_caregiver = "True",
 masked_investigator = "True",
 masked_assessor = "True",
-number_arms = "2",
+number_arms = 2,
 sample_size = "40",
-eligibility_criteria = "details",
+eligibility_criteria = "Inclusion Criteria
+- Adults
+Exclusion Criteria
+- Children",
 healthy_volunteers = "No",
 genders_included = "Both",
 gender_based = "No",
-min_age = "N/A",
+min_age = "1 years",
 max_age = "N/A",
+#Central contact
 contact_first_name = "Aaron",
 contact_last_name = "Conway",
 contact_degrees = "PhD",
-contact_phone = "xxx-xxx-xxxx",
-contact_email = "dhsksj@hfhfk.com",
-official_first_name = "Aarpn",
+contact_phone = "649-728-8499",
+contact_email = "aaron.conway@utoronto.ca",
+#Overall official
+official_first_name = "Aaron",
 official_last_name ="Conway",
 official_degrees = "PhD",
-official_affiliation = "Assistant Professor",
-official_role = "Principal Investigator",
+official_affiliation = "UHN",
+official_role = "Study Principal Investigator",
+#Sharing statements
 ipd_sharing = "Yes",
 ipd_description = "details",
 ipd_protocol =  "True",
@@ -208,9 +214,11 @@ ipd_sap = "True",
 ipd_icf = "True",
 ipd_csr = "True",
 ipd_code = "True",
-ipd_time = "On publication of results",
+ipd_time = "details",
 ipd_criteria = "details",
-ipd_url = "http://")  
-}    
+ipd_url = "http://www.aaronconway.info"
+)
+
+ctxml <- do.call(create_ctxml, args_ctxml)
        
 }

@@ -64,7 +64,7 @@ requirements for automatic upload to the registry" />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spiritR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -368,12 +368,12 @@ about the plan to share IPD.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>create_ctxml</span>(<span class='kw'>org_name</span> <span class='kw'>=</span> <span class='st'>"UHNToronto"</span>,
-<span class='kw'>org_study_id</span> <span class='kw'>=</span> <span class='st'>"Foo trial"</span>,
-<span class='kw'>brief_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload"</span>,
+    <pre class="examples"><div class='input'><span class='no'>args_ctxml</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
+<span class='kw'>org_name</span> <span class='kw'>=</span> <span class='st'>"UHNToronto"</span>,
+<span class='kw'>org_study_id</span> <span class='kw'>=</span> <span class='st'>"Foo trial 20190806"</span>,
+<span class='kw'>brief_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload 20190806"</span>,
 <span class='kw'>study_acronym</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
-<span class='kw'>official_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload: A randomized trial"</span>,
+<span class='kw'>official_title</span> <span class='kw'>=</span> <span class='st'>"Foo trial to test auto upload: A randomized trial new 20190806"</span>,
 <span class='kw'>agency</span>  <span class='kw'>=</span> <span class='st'>"Aaron Conway"</span>,
 <span class='kw'>resp_party_type</span> <span class='kw'>=</span> <span class='st'>"Sponsor-Investigator"</span>,
 <span class='kw'>investigator_username</span> <span class='kw'>=</span> <span class='st'>"aconway"</span>,
@@ -382,7 +382,7 @@ about the plan to share IPD.</p></td>
 <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='st'>"2019-10"</span>,
 <span class='kw'>primary_compl</span> <span class='kw'>=</span>  <span class='st'>"2020-12"</span>,
 <span class='kw'>study_compl</span> <span class='kw'>=</span> <span class='st'>"2020-12"</span>,
-<span class='kw'>int_subtype</span> <span class='kw'>=</span> <span class='st'>"Treatment"</span>,
+<span class='kw'>int_subtype</span> <span class='kw'>=</span> <span class='st'>"Health Services Research"</span>,
 <span class='kw'>phase</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
 <span class='kw'>assignment</span> <span class='kw'>=</span> <span class='st'>"Parallel"</span>,
 <span class='kw'>allocation</span> <span class='kw'>=</span> <span class='st'>"Randomized"</span>,
@@ -391,24 +391,30 @@ about the plan to share IPD.</p></td>
 <span class='kw'>masked_caregiver</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
 <span class='kw'>masked_investigator</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
 <span class='kw'>masked_assessor</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
-<span class='kw'>number_arms</span> <span class='kw'>=</span> <span class='st'>"2"</span>,
+<span class='kw'>number_arms</span> <span class='kw'>=</span> <span class='fl'>2</span>,
 <span class='kw'>sample_size</span> <span class='kw'>=</span> <span class='st'>"40"</span>,
-<span class='kw'>eligibility_criteria</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
+<span class='kw'>eligibility_criteria</span> <span class='kw'>=</span> <span class='st'>"Inclusion Criteria
+- Adults
+Exclusion Criteria
+- Children"</span>,
 <span class='kw'>healthy_volunteers</span> <span class='kw'>=</span> <span class='st'>"No"</span>,
 <span class='kw'>genders_included</span> <span class='kw'>=</span> <span class='st'>"Both"</span>,
 <span class='kw'>gender_based</span> <span class='kw'>=</span> <span class='st'>"No"</span>,
-<span class='kw'>min_age</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
+<span class='kw'>min_age</span> <span class='kw'>=</span> <span class='st'>"1 years"</span>,
 <span class='kw'>max_age</span> <span class='kw'>=</span> <span class='st'>"N/A"</span>,
+<span class='co'>#Central contact</span>
 <span class='kw'>contact_first_name</span> <span class='kw'>=</span> <span class='st'>"Aaron"</span>,
 <span class='kw'>contact_last_name</span> <span class='kw'>=</span> <span class='st'>"Conway"</span>,
 <span class='kw'>contact_degrees</span> <span class='kw'>=</span> <span class='st'>"PhD"</span>,
-<span class='kw'>contact_phone</span> <span class='kw'>=</span> <span class='st'>"xxx-xxx-xxxx"</span>,
-<span class='kw'>contact_email</span> <span class='kw'>=</span> <span class='st'>"dhsksj@hfhfk.com"</span>,
-<span class='kw'>official_first_name</span> <span class='kw'>=</span> <span class='st'>"Aarpn"</span>,
+<span class='kw'>contact_phone</span> <span class='kw'>=</span> <span class='st'>"649-728-8499"</span>,
+<span class='kw'>contact_email</span> <span class='kw'>=</span> <span class='st'>"aaron.conway@utoronto.ca"</span>,
+<span class='co'>#Overall official</span>
+<span class='kw'>official_first_name</span> <span class='kw'>=</span> <span class='st'>"Aaron"</span>,
 <span class='kw'>official_last_name</span> <span class='kw'>=</span><span class='st'>"Conway"</span>,
 <span class='kw'>official_degrees</span> <span class='kw'>=</span> <span class='st'>"PhD"</span>,
-<span class='kw'>official_affiliation</span> <span class='kw'>=</span> <span class='st'>"Assistant Professor"</span>,
-<span class='kw'>official_role</span> <span class='kw'>=</span> <span class='st'>"Principal Investigator"</span>,
+<span class='kw'>official_affiliation</span> <span class='kw'>=</span> <span class='st'>"UHN"</span>,
+<span class='kw'>official_role</span> <span class='kw'>=</span> <span class='st'>"Study Principal Investigator"</span>,
+<span class='co'>#Sharing statements</span>
 <span class='kw'>ipd_sharing</span> <span class='kw'>=</span> <span class='st'>"Yes"</span>,
 <span class='kw'>ipd_description</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
 <span class='kw'>ipd_protocol</span> <span class='kw'>=</span>  <span class='st'>"True"</span>,
@@ -416,11 +422,12 @@ about the plan to share IPD.</p></td>
 <span class='kw'>ipd_icf</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
 <span class='kw'>ipd_csr</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
 <span class='kw'>ipd_code</span> <span class='kw'>=</span> <span class='st'>"True"</span>,
-<span class='kw'>ipd_time</span> <span class='kw'>=</span> <span class='st'>"On publication of results"</span>,
+<span class='kw'>ipd_time</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
 <span class='kw'>ipd_criteria</span> <span class='kw'>=</span> <span class='st'>"details"</span>,
-<span class='kw'>ipd_url</span> <span class='kw'>=</span> <span class='st'>"http://"</span>)
-<span class='co'># }</span><div class='input'>       
-</div></pre>
+<span class='kw'>ipd_url</span> <span class='kw'>=</span> <span class='st'>"http://www.aaronconway.info"</span>
+)
+
+<span class='no'>ctxml</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/do.call'>do.call</a></span>(<span class='no'>create_ctxml</span>, <span class='no'>args_ctxml</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
