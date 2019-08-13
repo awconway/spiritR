@@ -17,8 +17,8 @@ Contains an R Markdown template for a clinical trial
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://spiritR.netlify.com}
-  \item Report bugs at \url{https://github.com/awconway/spiritR}
+  \item \url{https://github.com/awconway/spiritR}
+  \item Report bugs at \url{https://github.com/awconway/spiritR/issues}
 }
 
 }

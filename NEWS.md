@@ -8,3 +8,4 @@
 * Added covr for code coverage
 * Added package webpage and bug reports site to description
 * Removed unneeded package from imports (tibble)
+* Added test for `print_ctxml` function
