@@ -14,6 +14,14 @@ Contains an R Markdown template for a clinical trial
     upload it to clinicaltrials.gov<https://www.clinicaltrials.gov/> for 
     trial registration.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://spiritR.netlify.com}
+  \item Report bugs at \url{https://github.com/awconway/spiritR}
+}
+
+}
 \author{
 \strong{Maintainer}: Aaron Conway \email{aaron.conway@utoronto.ca} (0000-0002-9583-8636)
 

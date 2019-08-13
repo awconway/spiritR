@@ -2,7 +2,6 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/spiritR)](https://CRAN.R-project.org/package=spiritR)
 [![Build Status](https://travis-ci.org/awconway/spiritR.svg?branch=master)](https://travis-ci.org/awconway/spiritR)
-[![codecov](https://codecov.io/gh/awconway/spiritR/branch/master/graph/badge.svg)](https://codecov.io/gh/awconway/spiritR)
 [![Codecov test coverage](https://codecov.io/gh/awconway/spiritR/branch/master/graph/badge.svg)](https://codecov.io/gh/awconway/spiritR?branch=master)
 <!-- badges: end -->
 # spiritR
@@ -16,8 +15,6 @@ Functions in this package provide the functionality to  upload information from 
 
 
 # Installing the package
-
-Enter the following in your console for installation (uncomment the first line if devtools is not already installed):
 
     install.packages("spiritR")
     
