@@ -22,8 +22,7 @@ LazyData: true
 Imports: 
     xml2,
     httr,
-    magrittr,
-    tibble
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 

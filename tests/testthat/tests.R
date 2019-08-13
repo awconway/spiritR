@@ -96,3 +96,9 @@ testthat::test_that("expect = xml document", {
 }
 )
 
+
+testthat::test_that("expect = character string of xml document", {
+  expect_that(
+    print_ctxml(ctxmltest), prints_text(cat(as.character(ctxmltest))))
+}
+)
