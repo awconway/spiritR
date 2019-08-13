@@ -1,6 +1,6 @@
 Package: spiritR
 Title: Template for Clinical Trial Protocol
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Aaron",
            family = "Conway",
@@ -14,6 +14,8 @@ Description: Contains an R Markdown template for a clinical trial
     Also contains functions to create a xml document from the template and 
     upload it to clinicaltrials.gov<https://www.clinicaltrials.gov/> for 
     trial registration.
+URL: https://spiritR.netlify.com
+BugReports: https://github.com/awconway/spiritR
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -28,6 +30,7 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    pkgdown
+    pkgdown,
+    covr
 VignetteBuilder: knitr
 Language: en-US
