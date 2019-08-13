@@ -5,22 +5,11 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-* This is a new release.
+# spiritR 0.1.1
 
-## Responses to CRAN submission 2019.08.09
-
-Thank you for reviewing the submission. 
-
-- I have changed the title to TitleCase.
-- I have inserted the link to clinicaltrials.gov using <> in teh Description 
-field.
-- I have inserted more information to describe key terms (SPIRIT) in the 
-Description field.
-- The example included in the `upload_ctxml` function is still wrapped in 
-\dontrun because it requires a username and password for an API upload.
-- The \dontrun wrappers have been removed from the other examples with further 
-code added so that they can be run to produce the xml elements as per the 
-intended use of the functions.
-
+* Added covr for code coverage
+* Added package webpage and bug reports site to description
+* Removed unneeded package from imports (tibble)
+* Added test for `print_ctxml` function
