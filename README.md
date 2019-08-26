@@ -1,8 +1,9 @@
 <!-- badges: start -->
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/spiritR)](https://CRAN.R-project.org/package=spiritR)
 [![Build Status](https://travis-ci.org/awconway/spiritR.svg?branch=master)](https://travis-ci.org/awconway/spiritR)
 [![Codecov test coverage](https://codecov.io/gh/awconway/spiritR/branch/master/graph/badge.svg)](https://codecov.io/gh/awconway/spiritR?branch=master)
+[![](https://cranlogs.r-pkg.org/badges/spiritR)](https://cran.rstudio.com/web/packages/spiritR/index.html)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 # spiritR
 
