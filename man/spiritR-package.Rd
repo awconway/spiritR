@@ -6,6 +6,8 @@
 \alias{spiritR-package}
 \title{spiritR: Template for Clinical Trial Protocol}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 Contains an R Markdown template for a clinical trial 
     protocol adhering to the SPIRIT statement. The SPIRIT (Standard Protocol 
     Items for Interventional Trials) statement outlines recommendations for a 
