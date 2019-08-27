@@ -5,7 +5,7 @@
 [![](https://cranlogs.r-pkg.org/badges/spiritR)](https://cran.rstudio.com/web/packages/spiritR/index.html)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
-# spiritR
+# spiritR <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 This package contains an Rmarkdown template for a clinical trial protocol adhering to the [SPIRIT](http://www.spirit-statement.org/) checklist. This package was inspired by the Spirit Electronic Protocol Tool & Resource [SEPTRE](https://www.spirit-statement.org/septre) software program.
 
