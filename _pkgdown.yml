@@ -1,1 +1,5 @@
 url: https://spiritr.netlify.com
+template: 
+  params:
+    ganalytics: UA-147024825-4
+
